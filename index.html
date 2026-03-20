@@ -407,27 +407,17 @@
       }
     ];
 
-    let gameRounds = [];
     const state = { round: 0, score: 0, revealed: 0, answered: false, earned: 0 };
 
-    function shuffleArray(arr) {
-      const copy = [...arr];
-      for (let i = copy.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [copy[i], copy[j]] = [copy[j], copy[i]];
-      }
-      return copy;
-    }
-
     function renderRound() {
-      const r = gameRounds[state.round];
+      const r = rounds[state.round];
       const deck = document.getElementById('deck');
       document.getElementById('finalScreen').classList.remove('active');
       deck.style.display = 'block';
 
       deck.innerHTML = `
         <section class="slide active" id="challengeSlide">
-          <div class="round-chip">🧩 Rodada ${state.round + 1} de ${gameRounds.length}</div>
+          <div class="round-chip">🧩 Rodada ${state.round + 1} de ${rounds.length}</div>
           <h1>Descubra o país da África</h1>
           <p class="subtitle">Investigue as pistas e marque pontos como um super detetive geográfico!</p>
 
@@ -439,7 +429,7 @@
               </ul>
               <div class="controls">
                 <button class="btn" onclick="revealHint()">Revelar próxima dica</button>
-                <button class="btn secondary" id="showAnswerBtn" style="display:none;" onclick="goToAnswerSlide()">Ver resposta correta</button>
+                <button class="btn secondary" onclick="goToAnswerSlide()">Ver resposta correta</button>
               </div>
             </div>
 
@@ -495,23 +485,19 @@
     }
 
     function revealHint() {
-      const r = gameRounds[state.round];
+      const r = rounds[state.round];
       if (state.revealed >= 4) return;
       const i = state.revealed;
       const el = document.getElementById(`hint${i}`);
       el.textContent = `Dica ${i + 1}: ${r.hints[i]}`;
       el.classList.add('revealed');
       state.revealed++;
-      if (state.revealed >= 4) {
-        const showBtn = document.getElementById('showAnswerBtn');
-        if (showBtn) showBtn.style.display = 'inline-block';
-      }
       updateProgress();
     }
 
     function checkAnswer(option) {
       if (state.answered) return;
-      const correct = gameRounds[state.round].country;
+      const correct = rounds[state.round].country;
       const buttons = [...document.querySelectorAll('.answer-btn')];
       const feedback = document.getElementById('feedback');
 
@@ -553,7 +539,7 @@
 
     function nextRound() {
       state.round++;
-      if (state.round >= gameRounds.length) return showFinal();
+      if (state.round >= rounds.length) return showFinal();
       state.revealed = 0;
       state.answered = false;
       state.earned = 0;
@@ -574,13 +560,12 @@
       state.revealed = 0;
       state.answered = false;
       state.earned = 0;
-      gameRounds = shuffleArray(rounds);
       renderRound();
     }
 
     function updateHUD() {
       document.getElementById('score').textContent = state.score;
-      document.getElementById('hudRound').textContent = `Rodada ${Math.min(state.round + 1, gameRounds.length)}/${gameRounds.length}`;
+      document.getElementById('hudRound').textContent = `Rodada ${Math.min(state.round + 1, rounds.length)}/${rounds.length}`;
     }
 
     function updateProgress() {
@@ -589,7 +574,6 @@
       bar.style.width = `${(state.revealed / 4) * 100}%`;
     }
 
-    gameRounds = shuffleArray(rounds);
     renderRound();
   </script>
 </body>
