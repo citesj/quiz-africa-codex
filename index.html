@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Investigativo - Países da África (5º ano)</title>
+  <style>
+    :root {
+      --bg: #070b1a;
+      --panel: #101935;
+      --neon-blue: #2de2ff;
+      --neon-purple: #c544ff;
+      --neon-green: #4cff7a;
+      --text: #f4f8ff;
+      --muted: #9ab0da;
+      --danger: #ff4c7d;
+      --success: #58ffb1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #15264f 0%, var(--bg) 50%),
+                  linear-gradient(135deg, #090d1c 0%, #0b1330 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .hud {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      background: rgba(5, 8, 20, 0.85);
+      border-bottom: 1px solid rgba(45, 226, 255, 0.35);
+      backdrop-filter: blur(6px);
+    }
+
+    .hud .tag {
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--neon-blue);
+      text-shadow: 0 0 10px rgba(45, 226, 255, 0.8);
+    }
+
+    .hud .score {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--neon-green);
+      text-shadow: 0 0 10px rgba(76, 255, 122, 0.8);
+    }
+
+    .deck {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 12px;
+    }
+
+    .slide {
+      display: none;
+      background: linear-gradient(180deg, rgba(16, 25, 53, 0.95), rgba(8, 14, 34, 0.96));
+      border: 1px solid rgba(197, 68, 255, 0.35);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(45, 226, 255, 0.16), inset 0 0 30px rgba(197, 68, 255, 0.08);
+      padding: 26px;
+      min-height: 72vh;
+      animation: popIn 0.45s ease;
+    }
+
+    .slide.active { display: block; }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: translateY(15px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      color: var(--neon-blue);
+      text-shadow: 0 0 12px rgba(45, 226, 255, 0.8);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--neon-green);
+      font-size: clamp(1.5rem, 2.3vw, 2rem);
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .round-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(76, 255, 122, 0.55);
+      color: var(--neon-green);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .panel {
+      background: rgba(9, 14, 32, 0.85);
+      border: 1px solid rgba(45, 226, 255, 0.25);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .hint-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hint {
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px dashed rgba(154, 176, 218, 0.45);
+      color: var(--muted);
+      font-size: 1.1rem;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      transition: all 0.35s ease;
+    }
+
+    .hint.revealed {
+      border-style: solid;
+      border-color: rgba(45, 226, 255, 0.7);
+      color: var(--text);
+      background: rgba(45, 226, 255, 0.08);
+      box-shadow: 0 0 15px rgba(45, 226, 255, 0.2);
+      transform: scale(1.01);
+    }
+
+    .points-box {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .points-box strong { color: var(--neon-purple); }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      cursor: pointer;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #041224;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-green));
+      box-shadow: 0 0 16px rgba(76, 255, 122, 0.45);
+    }
+
+    .btn.secondary {
+      background: linear-gradient(90deg, #7a8cff, #d06dff);
+      color: #fff;
+      box-shadow: 0 0 16px rgba(197, 68, 255, 0.5);
+    }
+
+    .answers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .answer-btn {
+      border: 2px solid rgba(45, 226, 255, 0.5);
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text);
+      background: rgba(10, 24, 47, 0.9);
+      text-align: left;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .answer-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 16px rgba(45, 226, 255, 0.35);
+    }
+
+    .answer-btn.correct {
+      border-color: var(--success);
+      background: rgba(88, 255, 177, 0.16);
+    }
+
+    .answer-btn.wrong {
+      border-color: var(--danger);
+      background: rgba(255, 76, 125, 0.15);
+    }
+
+    .feedback {
+      min-height: 34px;
+      margin-top: 12px;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .feedback.ok { color: var(--success); }
+    .feedback.bad { color: var(--danger); }
+
+    .answer-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 2px solid rgba(45, 226, 255, 0.45);
+      box-shadow: 0 0 22px rgba(45, 226, 255, 0.3);
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 9px;
+      font-size: 1.05rem;
+    }
+
+    .fact {
+      padding: 10px;
+      border-radius: 10px;
+      background: rgba(9, 14, 32, 0.9);
+      border: 1px solid rgba(197, 68, 255, 0.3);
+    }
+
+    .fact strong { color: var(--neon-blue); }
+
+    .flag {
+      font-size: 2rem;
+      margin-left: 8px;
+      filter: drop-shadow(0 0 8px rgba(197, 68, 255, 0.7));
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 18px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .progress {
+      margin-top: 8px;
+      height: 10px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress > div {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue), var(--neon-green));
+      transition: width 0.3s ease;
+    }
+
+    .final-screen {
+      text-align: center;
+      display: none;
+      padding: 30px;
+    }
+
+    .final-screen.active { display: block; }
+
+    @media (max-width: 900px) {
+      .layout, .answer-layout { grid-template-columns: 1fr; }
+      .slide { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hud">
+    <div class="tag">🚀 QUIZ INVESTIGATIVO • TEMA CITESJ</div>
+    <div id="hudRound">Rodada 1/10</div>
+    <div class="score">⭐ Pontos: <span id="score">0</span></div>
+  </header>
+
+  <main class="deck" id="deck"></main>
+
+  <section id="finalScreen" class="final-screen">
+    <h1>Missão completa, exploradores! 🌍</h1>
+    <p class="subtitle">Vocês descobriram 10 países da África!</p>
+    <h2>Pontuação final: <span id="finalScore"></span> pontos</h2>
+    <button class="btn" onclick="restartGame()">Jogar novamente</button>
+  </section>
+
+  <script>
+    const rounds = [
+      {
+        country: "Egito", flag: "🇪🇬", capital: "Cairo", language: "Árabe",
+        food: "Koshari", animal: "Camelo", tourist: "Pirâmides de Gizé",
+        funFact: "As Pirâmides são uma das Sete Maravilhas do Mundo Antigo.",
+        image: "https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=1200&q=80",
+        hints: ["Tem o deserto do Saara", "Possui pirâmides famosas", "Fala árabe", "Tem camelos"],
+        options: ["Egito", "Marrocos", "Quênia"]
+      },
+      {
+        country: "África do Sul", flag: "🇿🇦", capital: "Pretória (administrativa)", language: "Inglês (entre vários idiomas)",
+        food: "Bobotie", animal: "Leão", tourist: "Table Mountain",
+        funFact: "Tem 3 capitais oficiais: Pretória, Cidade do Cabo e Bloemfontein.",
+        image: "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1200&q=80",
+        hints: ["Fica no extremo sul do continente", "Tem safáris famosos", "A bandeira tem várias cores", "É conhecida pela Table Mountain"],
+        options: ["Nigéria", "África do Sul", "Angola"]
+      },
+      {
+        country: "Quênia", flag: "🇰🇪", capital: "Nairóbi", language: "Suaíli e inglês",
+        food: "Ugali", animal: "Girafa", tourist: "Parque Nacional Maasai Mara",
+        funFact: "É um dos melhores lugares do mundo para ver a grande migração de animais.",
+        image: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80",
+        hints: ["Tem grandes savanas", "É famoso por safári", "Sua capital é Nairóbi", "A maratona é popular no país"],
+        options: ["Quênia", "Etiópia", "Gana"]
+      },
+      {
+        country: "Marrocos", flag: "🇲🇦", capital: "Rabat", language: "Árabe e amazigue",
+        food: "Cuscuz marroquino", animal: "Dromedário", tourist: "Medina de Marrakech",
+        funFact: "Seus mercados coloridos se chamam 'souks' e vendem temperos e artesanato.",
+        image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+        hints: ["Fica no norte da África", "Tem cidades com medinas antigas", "É conhecido por souks", "Tem influência árabe e berbere"],
+        options: ["Argélia", "Marrocos", "Tunísia"]
+      },
+      {
+        country: "Nigéria", flag: "🇳🇬", capital: "Abuja", language: "Inglês",
+        food: "Jollof rice", animal: "Águia-pescadora-africana", tourist: "Zuma Rock",
+        funFact: "É o país mais populoso da África, com muitos povos e culturas.",
+        image: "https://images.unsplash.com/photo-1618828664323-2f86f1954fca?auto=format&fit=crop&w=1200&q=80",
+        hints: ["É muito populoso", "Sua capital é Abuja", "Tem indústria de filmes chamada Nollywood", "A bandeira é verde e branca"],
+        options: ["Nigéria", "Gana", "Moçambique"]
+      },
+      {
+        country: "Tanzânia", flag: "🇹🇿", capital: "Dodoma", language: "Suaíli e inglês",
+        food: "Pilau", animal: "Elefante", tourist: "Monte Kilimanjaro",
+        funFact: "O Kilimanjaro é a montanha mais alta da África.",
+        image: "https://images.unsplash.com/photo-1600959907703-125ba1374a12?auto=format&fit=crop&w=1200&q=80",
+        hints: ["Tem o Monte Kilimanjaro", "Fica no leste da África", "É famoso por parques naturais", "Zanzibar faz parte deste país"],
+        options: ["Tanzânia", "Quênia", "Madagascar"]
+      },
+      {
+        country: "Madagascar", flag: "🇲🇬", capital: "Antananarivo", language: "Malgaxe e francês",
+        food: "Romazava", animal: "Lêmure", tourist: "Avenida dos Baobás",
+        funFact: "Muitos animais de Madagascar só existem lá, como vários lêmures.",
+        image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+        hints: ["É uma grande ilha", "Fica perto da costa leste da África", "É famoso pelos lêmures", "Tem baobás gigantes"],
+        options: ["Madagascar", "Cabo Verde", "Senegal"]
+      },
+      {
+        country: "Etiópia", flag: "🇪🇹", capital: "Adis Abeba", language: "Amárico",
+        food: "Injera", animal: "Gelada", tourist: "Igrejas de Lalibela",
+        funFact: "A Etiópia usa um calendário próprio e celebra datas em dias diferentes.",
+        image: "https://images.unsplash.com/photo-1528804336751-9fae7dbec4f1?auto=format&fit=crop&w=1200&q=80",
+        hints: ["Fica no Chifre da África", "Tem igrejas escavadas em rocha", "A capital é Adis Abeba", "É conhecida pelo café"],
+        options: ["Etiópia", "Argélia", "Angola"]
+      },
+      {
+        country: "Argélia", flag: "🇩🇿", capital: "Argel", language: "Árabe",
+        food: "Cuscuz", animal: "Raposa-do-deserto (feneco)", tourist: "Casbá de Argel",
+        funFact: "É o maior país da África em área territorial.",
+        image: "https://images.unsplash.com/photo-1548783307-f63adc3f200b?auto=format&fit=crop&w=1200&q=80",
+        hints: ["É um país muito grande", "Grande parte fica no Saara", "Sua capital é Argel", "Fica no norte da África"],
+        options: ["Marrocos", "Argélia", "Egito"]
+      },
+      {
+        country: "Gana", flag: "🇬🇭", capital: "Acra", language: "Inglês",
+        food: "Fufu", animal: "Papagaio-cinzento", tourist: "Castelo de Cape Coast",
+        funFact: "Foi o primeiro país da África Subsaariana a conquistar independência no século XX.",
+        image: "https://images.unsplash.com/photo-1612356158597-41721f5ec4b2?auto=format&fit=crop&w=1200&q=80",
+        hints: ["Fica na África Ocidental", "Sua capital é Acra", "A bandeira tem uma estrela preta", "É famoso pelo cacau"],
+        options: ["Senegal", "Gana", "Nigéria"]
+      }
+    ];
+
+    const state = { round: 0, score: 0, revealed: 0, answered: false, earned: 0 };
+
+    function renderRound() {
+      const r = rounds[state.round];
+      const deck = document.getElementById('deck');
+      document.getElementById('finalScreen').classList.remove('active');
+      deck.style.display = 'block';
+
+      deck.innerHTML = `
+        <section class="slide active" id="challengeSlide">
+          <div class="round-chip">🧩 Rodada ${state.round + 1} de ${rounds.length}</div>
+          <h1>Descubra o país da África</h1>
+          <p class="subtitle">Investigue as pistas e marque pontos como um super detetive geográfico!</p>
+
+          <div class="layout">
+            <div class="panel">
+              <h2>🔎 Dicas</h2>
+              <ul class="hint-list">
+                ${r.hints.map((_, i) => `<li class="hint" id="hint${i}">Dica ${i + 1}: ???</li>`).join('')}
+              </ul>
+              <div class="controls">
+                <button class="btn" onclick="revealHint()">Revelar próxima dica</button>
+                <button class="btn secondary" onclick="goToAnswerSlide()">Ver resposta correta</button>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h2>🎯 Pontuação por rapidez</h2>
+              <div class="points-box">
+                <div><strong>1 dica</strong> = 4 pontos</div>
+                <div><strong>2 dicas</strong> = 3 pontos</div>
+                <div><strong>3 dicas</strong> = 2 pontos</div>
+                <div><strong>4 dicas</strong> = 1 ponto</div>
+              </div>
+
+              <h2 style="margin-top:18px;">✅ Escolha uma opção</h2>
+              <div class="answers" id="answers">
+                ${r.options.map(opt => `<button class="answer-btn" onclick="checkAnswer('${opt.replace(/'/g, "\\'")}')">${opt}</button>`).join('')}
+              </div>
+              <div id="feedback" class="feedback"></div>
+            </div>
+          </div>
+          <div class="progress"><div id="progressBar"></div></div>
+        </section>
+
+        <section class="slide" id="answerSlide">
+          <div class="round-chip">🏁 Resposta da rodada ${state.round + 1}</div>
+          <h1>Resposta correta: <span style="color: var(--success)">${r.country}</span> <span class="flag">${r.flag}</span></h1>
+          <p class="subtitle">Boa investigação! Confira as informações do país.</p>
+
+          <div class="answer-layout">
+            <div class="panel">
+              <img class="hero-img" src="${r.image}" alt="Imagem de ${r.country}" />
+            </div>
+            <div class="panel facts">
+              <div class="fact"><strong>País:</strong> ${r.country}</div>
+              <div class="fact"><strong>Bandeira:</strong> ${r.flag}</div>
+              <div class="fact"><strong>Capital:</strong> ${r.capital}</div>
+              <div class="fact"><strong>Idioma principal:</strong> ${r.language}</div>
+              <div class="fact"><strong>Comida típica:</strong> ${r.food}</div>
+              <div class="fact"><strong>Animal típico:</strong> ${r.animal}</div>
+              <div class="fact"><strong>Ponto turístico:</strong> ${r.tourist}</div>
+              <div class="fact"><strong>Curiosidade:</strong> ${r.funFact}</div>
+            </div>
+          </div>
+
+          <div class="nav">
+            <button class="btn secondary" onclick="backToChallenge()">Voltar ao desafio</button>
+            <button class="btn" onclick="nextRound()">Próxima rodada ➜</button>
+          </div>
+        </section>
+      `;
+
+      updateHUD();
+      updateProgress();
+    }
+
+    function revealHint() {
+      const r = rounds[state.round];
+      if (state.revealed >= 4) return;
+      const i = state.revealed;
+      const el = document.getElementById(`hint${i}`);
+      el.textContent = `Dica ${i + 1}: ${r.hints[i]}`;
+      el.classList.add('revealed');
+      state.revealed++;
+      updateProgress();
+    }
+
+    function checkAnswer(option) {
+      if (state.answered) return;
+      const correct = rounds[state.round].country;
+      const buttons = [...document.querySelectorAll('.answer-btn')];
+      const feedback = document.getElementById('feedback');
+
+      const pointsMap = {1:4, 2:3, 3:2, 4:1};
+      const usedHints = Math.max(1, state.revealed || 1);
+      const earned = pointsMap[Math.min(4, usedHints)];
+
+      buttons.forEach(btn => {
+        const text = btn.textContent;
+        if (text === correct) btn.classList.add('correct');
+        if (text === option && option !== correct) btn.classList.add('wrong');
+      });
+
+      if (option === correct) {
+        state.score += earned;
+        state.earned = earned;
+        feedback.textContent = `Acertou! +${earned} pontos!`;
+        feedback.className = 'feedback ok';
+      } else {
+        state.earned = 0;
+        feedback.textContent = `Quase! A resposta certa é ${correct}.`;
+        feedback.className = 'feedback bad';
+      }
+
+      state.answered = true;
+      updateHUD();
+      setTimeout(goToAnswerSlide, 800);
+    }
+
+    function goToAnswerSlide() {
+      document.getElementById('challengeSlide').classList.remove('active');
+      document.getElementById('answerSlide').classList.add('active');
+    }
+
+    function backToChallenge() {
+      document.getElementById('answerSlide').classList.remove('active');
+      document.getElementById('challengeSlide').classList.add('active');
+    }
+
+    function nextRound() {
+      state.round++;
+      if (state.round >= rounds.length) return showFinal();
+      state.revealed = 0;
+      state.answered = false;
+      state.earned = 0;
+      renderRound();
+    }
+
+    function showFinal() {
+      document.getElementById('deck').style.display = 'none';
+      const final = document.getElementById('finalScreen');
+      final.classList.add('active');
+      document.getElementById('finalScore').textContent = state.score;
+      document.getElementById('hudRound').textContent = 'Fim do jogo';
+    }
+
+    function restartGame() {
+      state.round = 0;
+      state.score = 0;
+      state.revealed = 0;
+      state.answered = false;
+      state.earned = 0;
+      renderRound();
+    }
+
+    function updateHUD() {
+      document.getElementById('score').textContent = state.score;
+      document.getElementById('hudRound').textContent = `Rodada ${Math.min(state.round + 1, rounds.length)}/${rounds.length}`;
+    }
+
+    function updateProgress() {
+      const bar = document.getElementById('progressBar');
+      if (!bar) return;
+      bar.style.width = `${(state.revealed / 4) * 100}%`;
+    }
+
+    renderRound();
+  </script>
+</body>
+</html>
