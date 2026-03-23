@@ -44,9 +44,6 @@ export const DiscoveryScreen = ({
   const country = round.country;
   const selectedOption = round.options.find((option) => option.id === round.selectedCountryId);
 
-  const typicalDish = country.typicalDish?.trim() || 'Prato típico em atualização no diário.';
-  const famousAnimal = country.famousAnimal?.trim() || country.wildlife;
-
   const cards: InfoCardProps[] = [
     {
       label: 'Capital',
@@ -68,15 +65,15 @@ export const DiscoveryScreen = ({
     },
     {
       label: 'Prato Típico',
-      value: typicalDish,
+      value: country.typicalDish,
       imageSrc: asEncodedSvgIcon('🍲'),
       imageAlt: `Ilustração de prato típico de ${country.name}`,
     },
     {
       label: 'Animal Famoso',
-      value: famousAnimal,
+      value: country.famousAnimal,
       imageSrc: asEncodedSvgIcon('🦁'),
-      imageAlt: `Foto de um ${famousAnimal} nativo de ${country.name}`,
+      imageAlt: `Foto de um ${country.famousAnimal} nativo de ${country.name}`,
     },
     {
       label: 'Ponto Turístico',

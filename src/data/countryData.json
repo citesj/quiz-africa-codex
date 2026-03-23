@@ -15,7 +15,9 @@
       "Tenho pirâmides gigantes e muito antigas.",
       "Minha capital é Cairo.",
       "Fico no norte da África e falo árabe."
-    ]
+    ],
+    "typicalDish": "Koshari",
+    "famousAnimal": "Crocodilo-do-nilo"
   },
   {
     "id": "africa-do-sul",
@@ -33,7 +35,9 @@
       "Sou conhecido por safáris e pelos 'Big Five'.",
       "Uma das minhas capitais é Pretória.",
       "Fico no extremo sul do continente."
-    ]
+    ],
+    "typicalDish": "Bobotie",
+    "famousAnimal": "Leão-africano"
   },
   {
     "id": "quenia",
@@ -51,7 +55,9 @@
       "Minha reserva Maasai Mara é muito visitada.",
       "Minha capital é Nairóbi.",
       "No leste africano, falo suaíli e inglês."
-    ]
+    ],
+    "typicalDish": "Ugali",
+    "famousAnimal": "Girafa-masai"
   },
   {
     "id": "marrocos",
@@ -69,7 +75,9 @@
       "Minha capital é Rabat.",
       "Fico perto do estreito de Gibraltar.",
       "No norte africano, falo árabe e amazigue."
-    ]
+    ],
+    "typicalDish": "Cuscuz marroquino",
+    "famousAnimal": "Macaco-de-gibraltar"
   },
   {
     "id": "nigeria",
@@ -87,7 +95,9 @@
       "Sou o país mais populoso da África.",
       "Minha capital é Abuja.",
       "Fico no oeste africano e minha moeda é a naira."
-    ]
+    ],
+    "typicalDish": "Jollof rice",
+    "famousAnimal": "Chimpanzé-da-nigéria-camarões"
   },
   {
     "id": "tanzania",
@@ -105,7 +115,9 @@
       "Meu país tem parques com muitos leões e elefantes.",
       "Minha capital é Dodoma.",
       "No leste africano, falo suaíli e inglês."
-    ]
+    ],
+    "typicalDish": "Pilau",
+    "famousAnimal": "Leão-africano"
   },
   {
     "id": "madagascar",
@@ -123,7 +135,9 @@
       "Tenho animais famosos chamados lêmures.",
       "Minha capital é Antananarivo.",
       "Fico no Oceano Índico."
-    ]
+    ],
+    "typicalDish": "Romazava",
+    "famousAnimal": "Lêmure-de-cauda-anelada"
   },
   {
     "id": "etiopia",
@@ -141,7 +155,9 @@
       "Minha capital é Adis Abeba.",
       "Minha moeda é o birr.",
       "Fico no leste africano e falo amárico."
-    ]
+    ],
+    "typicalDish": "Injera com doro wat",
+    "famousAnimal": "Lobo-etíope"
   },
   {
     "id": "argelia",
@@ -159,7 +175,9 @@
       "Sou o maior país africano em área.",
       "Minha capital é Argel.",
       "Fico no norte da África."
-    ]
+    ],
+    "typicalDish": "Cuscuz argelino",
+    "famousAnimal": "Raposa-do-deserto (fennec)"
   },
   {
     "id": "gana",
@@ -177,7 +195,9 @@
       "Minha capital é Acra.",
       "Minha moeda é o cedi.",
       "Fico no oeste da África e falo inglês."
-    ]
+    ],
+    "typicalDish": "Fufu com sopa de amendoim",
+    "famousAnimal": "Antílope-florestal"
   },
   {
     "id": "angola",
@@ -195,7 +215,9 @@
       "Minha capital é Luanda.",
       "Minha moeda é o kwanza.",
       "Fico no sul do continente africano."
-    ]
+    ],
+    "typicalDish": "Muamba de galinha",
+    "famousAnimal": "Palanca-negra-gigante"
   },
   {
     "id": "mocambique",
@@ -213,7 +235,9 @@
       "Minha capital é Maputo.",
       "Minha moeda é o metical.",
       "No sudeste da África, também falo português."
-    ]
+    ],
+    "typicalDish": "Matapa",
+    "famousAnimal": "Dugongo"
   },
   {
     "id": "camaroes",
@@ -231,7 +255,9 @@
       "Tenho um vulcão chamado Monte Camarões.",
       "Minha capital é Yaoundé.",
       "Fico na África Central e uso francês e inglês."
-    ]
+    ],
+    "typicalDish": "Ndolé",
+    "famousAnimal": "Mandril"
   },
   {
     "id": "cabo-verde",
@@ -249,7 +275,9 @@
       "Minha capital se chama Praia.",
       "No meu país se fala português e crioulo.",
       "Tenho origem vulcânica e fico próximo à costa africana."
-    ]
+    ],
+    "typicalDish": "Cachupa",
+    "famousAnimal": "Tartaruga-cabeçuda"
   },
   {
     "id": "costa-do-marfim",
@@ -267,7 +295,9 @@
       "Minha capital política é Yamoussoukro.",
       "Minha língua oficial é francês.",
       "Fico no oeste da África."
-    ]
+    ],
+    "typicalDish": "Attiéké com peixe grelhado",
+    "famousAnimal": "Hipopótamo-pigmeu"
   },
   {
     "id": "senegal",
@@ -285,6 +315,8 @@
       "Minha ilha de Gorée é histórica.",
       "Minha língua oficial é francês.",
       "Fico no oeste africano, na ponta do continente."
-    ]
+    ],
+    "typicalDish": "Thieboudienne",
+    "famousAnimal": "Flamingo-maior"
   }
 ]
