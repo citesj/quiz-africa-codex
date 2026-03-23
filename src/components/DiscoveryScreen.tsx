@@ -44,9 +44,6 @@ export const DiscoveryScreen = ({
   const country = round.country;
   const selectedOption = round.options.find((option) => option.id === round.selectedCountryId);
 
-  const typicalDish = country.typicalDish?.trim() || 'Prato típico em atualização no diário.';
-  const famousAnimal = country.famousAnimal?.trim() || country.wildlife;
-
   const cards: InfoCardProps[] = [
     {
       label: 'Capital',

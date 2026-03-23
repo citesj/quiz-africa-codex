@@ -1,7 +1,6 @@
-export interface Country {
+export interface CountryCore {
   id: string;
   name: string;
-  flagImageUrl: string;
   capital: string;
   region: string;
   language: string;
@@ -19,6 +18,14 @@ export interface Country {
   imageUrl: string;
   hints: [string, string, string, string];
 }
+
+export interface CountryDiscovery {
+  flagImageUrl: string;
+  typicalDish?: string;
+  famousAnimal?: string;
+}
+
+export type Country = CountryCore & CountryDiscovery;
 
 export type GamePhase = 'welcome' | 'quiz' | 'discovery' | 'completed';
 
