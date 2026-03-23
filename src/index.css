@@ -3,14 +3,24 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Nunito', 'Trebuchet MS', 'Segoe UI', sans-serif;
-  color: #1e293b;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #29231a;
+  background-color: #f4ebd8;
 }
 
 body {
   margin: 0;
+  min-height: 100vh;
+  background-color: #f4ebd8;
+  background-image: radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.42), transparent 35%),
+    radial-gradient(circle at 85% 80%, rgba(182, 90, 60, 0.16), transparent 30%);
 }
 
 * {
   box-sizing: border-box;
+}
+
+button:focus-visible,
+[role='button']:focus-visible {
+  outline: none;
 }
