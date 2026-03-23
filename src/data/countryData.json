@@ -19,11 +19,11 @@
     ],
     "typicalDish": "Koshari",
     "famousAnimal": "Crocodilo-do-nilo",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?cairo,egypt",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?arabic,calligraphy,egypt",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?koshari,egyptian,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?nile,crocodile",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?giza,pyramids"
+    "capitalImageUrl": "https://picsum.photos/seed/egito-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/egito-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/egito-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/egito-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/egito-landmarkimageurl/900/600"
   },
   {
     "id": "africa-do-sul",
@@ -45,11 +45,11 @@
     ],
     "typicalDish": "Bobotie",
     "famousAnimal": "Leão-africano",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?pretoria,south-africa",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?south-africa,languages,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?bobotie,south-african,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?african,lion",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?table,mountain,cape-town"
+    "capitalImageUrl": "https://picsum.photos/seed/africa-do-sul-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/africa-do-sul-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/africa-do-sul-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/africa-do-sul-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/africa-do-sul-landmarkimageurl/900/600"
   },
   {
     "id": "quenia",
@@ -71,11 +71,11 @@
     ],
     "typicalDish": "Nyama Choma",
     "famousAnimal": "Girafa-masai",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?nairobi,kenya",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?swahili,kenya,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?nyama,choma,kenya,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?masai,giraffe",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?maasai,mara"
+    "capitalImageUrl": "https://picsum.photos/seed/quenia-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/quenia-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/quenia-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/quenia-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/quenia-landmarkimageurl/900/600"
   },
   {
     "id": "marrocos",
@@ -97,11 +97,11 @@
     ],
     "typicalDish": "Cuscuz marroquino",
     "famousAnimal": "Macaco-de-gibraltar",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?rabat,morocco",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?arabic,berber,morocco",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?moroccan,couscous",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?barbary,macaque",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?hassan,ii,mosque"
+    "capitalImageUrl": "https://picsum.photos/seed/marrocos-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/marrocos-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/marrocos-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/marrocos-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/marrocos-landmarkimageurl/900/600"
   },
   {
     "id": "nigeria",
@@ -123,11 +123,11 @@
     ],
     "typicalDish": "Jollof Rice",
     "famousAnimal": "Chimpanzé",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?abuja,nigeria",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?english,nigeria,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?jollof,rice",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?chimpanzee,africa",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?zuma,rock,nigeria"
+    "capitalImageUrl": "https://picsum.photos/seed/nigeria-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/nigeria-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/nigeria-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/nigeria-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/nigeria-landmarkimageurl/900/600"
   },
   {
     "id": "tanzania",
@@ -149,11 +149,11 @@
     ],
     "typicalDish": "Ugali",
     "famousAnimal": "Leão-africano",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?dodoma,tanzania",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?swahili,tanzania",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?ugali,african,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?lion,tanzania",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?kilimanjaro"
+    "capitalImageUrl": "https://picsum.photos/seed/tanzania-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/tanzania-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/tanzania-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/tanzania-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/tanzania-landmarkimageurl/900/600"
   },
   {
     "id": "madagascar",
@@ -175,11 +175,11 @@
     ],
     "typicalDish": "Romazava",
     "famousAnimal": "Lêmure-de-cauda-anelada",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?antananarivo,madagascar",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?madagascar,language,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?madagascar,traditional,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?ring-tailed,lemur",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?avenue,baobabs,madagascar"
+    "capitalImageUrl": "https://picsum.photos/seed/madagascar-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/madagascar-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/madagascar-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/madagascar-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/madagascar-landmarkimageurl/900/600"
   },
   {
     "id": "etiopia",
@@ -201,11 +201,11 @@
     ],
     "typicalDish": "Injera",
     "famousAnimal": "Lobo-etíope",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?addis,ababa,ethiopia",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?amharic,ethiopia",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?injera,ethiopian,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?ethiopian,wolf",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?lalibela,ethiopia"
+    "capitalImageUrl": "https://picsum.photos/seed/etiopia-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/etiopia-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/etiopia-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/etiopia-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/etiopia-landmarkimageurl/900/600"
   },
   {
     "id": "argelia",
@@ -227,11 +227,11 @@
     ],
     "typicalDish": "Cuscuz argelino",
     "famousAnimal": "Raposa-fennec",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?algiers,algeria",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?arabic,algeria,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?algerian,couscous",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?fennec,fox",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?casbah,algiers"
+    "capitalImageUrl": "https://picsum.photos/seed/argelia-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/argelia-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/argelia-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/argelia-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/argelia-landmarkimageurl/900/600"
   },
   {
     "id": "gana",
@@ -253,11 +253,11 @@
     ],
     "typicalDish": "Fufu com sopa leve",
     "famousAnimal": "Antílope",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?accra,ghana",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?ghana,english,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?fufu,ghana,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?antelope,africa",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?cape,coast,castle,ghana"
+    "capitalImageUrl": "https://picsum.photos/seed/gana-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/gana-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/gana-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/gana-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/gana-landmarkimageurl/900/600"
   },
   {
     "id": "angola",
@@ -279,11 +279,11 @@
     ],
     "typicalDish": "Muamba de galinha",
     "famousAnimal": "Palanca-negra-gigante",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?luanda,angola",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?portuguese,angola,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?angolan,food,stew",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?giant,sable,antelope",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?calandula,falls,angola"
+    "capitalImageUrl": "https://picsum.photos/seed/angola-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/angola-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/angola-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/angola-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/angola-landmarkimageurl/900/600"
   },
   {
     "id": "mocambique",
@@ -305,11 +305,11 @@
     ],
     "typicalDish": "Matapa",
     "famousAnimal": "Dugongo",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?maputo,mozambique",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?portuguese,mozambique,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?mozambique,traditional,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?dugong",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?mozambique,island"
+    "capitalImageUrl": "https://picsum.photos/seed/mocambique-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/mocambique-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/mocambique-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/mocambique-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/mocambique-landmarkimageurl/900/600"
   },
   {
     "id": "camaroes",
@@ -331,11 +331,11 @@
     ],
     "typicalDish": "Ndolé",
     "famousAnimal": "Mandril",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?yaounde,cameroon",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?cameroon,french,english,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?ndole,cameroon,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?mandrill",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?mount,cameroon"
+    "capitalImageUrl": "https://picsum.photos/seed/camaroes-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/camaroes-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/camaroes-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/camaroes-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/camaroes-landmarkimageurl/900/600"
   },
   {
     "id": "cabo-verde",
@@ -357,11 +357,11 @@
     ],
     "typicalDish": "Cachupa",
     "famousAnimal": "Tartaruga-marinha",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?praia,cape-verde",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?cape-verde,creole,portuguese,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?cachupa,cape-verde,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?sea,turtle",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?pico,do,fogo,cape-verde"
+    "capitalImageUrl": "https://picsum.photos/seed/cabo-verde-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/cabo-verde-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/cabo-verde-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/cabo-verde-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/cabo-verde-landmarkimageurl/900/600"
   },
   {
     "id": "costa-do-marfim",
@@ -383,11 +383,11 @@
     ],
     "typicalDish": "Attiéké com peixe",
     "famousAnimal": "Hipopótamo",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?yamoussoukro,ivory-coast",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?french,ivory-coast,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?attieke,ivory,coast,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?hippopotamus,africa",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?basilica,our-lady-of-peace,yamoussoukro"
+    "capitalImageUrl": "https://picsum.photos/seed/costa-do-marfim-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/costa-do-marfim-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/costa-do-marfim-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/costa-do-marfim-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/costa-do-marfim-landmarkimageurl/900/600"
   },
   {
     "id": "senegal",
@@ -409,10 +409,10 @@
     ],
     "typicalDish": "Thieboudienne",
     "famousAnimal": "Pelicano",
-    "capitalImageUrl": "https://source.unsplash.com/900x600/?dakar,senegal",
-    "languageImageUrl": "https://source.unsplash.com/900x600/?french,senegal,culture",
-    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?thieboudienne,senegal,food",
-    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?pelican",
-    "landmarkImageUrl": "https://source.unsplash.com/900x600/?goree,island,senegal"
+    "capitalImageUrl": "https://picsum.photos/seed/senegal-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/senegal-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/senegal-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/senegal-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/senegal-landmarkimageurl/900/600"
   }
 ]
