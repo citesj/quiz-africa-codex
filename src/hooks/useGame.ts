@@ -9,7 +9,15 @@ const fisherYatesShuffle = <T,>(items: T[]): T[] => {
   const arr = [...items];
   for (let i = arr.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
+    const current = arr[i];
+    const target = arr[j];
+
+    if (current === undefined || target === undefined) {
+      continue;
+    }
+
+    arr[i] = target;
+    arr[j] = current;
   }
   return arr;
 };
@@ -29,6 +37,16 @@ const getEncouragementByHints = (hintsUsed: number): string => {
   return ENCOURAGEMENT_MESSAGES.fourHints;
 };
 
+const getCountryOrFallback = (candidate: Country | undefined, fallback: Country): Country => candidate ?? fallback;
+
+const getFirstCountry = (pool: Country[]): Country => {
+  const firstCountry = pool[0];
+  if (!firstCountry) {
+    throw new Error('A lista de países está vazia.');
+  }
+  return firstCountry;
+};
+
 // Cada rodada é derivada de dados puros para facilitar testes e manutenção.
 const createRoundState = (roundNumber: number, country: Country, allCountries: Country[]): RoundState => ({
   roundNumber,
@@ -43,6 +61,7 @@ export const useGame = () => {
   const [isPending, startTransition] = useTransition();
 
   const initialRounds = useMemo(() => fisherYatesShuffle(countries).slice(0, TOTAL_ROUNDS), []);
+  const fallbackCountry = getFirstCountry(countries);
 
   const [gameState, setGameState] = useState<GameState>({
     phase: 'welcome',
@@ -54,7 +73,7 @@ export const useGame = () => {
 
   const startGame = () => {
     startTransition(() => {
-      const roundCountry = gameState.rounds[0];
+      const roundCountry = getCountryOrFallback(gameState.rounds[0], fallbackCountry);
       setGameState((previous) => ({
         ...previous,
         phase: 'quiz',
@@ -111,7 +130,7 @@ export const useGame = () => {
         };
       }
 
-      const nextCountry = previous.rounds[nextRoundIndex];
+      const nextCountry = getCountryOrFallback(previous.rounds[nextRoundIndex], fallbackCountry);
       return {
         ...previous,
         phase: 'quiz',
