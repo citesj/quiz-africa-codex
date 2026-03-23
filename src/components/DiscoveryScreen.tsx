@@ -10,6 +10,31 @@ interface DiscoveryScreenProps {
   isLastRound: boolean;
 }
 
+interface InfoCardProps {
+  label: string;
+  value: string;
+  imageSrc: string;
+  imageAlt: string;
+}
+
+const InfoCard = ({ label, value, imageSrc, imageAlt }: InfoCardProps) => (
+  <div className="rounded-2xl bg-color-paper p-3 shadow-photo">
+    <dt className="font-title text-sm font-bold uppercase tracking-wide text-color-ink/90">{label}</dt>
+    <img
+      src={imageSrc}
+      alt={imageAlt}
+      className="mt-2 h-24 w-full rounded-lg object-cover"
+      loading="lazy"
+    />
+    <dd className={`mt-3 text-color-ink ${BODY_TEXT_MIN_SIZE_CLASS}`}>{value}</dd>
+  </div>
+);
+
+const asEncodedSvgIcon = (emoji: string) =>
+  `data:image/svg+xml;utf8,${encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' width='240' height='160'><rect width='100%' height='100%' fill='#f6f0de'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='84'>${emoji}</text></svg>`,
+  )}`;
+
 export const DiscoveryScreen = ({
   round,
   encouragementMessage,
@@ -18,6 +43,48 @@ export const DiscoveryScreen = ({
 }: DiscoveryScreenProps) => {
   const country = round.country;
   const selectedOption = round.options.find((option) => option.id === round.selectedCountryId);
+
+  const typicalDish = country.typicalDish?.trim() || 'Prato típico em atualização no diário.';
+  const famousAnimal = country.famousAnimal?.trim() || country.wildlife;
+
+  const cards: InfoCardProps[] = [
+    {
+      label: 'Capital',
+      value: country.capital,
+      imageSrc: country.imageUrl,
+      imageAlt: `Paisagem da capital ${country.capital}, em ${country.name}`,
+    },
+    {
+      label: 'Bandeira',
+      value: `Bandeira de ${country.name}`,
+      imageSrc: asEncodedSvgIcon('🏳️'),
+      imageAlt: `Ícone da bandeira de ${country.name}`,
+    },
+    {
+      label: 'Idioma',
+      value: country.language,
+      imageSrc: asEncodedSvgIcon('🗣️'),
+      imageAlt: `Ícone representando os idiomas falados em ${country.name}`,
+    },
+    {
+      label: 'Prato Típico',
+      value: typicalDish,
+      imageSrc: asEncodedSvgIcon('🍲'),
+      imageAlt: `Ilustração de prato típico de ${country.name}`,
+    },
+    {
+      label: 'Animal Famoso',
+      value: famousAnimal,
+      imageSrc: asEncodedSvgIcon('🦁'),
+      imageAlt: `Foto de um ${famousAnimal} nativo de ${country.name}`,
+    },
+    {
+      label: 'Ponto Turístico',
+      value: country.landmark,
+      imageSrc: country.imageUrl,
+      imageAlt: `Imagem de um ponto turístico de ${country.name}`,
+    },
+  ];
 
   return (
     <motion.section
@@ -52,43 +119,22 @@ export const DiscoveryScreen = ({
         Você escolheu: {selectedOption?.name ?? 'sem resposta'} {round.isCorrect ? '✅' : '🧭'}
       </p>
 
-      <div className="grid gap-5 lg:grid-cols-[1.4fr_1fr]">
-        <figure className="relative rounded-2xl border-8 border-white bg-white p-2 shadow-photo">
-          <span aria-hidden="true" className="absolute -left-3 top-4 rotate-[-20deg] rounded-sm bg-color-ochre/50 px-4 py-1" />
-          <img
-            src={country.imageUrl}
-            alt={`Fotografia de viagem de ${country.name}, na região de ${country.region}`}
-            className="h-72 w-full rounded-lg object-cover"
-            loading="lazy"
+      <dl className="grid grid-cols-2 gap-4 md:grid-cols-3">
+        {cards.map((card) => (
+          <InfoCard
+            key={card.label}
+            label={card.label}
+            value={card.value}
+            imageSrc={card.imageSrc}
+            imageAlt={card.imageAlt}
           />
-        </figure>
-        <div className="grid grid-cols-2 gap-3">
-          <article className="rounded-xl border border-color-ink/10 bg-color-paper-deep/55 p-3">
-            <h3 className="font-title font-extrabold text-color-ink">País</h3>
-            <p className={BODY_TEXT_MIN_SIZE_CLASS}>{country.name}</p>
-          </article>
-          <article className="rounded-xl border border-color-ink/10 bg-color-paper-deep/55 p-3">
-            <h3 className="font-title font-extrabold text-color-ink">Capital</h3>
-            <p className={BODY_TEXT_MIN_SIZE_CLASS}>{country.capital}</p>
-          </article>
-          <article className="rounded-xl border border-color-ink/10 bg-color-paper-deep/55 p-3">
-            <h3 className="font-title font-extrabold text-color-ink">Região</h3>
-            <p className={BODY_TEXT_MIN_SIZE_CLASS}>{country.region}</p>
-          </article>
-          <article className="rounded-xl border border-color-ink/10 bg-color-paper-deep/55 p-3">
-            <h3 className="font-title font-extrabold text-color-ink">Língua</h3>
-            <p className={BODY_TEXT_MIN_SIZE_CLASS}>{country.language}</p>
-          </article>
-          <article className="rounded-xl border border-color-ink/10 bg-color-paper-deep/55 p-3">
-            <h3 className="font-title font-extrabold text-color-ink">Moeda</h3>
-            <p className={BODY_TEXT_MIN_SIZE_CLASS}>{country.currency}</p>
-          </article>
-          <article className="rounded-xl border border-color-ink/10 bg-color-paper-deep/55 p-3">
-            <h3 className="font-title font-extrabold text-color-ink">Saiba Mais</h3>
-            <p className={BODY_TEXT_MIN_SIZE_CLASS}>{country.funFact}</p>
-          </article>
-        </div>
-      </div>
+        ))}
+      </dl>
+
+      <p className="rounded-2xl bg-color-ochre/10 px-4 py-3 font-body text-color-ink shadow-photo">
+        <span className="font-title text-sm font-bold uppercase tracking-wide text-color-ink/90">Curiosidade</span>
+        <span className="mt-2 block">{country.funFact}</span>
+      </p>
 
       <button
         type="button"
