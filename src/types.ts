@@ -1,6 +1,7 @@
 export interface Country {
   id: string;
   name: string;
+  flagImageUrl: string;
   capital: string;
   region: string;
   language: string;

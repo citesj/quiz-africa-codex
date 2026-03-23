@@ -57,8 +57,8 @@ export const DiscoveryScreen = ({
     {
       label: 'Bandeira',
       value: `Bandeira de ${country.name}`,
-      imageSrc: asEncodedSvgIcon('🏳️'),
-      imageAlt: `Ícone da bandeira de ${country.name}`,
+      imageSrc: country.flagImageUrl,
+      imageAlt: `Bandeira de ${country.name}`,
     },
     {
       label: 'Idioma',
