@@ -16,7 +16,14 @@
       "Tenho pirâmides gigantes e muito antigas.",
       "Minha capital é Cairo.",
       "Fico no norte da África e falo árabe."
-    ]
+    ],
+    "typicalDish": "Koshari",
+    "famousAnimal": "Crocodilo-do-nilo",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?cairo,egypt",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?arabic,calligraphy,egypt",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?koshari,egyptian,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?nile,crocodile",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?giza,pyramids"
   },
   {
     "id": "africa-do-sul",
@@ -35,7 +42,14 @@
       "Sou conhecido por safáris e pelos 'Big Five'.",
       "Uma das minhas capitais é Pretória.",
       "Fico no extremo sul do continente."
-    ]
+    ],
+    "typicalDish": "Bobotie",
+    "famousAnimal": "Leão-africano",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?pretoria,south-africa",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?south-africa,languages,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?bobotie,south-african,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?african,lion",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?table,mountain,cape-town"
   },
   {
     "id": "quenia",
@@ -54,7 +68,14 @@
       "Minha reserva Maasai Mara é muito visitada.",
       "Minha capital é Nairóbi.",
       "No leste africano, falo suaíli e inglês."
-    ]
+    ],
+    "typicalDish": "Nyama Choma",
+    "famousAnimal": "Girafa-masai",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?nairobi,kenya",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?swahili,kenya,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?nyama,choma,kenya,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?masai,giraffe",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?maasai,mara"
   },
   {
     "id": "marrocos",
@@ -73,7 +94,14 @@
       "Minha capital é Rabat.",
       "Fico perto do estreito de Gibraltar.",
       "No norte africano, falo árabe e amazigue."
-    ]
+    ],
+    "typicalDish": "Cuscuz marroquino",
+    "famousAnimal": "Macaco-de-gibraltar",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?rabat,morocco",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?arabic,berber,morocco",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?moroccan,couscous",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?barbary,macaque",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?hassan,ii,mosque"
   },
   {
     "id": "nigeria",
@@ -92,7 +120,14 @@
       "Sou o país mais populoso da África.",
       "Minha capital é Abuja.",
       "Fico no oeste africano e minha moeda é a naira."
-    ]
+    ],
+    "typicalDish": "Jollof Rice",
+    "famousAnimal": "Chimpanzé",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?abuja,nigeria",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?english,nigeria,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?jollof,rice",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?chimpanzee,africa",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?zuma,rock,nigeria"
   },
   {
     "id": "tanzania",
@@ -111,7 +146,14 @@
       "Meu país tem parques com muitos leões e elefantes.",
       "Minha capital é Dodoma.",
       "No leste africano, falo suaíli e inglês."
-    ]
+    ],
+    "typicalDish": "Ugali",
+    "famousAnimal": "Leão-africano",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?dodoma,tanzania",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?swahili,tanzania",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?ugali,african,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?lion,tanzania",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?kilimanjaro"
   },
   {
     "id": "madagascar",
@@ -130,7 +172,14 @@
       "Tenho animais famosos chamados lêmures.",
       "Minha capital é Antananarivo.",
       "Fico no Oceano Índico."
-    ]
+    ],
+    "typicalDish": "Romazava",
+    "famousAnimal": "Lêmure-de-cauda-anelada",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?antananarivo,madagascar",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?madagascar,language,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?madagascar,traditional,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?ring-tailed,lemur",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?avenue,baobabs,madagascar"
   },
   {
     "id": "etiopia",
@@ -149,7 +198,14 @@
       "Minha capital é Adis Abeba.",
       "Minha moeda é o birr.",
       "Fico no leste africano e falo amárico."
-    ]
+    ],
+    "typicalDish": "Injera",
+    "famousAnimal": "Lobo-etíope",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?addis,ababa,ethiopia",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?amharic,ethiopia",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?injera,ethiopian,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?ethiopian,wolf",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?lalibela,ethiopia"
   },
   {
     "id": "argelia",
@@ -168,7 +224,14 @@
       "Sou o maior país africano em área.",
       "Minha capital é Argel.",
       "Fico no norte da África."
-    ]
+    ],
+    "typicalDish": "Cuscuz argelino",
+    "famousAnimal": "Raposa-fennec",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?algiers,algeria",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?arabic,algeria,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?algerian,couscous",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?fennec,fox",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?casbah,algiers"
   },
   {
     "id": "gana",
@@ -187,7 +250,14 @@
       "Minha capital é Acra.",
       "Minha moeda é o cedi.",
       "Fico no oeste da África e falo inglês."
-    ]
+    ],
+    "typicalDish": "Fufu com sopa leve",
+    "famousAnimal": "Antílope",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?accra,ghana",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?ghana,english,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?fufu,ghana,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?antelope,africa",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?cape,coast,castle,ghana"
   },
   {
     "id": "angola",
@@ -206,7 +276,14 @@
       "Minha capital é Luanda.",
       "Minha moeda é o kwanza.",
       "Fico no sul do continente africano."
-    ]
+    ],
+    "typicalDish": "Muamba de galinha",
+    "famousAnimal": "Palanca-negra-gigante",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?luanda,angola",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?portuguese,angola,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?angolan,food,stew",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?giant,sable,antelope",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?calandula,falls,angola"
   },
   {
     "id": "mocambique",
@@ -225,7 +302,14 @@
       "Minha capital é Maputo.",
       "Minha moeda é o metical.",
       "No sudeste da África, também falo português."
-    ]
+    ],
+    "typicalDish": "Matapa",
+    "famousAnimal": "Dugongo",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?maputo,mozambique",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?portuguese,mozambique,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?mozambique,traditional,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?dugong",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?mozambique,island"
   },
   {
     "id": "camaroes",
@@ -244,7 +328,14 @@
       "Tenho um vulcão chamado Monte Camarões.",
       "Minha capital é Yaoundé.",
       "Fico na África Central e uso francês e inglês."
-    ]
+    ],
+    "typicalDish": "Ndolé",
+    "famousAnimal": "Mandril",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?yaounde,cameroon",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?cameroon,french,english,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?ndole,cameroon,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?mandrill",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?mount,cameroon"
   },
   {
     "id": "cabo-verde",
@@ -263,7 +354,14 @@
       "Minha capital se chama Praia.",
       "No meu país se fala português e crioulo.",
       "Tenho origem vulcânica e fico próximo à costa africana."
-    ]
+    ],
+    "typicalDish": "Cachupa",
+    "famousAnimal": "Tartaruga-marinha",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?praia,cape-verde",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?cape-verde,creole,portuguese,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?cachupa,cape-verde,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?sea,turtle",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?pico,do,fogo,cape-verde"
   },
   {
     "id": "costa-do-marfim",
@@ -282,7 +380,14 @@
       "Minha capital política é Yamoussoukro.",
       "Minha língua oficial é francês.",
       "Fico no oeste da África."
-    ]
+    ],
+    "typicalDish": "Attiéké com peixe",
+    "famousAnimal": "Hipopótamo",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?yamoussoukro,ivory-coast",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?french,ivory-coast,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?attieke,ivory,coast,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?hippopotamus,africa",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?basilica,our-lady-of-peace,yamoussoukro"
   },
   {
     "id": "senegal",
@@ -301,6 +406,13 @@
       "Minha ilha de Gorée é histórica.",
       "Minha língua oficial é francês.",
       "Fico no oeste africano, na ponta do continente."
-    ]
+    ],
+    "typicalDish": "Thieboudienne",
+    "famousAnimal": "Pelicano",
+    "capitalImageUrl": "https://source.unsplash.com/900x600/?dakar,senegal",
+    "languageImageUrl": "https://source.unsplash.com/900x600/?french,senegal,culture",
+    "typicalDishImageUrl": "https://source.unsplash.com/900x600/?thieboudienne,senegal,food",
+    "famousAnimalImageUrl": "https://source.unsplash.com/900x600/?pelican",
+    "landmarkImageUrl": "https://source.unsplash.com/900x600/?goree,island,senegal"
   }
 ]

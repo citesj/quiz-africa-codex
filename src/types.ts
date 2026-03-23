@@ -10,6 +10,11 @@ export interface Country {
   wildlife: string;
   typicalDish?: string;
   famousAnimal?: string;
+  capitalImageUrl?: string;
+  languageImageUrl?: string;
+  typicalDishImageUrl?: string;
+  famousAnimalImageUrl?: string;
+  landmarkImageUrl?: string;
   funFact: string;
   imageUrl: string;
   hints: [string, string, string, string];

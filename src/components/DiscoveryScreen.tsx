@@ -51,7 +51,7 @@ export const DiscoveryScreen = ({
     {
       label: 'Capital',
       value: country.capital,
-      imageSrc: country.imageUrl,
+      imageSrc: country.capitalImageUrl ?? country.imageUrl,
       imageAlt: `Paisagem da capital ${country.capital}, em ${country.name}`,
     },
     {
@@ -63,25 +63,25 @@ export const DiscoveryScreen = ({
     {
       label: 'Idioma',
       value: country.language,
-      imageSrc: asEncodedSvgIcon('🗣️'),
+      imageSrc: country.languageImageUrl ?? asEncodedSvgIcon('🗣️'),
       imageAlt: `Ícone representando os idiomas falados em ${country.name}`,
     },
     {
       label: 'Prato Típico',
       value: typicalDish,
-      imageSrc: asEncodedSvgIcon('🍲'),
+      imageSrc: country.typicalDishImageUrl ?? asEncodedSvgIcon('🍲'),
       imageAlt: `Ilustração de prato típico de ${country.name}`,
     },
     {
       label: 'Animal Famoso',
       value: famousAnimal,
-      imageSrc: asEncodedSvgIcon('🦁'),
+      imageSrc: country.famousAnimalImageUrl ?? asEncodedSvgIcon('🦁'),
       imageAlt: `Foto de um ${famousAnimal} nativo de ${country.name}`,
     },
     {
       label: 'Ponto Turístico',
       value: country.landmark,
-      imageSrc: country.imageUrl,
+      imageSrc: country.landmarkImageUrl ?? country.imageUrl,
       imageAlt: `Imagem de um ponto turístico de ${country.name}`,
     },
   ];
