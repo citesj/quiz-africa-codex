@@ -7,8 +7,13 @@ export interface CountryCore {
   currency: string;
   landmark: string;
   wildlife: string;
-  typicalDish: string;
-  famousAnimal: string;
+  typicalDish?: string;
+  famousAnimal?: string;
+  capitalImageUrl?: string;
+  languageImageUrl?: string;
+  typicalDishImageUrl?: string;
+  famousAnimalImageUrl?: string;
+  landmarkImageUrl?: string;
   funFact: string;
   imageUrl: string;
   hints: [string, string, string, string];

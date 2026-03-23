@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_ROUNDS } from '../constants';
 import type { RoundState } from '../types';
 import { ProgressFootsteps } from './ProgressFootsteps';
@@ -15,20 +16,30 @@ interface InfoCardProps {
   value: string;
   imageSrc: string;
   imageAlt: string;
+  fallbackImageSrc: string;
 }
 
-const InfoCard = ({ label, value, imageSrc, imageAlt }: InfoCardProps) => (
-  <div className="rounded-2xl bg-color-paper p-3 shadow-photo">
-    <dt className="font-title text-sm font-bold uppercase tracking-wide text-color-ink/90">{label}</dt>
-    <img
-      src={imageSrc}
-      alt={imageAlt}
-      className="mt-2 h-24 w-full rounded-lg object-cover"
-      loading="lazy"
-    />
-    <dd className={`mt-3 text-color-ink ${BODY_TEXT_MIN_SIZE_CLASS}`}>{value}</dd>
-  </div>
-);
+const InfoCard = ({ label, value, imageSrc, imageAlt, fallbackImageSrc }: InfoCardProps) => {
+  const [currentImageSrc, setCurrentImageSrc] = useState(imageSrc);
+
+  return (
+    <div className="rounded-2xl bg-color-paper p-3 shadow-photo">
+      <dt className="font-title text-sm font-bold uppercase tracking-wide text-color-ink/90">{label}</dt>
+      <img
+        src={currentImageSrc}
+        alt={imageAlt}
+        className="mt-2 h-24 w-full rounded-lg object-cover"
+        loading="lazy"
+        onError={() => {
+          if (currentImageSrc !== fallbackImageSrc) {
+            setCurrentImageSrc(fallbackImageSrc);
+          }
+        }}
+      />
+      <dd className={`mt-3 text-color-ink ${BODY_TEXT_MIN_SIZE_CLASS}`}>{value}</dd>
+    </div>
+  );
+};
 
 const asEncodedSvgIcon = (emoji: string) =>
   `data:image/svg+xml;utf8,${encodeURIComponent(
@@ -43,42 +54,50 @@ export const DiscoveryScreen = ({
 }: DiscoveryScreenProps) => {
   const country = round.country;
   const selectedOption = round.options.find((option) => option.id === round.selectedCountryId);
+  const typicalDish = country.typicalDish ?? 'Prato tradicional local';
+  const famousAnimal = country.famousAnimal ?? 'Animal típico da fauna local';
 
   const cards: InfoCardProps[] = [
     {
       label: 'Capital',
       value: country.capital,
-      imageSrc: country.imageUrl,
+      imageSrc: country.capitalImageUrl ?? country.imageUrl,
+      fallbackImageSrc: country.imageUrl,
       imageAlt: `Paisagem da capital ${country.capital}, em ${country.name}`,
     },
     {
       label: 'Bandeira',
       value: `Bandeira de ${country.name}`,
       imageSrc: country.flagImageUrl,
+      fallbackImageSrc: asEncodedSvgIcon('🏳️'),
       imageAlt: `Bandeira de ${country.name}`,
     },
     {
       label: 'Idioma',
       value: country.language,
-      imageSrc: asEncodedSvgIcon('🗣️'),
+      imageSrc: country.languageImageUrl ?? asEncodedSvgIcon('🗣️'),
+      fallbackImageSrc: asEncodedSvgIcon('🗣️'),
       imageAlt: `Ícone representando os idiomas falados em ${country.name}`,
     },
     {
       label: 'Prato Típico',
-      value: country.typicalDish,
-      imageSrc: asEncodedSvgIcon('🍲'),
+      value: typicalDish,
+      imageSrc: country.typicalDishImageUrl ?? asEncodedSvgIcon('🍲'),
+      fallbackImageSrc: asEncodedSvgIcon('🍲'),
       imageAlt: `Ilustração de prato típico de ${country.name}`,
     },
     {
       label: 'Animal Famoso',
-      value: country.famousAnimal,
-      imageSrc: asEncodedSvgIcon('🦁'),
-      imageAlt: `Foto de um ${country.famousAnimal} nativo de ${country.name}`,
+      value: famousAnimal,
+      imageSrc: country.famousAnimalImageUrl ?? asEncodedSvgIcon('🦁'),
+      fallbackImageSrc: asEncodedSvgIcon('🦁'),
+      imageAlt: `Foto de um ${famousAnimal} nativo de ${country.name}`,
     },
     {
       label: 'Ponto Turístico',
       value: country.landmark,
-      imageSrc: country.imageUrl,
+      imageSrc: country.landmarkImageUrl ?? country.imageUrl,
+      fallbackImageSrc: country.imageUrl,
       imageAlt: `Imagem de um ponto turístico de ${country.name}`,
     },
   ];
@@ -123,6 +142,7 @@ export const DiscoveryScreen = ({
             label={card.label}
             value={card.value}
             imageSrc={card.imageSrc}
+            fallbackImageSrc={card.fallbackImageSrc}
             imageAlt={card.imageAlt}
           />
         ))}

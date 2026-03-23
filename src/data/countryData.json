@@ -18,7 +18,12 @@
       "Fico no norte da África e falo árabe."
     ],
     "typicalDish": "Koshari",
-    "famousAnimal": "Crocodilo-do-nilo"
+    "famousAnimal": "Crocodilo-do-nilo",
+    "capitalImageUrl": "https://picsum.photos/seed/egito-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/egito-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/egito-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/egito-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/egito-landmarkimageurl/900/600"
   },
   {
     "id": "africa-do-sul",
@@ -39,7 +44,12 @@
       "Fico no extremo sul do continente."
     ],
     "typicalDish": "Bobotie",
-    "famousAnimal": "Leão-africano"
+    "famousAnimal": "Leão-africano",
+    "capitalImageUrl": "https://picsum.photos/seed/africa-do-sul-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/africa-do-sul-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/africa-do-sul-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/africa-do-sul-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/africa-do-sul-landmarkimageurl/900/600"
   },
   {
     "id": "quenia",
@@ -59,8 +69,13 @@
       "Minha capital é Nairóbi.",
       "No leste africano, falo suaíli e inglês."
     ],
-    "typicalDish": "Ugali",
-    "famousAnimal": "Girafa-masai"
+    "typicalDish": "Nyama Choma",
+    "famousAnimal": "Girafa-masai",
+    "capitalImageUrl": "https://picsum.photos/seed/quenia-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/quenia-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/quenia-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/quenia-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/quenia-landmarkimageurl/900/600"
   },
   {
     "id": "marrocos",
@@ -81,7 +96,12 @@
       "No norte africano, falo árabe e amazigue."
     ],
     "typicalDish": "Cuscuz marroquino",
-    "famousAnimal": "Macaco-de-gibraltar"
+    "famousAnimal": "Macaco-de-gibraltar",
+    "capitalImageUrl": "https://picsum.photos/seed/marrocos-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/marrocos-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/marrocos-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/marrocos-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/marrocos-landmarkimageurl/900/600"
   },
   {
     "id": "nigeria",
@@ -101,8 +121,13 @@
       "Minha capital é Abuja.",
       "Fico no oeste africano e minha moeda é a naira."
     ],
-    "typicalDish": "Jollof rice",
-    "famousAnimal": "Chimpanzé-da-nigéria-camarões"
+    "typicalDish": "Jollof Rice",
+    "famousAnimal": "Chimpanzé",
+    "capitalImageUrl": "https://picsum.photos/seed/nigeria-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/nigeria-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/nigeria-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/nigeria-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/nigeria-landmarkimageurl/900/600"
   },
   {
     "id": "tanzania",
@@ -122,8 +147,13 @@
       "Minha capital é Dodoma.",
       "No leste africano, falo suaíli e inglês."
     ],
-    "typicalDish": "Pilau",
-    "famousAnimal": "Leão-africano"
+    "typicalDish": "Ugali",
+    "famousAnimal": "Leão-africano",
+    "capitalImageUrl": "https://picsum.photos/seed/tanzania-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/tanzania-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/tanzania-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/tanzania-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/tanzania-landmarkimageurl/900/600"
   },
   {
     "id": "madagascar",
@@ -144,7 +174,12 @@
       "Fico no Oceano Índico."
     ],
     "typicalDish": "Romazava",
-    "famousAnimal": "Lêmure-de-cauda-anelada"
+    "famousAnimal": "Lêmure-de-cauda-anelada",
+    "capitalImageUrl": "https://picsum.photos/seed/madagascar-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/madagascar-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/madagascar-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/madagascar-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/madagascar-landmarkimageurl/900/600"
   },
   {
     "id": "etiopia",
@@ -164,8 +199,13 @@
       "Minha moeda é o birr.",
       "Fico no leste africano e falo amárico."
     ],
-    "typicalDish": "Injera com doro wat",
-    "famousAnimal": "Lobo-etíope"
+    "typicalDish": "Injera",
+    "famousAnimal": "Lobo-etíope",
+    "capitalImageUrl": "https://picsum.photos/seed/etiopia-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/etiopia-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/etiopia-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/etiopia-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/etiopia-landmarkimageurl/900/600"
   },
   {
     "id": "argelia",
@@ -186,7 +226,12 @@
       "Fico no norte da África."
     ],
     "typicalDish": "Cuscuz argelino",
-    "famousAnimal": "Raposa-do-deserto (fennec)"
+    "famousAnimal": "Raposa-fennec",
+    "capitalImageUrl": "https://picsum.photos/seed/argelia-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/argelia-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/argelia-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/argelia-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/argelia-landmarkimageurl/900/600"
   },
   {
     "id": "gana",
@@ -206,8 +251,13 @@
       "Minha moeda é o cedi.",
       "Fico no oeste da África e falo inglês."
     ],
-    "typicalDish": "Fufu com sopa de amendoim",
-    "famousAnimal": "Antílope-florestal"
+    "typicalDish": "Fufu com sopa leve",
+    "famousAnimal": "Antílope",
+    "capitalImageUrl": "https://picsum.photos/seed/gana-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/gana-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/gana-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/gana-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/gana-landmarkimageurl/900/600"
   },
   {
     "id": "angola",
@@ -228,7 +278,12 @@
       "Fico no sul do continente africano."
     ],
     "typicalDish": "Muamba de galinha",
-    "famousAnimal": "Palanca-negra-gigante"
+    "famousAnimal": "Palanca-negra-gigante",
+    "capitalImageUrl": "https://picsum.photos/seed/angola-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/angola-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/angola-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/angola-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/angola-landmarkimageurl/900/600"
   },
   {
     "id": "mocambique",
@@ -249,7 +304,12 @@
       "No sudeste da África, também falo português."
     ],
     "typicalDish": "Matapa",
-    "famousAnimal": "Dugongo"
+    "famousAnimal": "Dugongo",
+    "capitalImageUrl": "https://picsum.photos/seed/mocambique-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/mocambique-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/mocambique-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/mocambique-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/mocambique-landmarkimageurl/900/600"
   },
   {
     "id": "camaroes",
@@ -270,7 +330,12 @@
       "Fico na África Central e uso francês e inglês."
     ],
     "typicalDish": "Ndolé",
-    "famousAnimal": "Mandril"
+    "famousAnimal": "Mandril",
+    "capitalImageUrl": "https://picsum.photos/seed/camaroes-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/camaroes-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/camaroes-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/camaroes-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/camaroes-landmarkimageurl/900/600"
   },
   {
     "id": "cabo-verde",
@@ -291,7 +356,12 @@
       "Tenho origem vulcânica e fico próximo à costa africana."
     ],
     "typicalDish": "Cachupa",
-    "famousAnimal": "Tartaruga-cabeçuda"
+    "famousAnimal": "Tartaruga-marinha",
+    "capitalImageUrl": "https://picsum.photos/seed/cabo-verde-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/cabo-verde-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/cabo-verde-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/cabo-verde-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/cabo-verde-landmarkimageurl/900/600"
   },
   {
     "id": "costa-do-marfim",
@@ -311,8 +381,13 @@
       "Minha língua oficial é francês.",
       "Fico no oeste da África."
     ],
-    "typicalDish": "Attiéké com peixe grelhado",
-    "famousAnimal": "Hipopótamo-pigmeu"
+    "typicalDish": "Attiéké com peixe",
+    "famousAnimal": "Hipopótamo",
+    "capitalImageUrl": "https://picsum.photos/seed/costa-do-marfim-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/costa-do-marfim-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/costa-do-marfim-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/costa-do-marfim-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/costa-do-marfim-landmarkimageurl/900/600"
   },
   {
     "id": "senegal",
@@ -333,6 +408,11 @@
       "Fico no oeste africano, na ponta do continente."
     ],
     "typicalDish": "Thieboudienne",
-    "famousAnimal": "Flamingo-maior"
+    "famousAnimal": "Pelicano",
+    "capitalImageUrl": "https://picsum.photos/seed/senegal-capitalimageurl/900/600",
+    "languageImageUrl": "https://picsum.photos/seed/senegal-languageimageurl/900/600",
+    "typicalDishImageUrl": "https://picsum.photos/seed/senegal-typicaldishimageurl/900/600",
+    "famousAnimalImageUrl": "https://picsum.photos/seed/senegal-famousanimalimageurl/900/600",
+    "landmarkImageUrl": "https://picsum.photos/seed/senegal-landmarkimageurl/900/600"
   }
 ]
