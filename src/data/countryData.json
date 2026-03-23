@@ -1,0 +1,290 @@
+[
+  {
+    "id": "egito",
+    "name": "Egito",
+    "capital": "Cairo",
+    "region": "Norte da África",
+    "language": "Árabe",
+    "currency": "Libra egípcia",
+    "landmark": "Pirâmides de Gizé",
+    "wildlife": "Falcão e crocodilo-do-nilo",
+    "funFact": "O Rio Nilo ajudou a criar uma das civilizações mais antigas do mundo.",
+    "imageUrl": "https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Meu território é cortado por um rio muito famoso.",
+      "Tenho pirâmides gigantes e muito antigas.",
+      "Minha capital é Cairo.",
+      "Fico no norte da África e falo árabe."
+    ]
+  },
+  {
+    "id": "africa-do-sul",
+    "name": "África do Sul",
+    "capital": "Pretória (administrativa)",
+    "region": "Sul da África",
+    "language": "11 línguas oficiais",
+    "currency": "Rand sul-africano",
+    "landmark": "Table Mountain",
+    "wildlife": "Leão, elefante e rinoceronte",
+    "funFact": "É um dos países com maior diversidade linguística oficial no mundo.",
+    "imageUrl": "https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Tenho uma montanha famosa com topo achatado.",
+      "Sou conhecido por safáris e pelos 'Big Five'.",
+      "Uma das minhas capitais é Pretória.",
+      "Fico no extremo sul do continente."
+    ]
+  },
+  {
+    "id": "quenia",
+    "name": "Quênia",
+    "capital": "Nairóbi",
+    "region": "Leste da África",
+    "language": "Suaíli e inglês",
+    "currency": "Xelim queniano",
+    "landmark": "Reserva Maasai Mara",
+    "wildlife": "Girafas, zebras e gnus",
+    "funFact": "A Grande Migração de animais passa por suas savanas.",
+    "imageUrl": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Sou famoso por savanas e corridas de animais.",
+      "Minha reserva Maasai Mara é muito visitada.",
+      "Minha capital é Nairóbi.",
+      "No leste africano, falo suaíli e inglês."
+    ]
+  },
+  {
+    "id": "marrocos",
+    "name": "Marrocos",
+    "capital": "Rabat",
+    "region": "Norte da África",
+    "language": "Árabe e amazigue",
+    "currency": "Dirrã marroquino",
+    "landmark": "Mesquita Hassan II",
+    "wildlife": "Macaco-de-gibraltar",
+    "funFact": "Tem cidades históricas conhecidas por mercados coloridos chamados souks.",
+    "imageUrl": "https://images.unsplash.com/photo-1489493887464-892be6d1daae?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Tenho mercados tradicionais chamados souks.",
+      "Minha capital é Rabat.",
+      "Fico perto do estreito de Gibraltar.",
+      "No norte africano, falo árabe e amazigue."
+    ]
+  },
+  {
+    "id": "nigeria",
+    "name": "Nigéria",
+    "capital": "Abuja",
+    "region": "Oeste da África",
+    "language": "Inglês",
+    "currency": "Naira",
+    "landmark": "Rocha Zuma",
+    "wildlife": "Antílopes e chimpanzés",
+    "funFact": "É o país mais populoso da África.",
+    "imageUrl": "https://images.unsplash.com/photo-1615562154695-ef6886b0e1fd?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Sou muito conhecido pela música afrobeat.",
+      "Sou o país mais populoso da África.",
+      "Minha capital é Abuja.",
+      "Fico no oeste africano e minha moeda é a naira."
+    ]
+  },
+  {
+    "id": "tanzania",
+    "name": "Tanzânia",
+    "capital": "Dodoma",
+    "region": "Leste da África",
+    "language": "Suaíli e inglês",
+    "currency": "Xelim tanzaniano",
+    "landmark": "Monte Kilimanjaro",
+    "wildlife": "Leões e elefantes",
+    "funFact": "Abriga o monte Kilimanjaro, o ponto mais alto da África.",
+    "imageUrl": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Tenho o monte mais alto da África.",
+      "Meu país tem parques com muitos leões e elefantes.",
+      "Minha capital é Dodoma.",
+      "No leste africano, falo suaíli e inglês."
+    ]
+  },
+  {
+    "id": "madagascar",
+    "name": "Madagascar",
+    "capital": "Antananarivo",
+    "region": "Ilha no Oceano Índico",
+    "language": "Malgaxe e francês",
+    "currency": "Ariary malgaxe",
+    "landmark": "Avenida dos Baobás",
+    "wildlife": "Lêmures",
+    "funFact": "É a quarta maior ilha do mundo.",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Sou uma grande ilha ao lado da África.",
+      "Tenho animais famosos chamados lêmures.",
+      "Minha capital é Antananarivo.",
+      "Fico no Oceano Índico."
+    ]
+  },
+  {
+    "id": "etiopia",
+    "name": "Etiópia",
+    "capital": "Adis Abeba",
+    "region": "Leste da África",
+    "language": "Amárico",
+    "currency": "Birr etíope",
+    "landmark": "Igrejas de Lalibela",
+    "wildlife": "Lobo-etíope",
+    "funFact": "É um dos poucos países africanos que nunca foi colonizado por longo período.",
+    "imageUrl": "https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Minhas montanhas guardam igrejas escavadas na rocha.",
+      "Minha capital é Adis Abeba.",
+      "Minha moeda é o birr.",
+      "Fico no leste africano e falo amárico."
+    ]
+  },
+  {
+    "id": "argelia",
+    "name": "Argélia",
+    "capital": "Argel",
+    "region": "Norte da África",
+    "language": "Árabe e amazigue",
+    "currency": "Dinar argelino",
+    "landmark": "Casbá de Argel",
+    "wildlife": "Fennec",
+    "funFact": "É o maior país da África em área territorial.",
+    "imageUrl": "https://images.unsplash.com/photo-1604866830893-c13cafa515d5?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Grande parte do meu território fica no Saara.",
+      "Sou o maior país africano em área.",
+      "Minha capital é Argel.",
+      "Fico no norte da África."
+    ]
+  },
+  {
+    "id": "gana",
+    "name": "Gana",
+    "capital": "Acra",
+    "region": "Oeste da África",
+    "language": "Inglês",
+    "currency": "Cedi ganês",
+    "landmark": "Castelo de Cape Coast",
+    "wildlife": "Antílopes florestais",
+    "funFact": "Foi o primeiro país da África Subsaariana a conquistar independência no século XX.",
+    "imageUrl": "https://images.unsplash.com/photo-1526779259212-756e4f1de7e4?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Tenho litoral no Golfo da Guiné.",
+      "Minha capital é Acra.",
+      "Minha moeda é o cedi.",
+      "Fico no oeste da África e falo inglês."
+    ]
+  },
+  {
+    "id": "angola",
+    "name": "Angola",
+    "capital": "Luanda",
+    "region": "Sul da África",
+    "language": "Português",
+    "currency": "Kwanza",
+    "landmark": "Quedas de Calandula",
+    "wildlife": "Palanca-negra-gigante",
+    "funFact": "Tem o português como língua oficial.",
+    "imageUrl": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "No meu país, a língua oficial é português.",
+      "Minha capital é Luanda.",
+      "Minha moeda é o kwanza.",
+      "Fico no sul do continente africano."
+    ]
+  },
+  {
+    "id": "mocambique",
+    "name": "Moçambique",
+    "capital": "Maputo",
+    "region": "Sudeste da África",
+    "language": "Português",
+    "currency": "Metical",
+    "landmark": "Ilha de Moçambique",
+    "wildlife": "Dugongo",
+    "funFact": "Seu litoral é banhado pelo Oceano Índico.",
+    "imageUrl": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Tenho um longo litoral no Oceano Índico.",
+      "Minha capital é Maputo.",
+      "Minha moeda é o metical.",
+      "No sudeste da África, também falo português."
+    ]
+  },
+  {
+    "id": "camaroes",
+    "name": "Camarões",
+    "capital": "Yaoundé",
+    "region": "África Central",
+    "language": "Francês e inglês",
+    "currency": "Franco CFA",
+    "landmark": "Monte Camarões",
+    "wildlife": "Gorilas e mandris",
+    "funFact": "É chamado de 'África em miniatura' por sua diversidade de paisagens.",
+    "imageUrl": "https://images.unsplash.com/photo-1459794122278-762e7b861a37?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Sou conhecido como 'África em miniatura'.",
+      "Tenho um vulcão chamado Monte Camarões.",
+      "Minha capital é Yaoundé.",
+      "Fico na África Central e uso francês e inglês."
+    ]
+  },
+  {
+    "id": "cabo-verde",
+    "name": "Cabo Verde",
+    "capital": "Praia",
+    "region": "Arquipélago no Atlântico",
+    "language": "Português e crioulo cabo-verdiano",
+    "currency": "Escudo cabo-verdiano",
+    "landmark": "Pico do Fogo",
+    "wildlife": "Tartarugas marinhas",
+    "funFact": "É formado por ilhas vulcânicas no Oceano Atlântico.",
+    "imageUrl": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Sou um conjunto de ilhas no Atlântico.",
+      "Minha capital se chama Praia.",
+      "No meu país se fala português e crioulo.",
+      "Tenho origem vulcânica e fico próximo à costa africana."
+    ]
+  },
+  {
+    "id": "costa-do-marfim",
+    "name": "Costa do Marfim",
+    "capital": "Yamoussoukro",
+    "region": "Oeste da África",
+    "language": "Francês",
+    "currency": "Franco CFA",
+    "landmark": "Basílica de Nossa Senhora da Paz",
+    "wildlife": "Hipopótamos",
+    "funFact": "É um importante produtor mundial de cacau.",
+    "imageUrl": "https://images.unsplash.com/photo-1531177076125-6f61c6a8db6c?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Sou um dos grandes produtores de cacau.",
+      "Minha capital política é Yamoussoukro.",
+      "Minha língua oficial é francês.",
+      "Fico no oeste da África."
+    ]
+  },
+  {
+    "id": "senegal",
+    "name": "Senegal",
+    "capital": "Dacar",
+    "region": "Oeste da África",
+    "language": "Francês",
+    "currency": "Franco CFA",
+    "landmark": "Ilha de Gorée",
+    "wildlife": "Pelicanos e flamingos",
+    "funFact": "A cidade de Dacar é conhecida por eventos culturais e esportivos internacionais.",
+    "imageUrl": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=900&q=80",
+    "hints": [
+      "Tenho uma capital costeira chamada Dacar.",
+      "Minha ilha de Gorée é histórica.",
+      "Minha língua oficial é francês.",
+      "Fico no oeste africano, na ponta do continente."
+    ]
+  }
+]
