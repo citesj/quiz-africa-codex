@@ -2,6 +2,7 @@
   {
     "id": "egito",
     "name": "Egito",
+    "flagImageUrl": "https://flagcdn.com/w320/eg.png",
     "capital": "Cairo",
     "region": "Norte da África",
     "language": "Árabe",
@@ -20,6 +21,7 @@
   {
     "id": "africa-do-sul",
     "name": "África do Sul",
+    "flagImageUrl": "https://flagcdn.com/w320/za.png",
     "capital": "Pretória (administrativa)",
     "region": "Sul da África",
     "language": "11 línguas oficiais",
@@ -38,6 +40,7 @@
   {
     "id": "quenia",
     "name": "Quênia",
+    "flagImageUrl": "https://flagcdn.com/w320/ke.png",
     "capital": "Nairóbi",
     "region": "Leste da África",
     "language": "Suaíli e inglês",
@@ -56,6 +59,7 @@
   {
     "id": "marrocos",
     "name": "Marrocos",
+    "flagImageUrl": "https://flagcdn.com/w320/ma.png",
     "capital": "Rabat",
     "region": "Norte da África",
     "language": "Árabe e amazigue",
@@ -74,6 +78,7 @@
   {
     "id": "nigeria",
     "name": "Nigéria",
+    "flagImageUrl": "https://flagcdn.com/w320/ng.png",
     "capital": "Abuja",
     "region": "Oeste da África",
     "language": "Inglês",
@@ -92,6 +97,7 @@
   {
     "id": "tanzania",
     "name": "Tanzânia",
+    "flagImageUrl": "https://flagcdn.com/w320/tz.png",
     "capital": "Dodoma",
     "region": "Leste da África",
     "language": "Suaíli e inglês",
@@ -110,6 +116,7 @@
   {
     "id": "madagascar",
     "name": "Madagascar",
+    "flagImageUrl": "https://flagcdn.com/w320/mg.png",
     "capital": "Antananarivo",
     "region": "Ilha no Oceano Índico",
     "language": "Malgaxe e francês",
@@ -128,6 +135,7 @@
   {
     "id": "etiopia",
     "name": "Etiópia",
+    "flagImageUrl": "https://flagcdn.com/w320/et.png",
     "capital": "Adis Abeba",
     "region": "Leste da África",
     "language": "Amárico",
@@ -146,6 +154,7 @@
   {
     "id": "argelia",
     "name": "Argélia",
+    "flagImageUrl": "https://flagcdn.com/w320/dz.png",
     "capital": "Argel",
     "region": "Norte da África",
     "language": "Árabe e amazigue",
@@ -164,6 +173,7 @@
   {
     "id": "gana",
     "name": "Gana",
+    "flagImageUrl": "https://flagcdn.com/w320/gh.png",
     "capital": "Acra",
     "region": "Oeste da África",
     "language": "Inglês",
@@ -182,6 +192,7 @@
   {
     "id": "angola",
     "name": "Angola",
+    "flagImageUrl": "https://flagcdn.com/w320/ao.png",
     "capital": "Luanda",
     "region": "Sul da África",
     "language": "Português",
@@ -200,6 +211,7 @@
   {
     "id": "mocambique",
     "name": "Moçambique",
+    "flagImageUrl": "https://flagcdn.com/w320/mz.png",
     "capital": "Maputo",
     "region": "Sudeste da África",
     "language": "Português",
@@ -218,6 +230,7 @@
   {
     "id": "camaroes",
     "name": "Camarões",
+    "flagImageUrl": "https://flagcdn.com/w320/cm.png",
     "capital": "Yaoundé",
     "region": "África Central",
     "language": "Francês e inglês",
@@ -236,6 +249,7 @@
   {
     "id": "cabo-verde",
     "name": "Cabo Verde",
+    "flagImageUrl": "https://flagcdn.com/w320/cv.png",
     "capital": "Praia",
     "region": "Arquipélago no Atlântico",
     "language": "Português e crioulo cabo-verdiano",
@@ -254,6 +268,7 @@
   {
     "id": "costa-do-marfim",
     "name": "Costa do Marfim",
+    "flagImageUrl": "https://flagcdn.com/w320/ci.png",
     "capital": "Yamoussoukro",
     "region": "Oeste da África",
     "language": "Francês",
@@ -272,6 +287,7 @@
   {
     "id": "senegal",
     "name": "Senegal",
+    "flagImageUrl": "https://flagcdn.com/w320/sn.png",
     "capital": "Dacar",
     "region": "Oeste da África",
     "language": "Francês",
