@@ -8,8 +8,8 @@ export interface Country {
   currency: string;
   landmark: string;
   wildlife: string;
-  typicalDish?: string;
-  famousAnimal?: string;
+  typicalDish: string;
+  famousAnimal: string;
   funFact: string;
   imageUrl: string;
   hints: [string, string, string, string];
