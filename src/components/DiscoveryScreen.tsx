@@ -53,7 +53,6 @@ export const DiscoveryScreen = ({
   isLastRound,
 }: DiscoveryScreenProps) => {
   const country = round.country;
-  const selectedOption = round.options.find((option) => option.id === round.selectedCountryId);
   const typicalDish = country.typicalDish ?? 'Prato tradicional local';
   const famousAnimal = country.famousAnimal ?? 'Animal típico da fauna local';
 
@@ -120,20 +119,14 @@ export const DiscoveryScreen = ({
       <motion.p
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
-        className="rounded-2xl border border-color-olive/30 bg-color-olive p-4 text-xl font-bold text-[#f8f4e9]"
+        className={`rounded-2xl border-2 p-4 text-lg font-bold leading-relaxed shadow-photo md:text-xl ${
+          round.isCorrect
+            ? 'border-emerald-800 bg-emerald-200 text-emerald-950'
+            : 'border-amber-900 bg-amber-200 text-amber-950'
+        }`}
       >
         {encouragementMessage}
       </motion.p>
-
-      <p
-        className={`rounded-xl border p-3 text-lg font-bold ${
-          round.isCorrect
-            ? 'border-emerald-700/30 bg-emerald-100 text-emerald-900'
-            : 'border-amber-700/30 bg-amber-100 text-amber-900'
-        }`}
-      >
-        Você escolheu: {selectedOption?.name ?? 'sem resposta'} {round.isCorrect ? '✅' : '🧭'}
-      </p>
 
       <dl className="grid grid-cols-2 gap-4 md:grid-cols-3">
         {cards.map((card) => (

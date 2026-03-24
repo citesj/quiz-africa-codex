@@ -30,11 +30,33 @@ const buildOptions = (correctCountry: Country, pool: Country[]): [Country, Count
   return fisherYatesShuffle([correctCountry, ...distractors]) as [Country, Country, Country];
 };
 
+interface DiscoveryFeedbackArgs {
+  isCorrect: boolean;
+  hintsUsed: number;
+  selectedCountryName: string;
+  correctCountryName: string;
+}
+
 const getEncouragementByHints = (hintsUsed: number): string => {
-  if (hintsUsed <= 1) return ENCOURAGEMENT_MESSAGES.oneHint;
-  if (hintsUsed === 2) return ENCOURAGEMENT_MESSAGES.twoHints;
-  if (hintsUsed === 3) return ENCOURAGEMENT_MESSAGES.threeHints;
-  return ENCOURAGEMENT_MESSAGES.fourHints;
+  if (hintsUsed <= 1) return ENCOURAGEMENT_MESSAGES.correctByHints.oneHint;
+  if (hintsUsed === 2) return ENCOURAGEMENT_MESSAGES.correctByHints.twoHints;
+  if (hintsUsed === 3) return ENCOURAGEMENT_MESSAGES.correctByHints.threeHints;
+  return ENCOURAGEMENT_MESSAGES.correctByHints.fourOrMoreHints;
+};
+
+const buildDiscoveryFeedbackMessage = ({
+  isCorrect,
+  hintsUsed,
+  selectedCountryName,
+  correctCountryName,
+}: DiscoveryFeedbackArgs): string => {
+  const encouragement = isCorrect ? getEncouragementByHints(hintsUsed) : ENCOURAGEMENT_MESSAGES.incorrect;
+
+  if (isCorrect) {
+    return `✅ Você acertou! Era ${correctCountryName}. ${encouragement}`;
+  }
+
+  return `❌ Você errou. Você escolheu ${selectedCountryName}, mas era ${correctCountryName}. ${encouragement}`;
 };
 
 const getCountryOrFallback = (candidate: Country | undefined, fallback: Country): Country => candidate ?? fallback;
@@ -102,6 +124,9 @@ export const useGame = () => {
     setGameState((previous) => {
       if (!previous.round || previous.round.selectedCountryId) return previous;
       const isCorrect = countryId === previous.round.country.id;
+      const selectedCountryName =
+        previous.round.options.find((option) => option.id === countryId)?.name ?? 'uma opção';
+
       return {
         ...previous,
         round: {
@@ -109,9 +134,12 @@ export const useGame = () => {
           selectedCountryId: countryId,
           isCorrect,
         },
-        encouragementMessage: isCorrect
-          ? getEncouragementByHints(previous.round.revealedHints)
-          : ENCOURAGEMENT_MESSAGES.incorrect,
+        encouragementMessage: buildDiscoveryFeedbackMessage({
+          isCorrect,
+          hintsUsed: previous.round.revealedHints,
+          selectedCountryName,
+          correctCountryName: previous.round.country.name,
+        }),
         phase: 'discovery',
       };
     });
