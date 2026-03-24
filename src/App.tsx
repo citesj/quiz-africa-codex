@@ -1,6 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 import { TOTAL_ROUNDS } from './constants';
 import { DiscoveryScreen } from './components/DiscoveryScreen';
+import { ImageCreditsScreen } from './components/ImageCreditsScreen';
 import { QuizScreen } from './components/QuizScreen';
 import { WelcomeScreen } from './components/WelcomeScreen';
 import { useGame } from './hooks/useGame';
@@ -14,6 +16,7 @@ const pageTransition = {
 
 const App = () => {
   const { gameState, isPending, startGame, revealNextHint, selectAnswer, goToNextRound, resetGame } = useGame();
+  const [showImageCredits, setShowImageCredits] = useState(false);
 
   return (
     <main className="min-h-screen bg-color-paper bg-paper p-4 font-body text-color-ink md:p-10">
@@ -25,6 +28,14 @@ const App = () => {
         </div>
 
         <AnimatePresence mode="wait">
+          {showImageCredits && (
+            <motion.div key="image-credits" {...pageTransition}>
+              <ImageCreditsScreen onBack={() => setShowImageCredits(false)} />
+            </motion.div>
+          )}
+
+          {!showImageCredits && (
+            <>
           {gameState.phase === 'welcome' && (
             <motion.div key="welcome" {...pageTransition}>
               <WelcomeScreen onStart={startGame} isPending={isPending} />
@@ -68,7 +79,19 @@ const App = () => {
               </button>
             </motion.section>
           )}
+            </>
+          )}
         </AnimatePresence>
+
+        <footer className="mt-6 text-right">
+          <button
+            type="button"
+            onClick={() => setShowImageCredits(true)}
+            className="text-xs text-color-ink/60 underline decoration-dotted underline-offset-4 transition hover:text-color-ink"
+          >
+            Créditos de imagens
+          </button>
+        </footer>
       </div>
     </main>
   );
