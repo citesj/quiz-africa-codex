@@ -128,6 +128,11 @@ export const DiscoveryScreen = ({
         {encouragementMessage}
       </motion.p>
 
+      <div className="space-y-1 pt-1">
+        <p className="font-body text-sm text-color-ink/70">País revelado</p>
+        <h3 className="font-title text-2xl font-extrabold text-color-ink md:text-3xl">{country.name}</h3>
+      </div>
+
       <dl className="grid grid-cols-2 gap-4 md:grid-cols-3">
         {cards.map((card) => (
           <InfoCard
