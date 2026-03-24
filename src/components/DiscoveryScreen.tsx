@@ -57,7 +57,6 @@ export const DiscoveryScreen = ({
   const typicalDish = country.typicalDish ?? 'Prato tradicional local';
   const famousAnimal = country.famousAnimal ?? 'Animal típico da fauna local';
   const nextButtonLabel = isLastRound ? 'Ver resultado final' : 'Próxima descoberta';
-  const resultIndicator = round.isCorrect ? 'Você acertou' : 'Você errou';
 
   useEffect(() => {
     feedbackRef.current?.focus();
@@ -136,8 +135,7 @@ export const DiscoveryScreen = ({
             : 'border-red-900 bg-red-100 text-red-950'
         }`}
       >
-        <span className="block">{resultIndicator}</span>
-        <span className="block">{encouragementMessage}</span>
+        {encouragementMessage}
       </motion.p>
 
       <div className="space-y-1 pt-1">
