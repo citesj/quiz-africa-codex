@@ -1,3 +1,15 @@
+export interface ImageAsset {
+  src: string;
+  title: string;
+  author: string;
+  sourceUrl: string;
+  license: string;
+  licenseUrl: string;
+  modified: boolean;
+  modificationNote?: string;
+  attributionText: string;
+}
+
 export interface CountryCore {
   id: string;
   name: string;
@@ -9,18 +21,18 @@ export interface CountryCore {
   wildlife: string;
   typicalDish?: string;
   famousAnimal?: string;
-  capitalImageUrl?: string;
-  languageImageUrl?: string;
-  typicalDishImageUrl?: string;
-  famousAnimalImageUrl?: string;
-  landmarkImageUrl?: string;
+  capitalImage?: ImageAsset;
+  languageImage?: ImageAsset;
+  typicalDishImage?: ImageAsset;
+  famousAnimalImage?: ImageAsset;
+  landmarkImage?: ImageAsset;
   funFact: string;
-  imageUrl: string;
+  image: ImageAsset;
   hints: [string, string, string, string];
 }
 
 export interface CountryDiscovery {
-  flagImageUrl: string;
+  flagImage: ImageAsset;
   typicalDish?: string;
   famousAnimal?: string;
 }
