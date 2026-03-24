@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_ROUNDS } from '../constants';
 import type { RoundState } from '../types';
 import { ProgressFootsteps } from './ProgressFootsteps';
@@ -52,9 +52,16 @@ export const DiscoveryScreen = ({
   onNext,
   isLastRound,
 }: DiscoveryScreenProps) => {
+  const feedbackRef = useRef<HTMLParagraphElement>(null);
   const country = round.country;
   const typicalDish = country.typicalDish ?? 'Prato tradicional local';
   const famousAnimal = country.famousAnimal ?? 'Animal típico da fauna local';
+  const nextButtonLabel = isLastRound ? 'Ver resultado final' : 'Próxima descoberta';
+  const resultIndicator = round.isCorrect ? 'Você acertou' : 'Você errou';
+
+  useEffect(() => {
+    feedbackRef.current?.focus();
+  }, [round.roundNumber]);
 
   const cards: InfoCardProps[] = [
     {
@@ -117,20 +124,26 @@ export const DiscoveryScreen = ({
       </div>
 
       <motion.p
+        ref={feedbackRef}
+        tabIndex={-1}
+        aria-live="polite"
+        aria-atomic="true"
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
-        className={`rounded-2xl border-2 p-4 text-lg font-bold leading-relaxed shadow-photo md:text-xl ${
+        className={`rounded-2xl border-2 p-4 text-lg font-bold leading-relaxed shadow-photo focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper md:text-xl ${
           round.isCorrect
-            ? 'border-emerald-800 bg-emerald-200 text-emerald-950'
-            : 'border-amber-900 bg-amber-200 text-amber-950'
+            ? 'border-emerald-900 bg-emerald-100 text-emerald-950'
+            : 'border-red-900 bg-red-100 text-red-950'
         }`}
       >
-        {encouragementMessage}
+        <span className="block">{resultIndicator}</span>
+        <span className="block">{encouragementMessage}</span>
       </motion.p>
 
       <div className="space-y-1 pt-1">
         <p className="font-body text-sm text-color-ink/70">País revelado</p>
         <h3 className="font-title text-2xl font-extrabold text-color-ink md:text-3xl">{country.name}</h3>
+        <p className="font-body text-sm text-color-ink/75">Rodada {round.roundNumber} de {TOTAL_ROUNDS} concluída</p>
       </div>
 
       <dl className="grid grid-cols-2 gap-4 md:grid-cols-3">
@@ -154,9 +167,10 @@ export const DiscoveryScreen = ({
       <button
         type="button"
         onClick={onNext}
+        aria-label={`${nextButtonLabel}. Rodada ${round.roundNumber} de ${TOTAL_ROUNDS}.`}
         className="rounded-2xl border-2 border-color-terracotta bg-color-terracotta px-6 py-3 text-xl font-bold text-[#fff9f0] transition hover:bg-[#a74e34] active:scale-95 focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
       >
-        {isLastRound ? 'Ver resultado final' : 'Próxima descoberta'}
+        {nextButtonLabel}
       </button>
     </motion.section>
   );
