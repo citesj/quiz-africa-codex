@@ -53,10 +53,10 @@ const buildDiscoveryFeedbackMessage = ({
   const encouragement = isCorrect ? getEncouragementByHints(hintsUsed) : ENCOURAGEMENT_MESSAGES.incorrect;
 
   if (isCorrect) {
-    return `✅ Você acertou! Era ${correctCountryName}. ${encouragement}`;
+    return `Era ${correctCountryName}. ${encouragement}`;
   }
 
-  return `❌ Você errou. Você escolheu ${selectedCountryName}, mas era ${correctCountryName}. ${encouragement}`;
+  return `Você escolheu ${selectedCountryName}, mas era ${correctCountryName}. ${encouragement}`;
 };
 
 const getCountryOrFallback = (candidate: Country | undefined, fallback: Country): Country => candidate ?? fallback;
