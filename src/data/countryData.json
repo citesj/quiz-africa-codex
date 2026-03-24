@@ -2,7 +2,6 @@
   {
     "id": "egito",
     "name": "Egito",
-    "flagImageUrl": "https://flagcdn.com/w320/eg.png",
     "capital": "Cairo",
     "region": "Norte da África",
     "language": "Árabe",
@@ -10,7 +9,6 @@
     "landmark": "Pirâmides de Gizé",
     "wildlife": "Falcão e crocodilo-do-nilo",
     "funFact": "O Rio Nilo ajudou a criar uma das civilizações mais antigas do mundo.",
-    "imageUrl": "https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Meu território é cortado por um rio muito famoso.",
       "Tenho pirâmides gigantes e muito antigas.",
@@ -19,16 +17,87 @@
     ],
     "typicalDish": "Koshari",
     "famousAnimal": "Crocodilo-do-nilo",
-    "capitalImageUrl": "https://picsum.photos/seed/egito-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/egito-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/egito-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/egito-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/egito-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/eg.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/egito-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/egito-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/egito-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/egito-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/egito-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "africa-do-sul",
     "name": "África do Sul",
-    "flagImageUrl": "https://flagcdn.com/w320/za.png",
     "capital": "Pretória (administrativa)",
     "region": "Sul da África",
     "language": "11 línguas oficiais",
@@ -36,7 +105,6 @@
     "landmark": "Table Mountain",
     "wildlife": "Leão, elefante e rinoceronte",
     "funFact": "É um dos países com maior diversidade linguística oficial no mundo.",
-    "imageUrl": "https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Tenho uma montanha famosa com topo achatado.",
       "Sou conhecido por safáris e pelos 'Big Five'.",
@@ -45,16 +113,87 @@
     ],
     "typicalDish": "Bobotie",
     "famousAnimal": "Leão-africano",
-    "capitalImageUrl": "https://picsum.photos/seed/africa-do-sul-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/africa-do-sul-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/africa-do-sul-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/africa-do-sul-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/africa-do-sul-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/za.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/africa-do-sul-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/africa-do-sul-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/africa-do-sul-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/africa-do-sul-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/africa-do-sul-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "quenia",
     "name": "Quênia",
-    "flagImageUrl": "https://flagcdn.com/w320/ke.png",
     "capital": "Nairóbi",
     "region": "Leste da África",
     "language": "Suaíli e inglês",
@@ -62,7 +201,6 @@
     "landmark": "Reserva Maasai Mara",
     "wildlife": "Girafas, zebras e gnus",
     "funFact": "A Grande Migração de animais passa por suas savanas.",
-    "imageUrl": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Sou famoso por savanas e corridas de animais.",
       "Minha reserva Maasai Mara é muito visitada.",
@@ -71,16 +209,87 @@
     ],
     "typicalDish": "Nyama Choma",
     "famousAnimal": "Girafa-masai",
-    "capitalImageUrl": "https://picsum.photos/seed/quenia-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/quenia-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/quenia-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/quenia-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/quenia-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/ke.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/quenia-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/quenia-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/quenia-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/quenia-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/quenia-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "marrocos",
     "name": "Marrocos",
-    "flagImageUrl": "https://flagcdn.com/w320/ma.png",
     "capital": "Rabat",
     "region": "Norte da África",
     "language": "Árabe e amazigue",
@@ -88,7 +297,6 @@
     "landmark": "Mesquita Hassan II",
     "wildlife": "Macaco-de-gibraltar",
     "funFact": "Tem cidades históricas conhecidas por mercados coloridos chamados souks.",
-    "imageUrl": "https://images.unsplash.com/photo-1489493887464-892be6d1daae?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Tenho mercados tradicionais chamados souks.",
       "Minha capital é Rabat.",
@@ -97,16 +305,87 @@
     ],
     "typicalDish": "Cuscuz marroquino",
     "famousAnimal": "Macaco-de-gibraltar",
-    "capitalImageUrl": "https://picsum.photos/seed/marrocos-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/marrocos-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/marrocos-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/marrocos-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/marrocos-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1489493887464-892be6d1daae?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1489493887464-892be6d1daae?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/ma.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/marrocos-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/marrocos-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/marrocos-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/marrocos-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/marrocos-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "nigeria",
     "name": "Nigéria",
-    "flagImageUrl": "https://flagcdn.com/w320/ng.png",
     "capital": "Abuja",
     "region": "Oeste da África",
     "language": "Inglês",
@@ -114,7 +393,6 @@
     "landmark": "Rocha Zuma",
     "wildlife": "Antílopes e chimpanzés",
     "funFact": "É o país mais populoso da África.",
-    "imageUrl": "https://images.unsplash.com/photo-1615562154695-ef6886b0e1fd?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Sou muito conhecido pela música afrobeat.",
       "Sou o país mais populoso da África.",
@@ -123,16 +401,87 @@
     ],
     "typicalDish": "Jollof Rice",
     "famousAnimal": "Chimpanzé",
-    "capitalImageUrl": "https://picsum.photos/seed/nigeria-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/nigeria-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/nigeria-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/nigeria-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/nigeria-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1615562154695-ef6886b0e1fd?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1615562154695-ef6886b0e1fd?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/ng.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/nigeria-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/nigeria-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/nigeria-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/nigeria-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/nigeria-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "tanzania",
     "name": "Tanzânia",
-    "flagImageUrl": "https://flagcdn.com/w320/tz.png",
     "capital": "Dodoma",
     "region": "Leste da África",
     "language": "Suaíli e inglês",
@@ -140,7 +489,6 @@
     "landmark": "Monte Kilimanjaro",
     "wildlife": "Leões e elefantes",
     "funFact": "Abriga o monte Kilimanjaro, o ponto mais alto da África.",
-    "imageUrl": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Tenho o monte mais alto da África.",
       "Meu país tem parques com muitos leões e elefantes.",
@@ -149,16 +497,87 @@
     ],
     "typicalDish": "Ugali",
     "famousAnimal": "Leão-africano",
-    "capitalImageUrl": "https://picsum.photos/seed/tanzania-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/tanzania-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/tanzania-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/tanzania-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/tanzania-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/tz.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/tanzania-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/tanzania-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/tanzania-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/tanzania-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/tanzania-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "madagascar",
     "name": "Madagascar",
-    "flagImageUrl": "https://flagcdn.com/w320/mg.png",
     "capital": "Antananarivo",
     "region": "Ilha no Oceano Índico",
     "language": "Malgaxe e francês",
@@ -166,7 +585,6 @@
     "landmark": "Avenida dos Baobás",
     "wildlife": "Lêmures",
     "funFact": "É a quarta maior ilha do mundo.",
-    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Sou uma grande ilha ao lado da África.",
       "Tenho animais famosos chamados lêmures.",
@@ -175,16 +593,87 @@
     ],
     "typicalDish": "Romazava",
     "famousAnimal": "Lêmure-de-cauda-anelada",
-    "capitalImageUrl": "https://picsum.photos/seed/madagascar-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/madagascar-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/madagascar-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/madagascar-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/madagascar-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/mg.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/madagascar-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/madagascar-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/madagascar-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/madagascar-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/madagascar-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "etiopia",
     "name": "Etiópia",
-    "flagImageUrl": "https://flagcdn.com/w320/et.png",
     "capital": "Adis Abeba",
     "region": "Leste da África",
     "language": "Amárico",
@@ -192,7 +681,6 @@
     "landmark": "Igrejas de Lalibela",
     "wildlife": "Lobo-etíope",
     "funFact": "É um dos poucos países africanos que nunca foi colonizado por longo período.",
-    "imageUrl": "https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Minhas montanhas guardam igrejas escavadas na rocha.",
       "Minha capital é Adis Abeba.",
@@ -201,16 +689,87 @@
     ],
     "typicalDish": "Injera",
     "famousAnimal": "Lobo-etíope",
-    "capitalImageUrl": "https://picsum.photos/seed/etiopia-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/etiopia-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/etiopia-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/etiopia-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/etiopia-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1594708767771-a7502209ff51?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/et.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/etiopia-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/etiopia-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/etiopia-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/etiopia-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/etiopia-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "argelia",
     "name": "Argélia",
-    "flagImageUrl": "https://flagcdn.com/w320/dz.png",
     "capital": "Argel",
     "region": "Norte da África",
     "language": "Árabe e amazigue",
@@ -218,7 +777,6 @@
     "landmark": "Casbá de Argel",
     "wildlife": "Fennec",
     "funFact": "É o maior país da África em área territorial.",
-    "imageUrl": "https://images.unsplash.com/photo-1604866830893-c13cafa515d5?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Grande parte do meu território fica no Saara.",
       "Sou o maior país africano em área.",
@@ -227,16 +785,87 @@
     ],
     "typicalDish": "Cuscuz argelino",
     "famousAnimal": "Raposa-fennec",
-    "capitalImageUrl": "https://picsum.photos/seed/argelia-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/argelia-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/argelia-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/argelia-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/argelia-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1604866830893-c13cafa515d5?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1604866830893-c13cafa515d5?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/dz.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/argelia-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/argelia-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/argelia-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/argelia-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/argelia-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "gana",
     "name": "Gana",
-    "flagImageUrl": "https://flagcdn.com/w320/gh.png",
     "capital": "Acra",
     "region": "Oeste da África",
     "language": "Inglês",
@@ -244,7 +873,6 @@
     "landmark": "Castelo de Cape Coast",
     "wildlife": "Antílopes florestais",
     "funFact": "Foi o primeiro país da África Subsaariana a conquistar independência no século XX.",
-    "imageUrl": "https://images.unsplash.com/photo-1526779259212-756e4f1de7e4?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Tenho litoral no Golfo da Guiné.",
       "Minha capital é Acra.",
@@ -253,16 +881,87 @@
     ],
     "typicalDish": "Fufu com sopa leve",
     "famousAnimal": "Antílope",
-    "capitalImageUrl": "https://picsum.photos/seed/gana-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/gana-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/gana-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/gana-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/gana-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1526779259212-756e4f1de7e4?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1526779259212-756e4f1de7e4?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/gh.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/gana-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/gana-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/gana-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/gana-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/gana-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "angola",
     "name": "Angola",
-    "flagImageUrl": "https://flagcdn.com/w320/ao.png",
     "capital": "Luanda",
     "region": "Sul da África",
     "language": "Português",
@@ -270,7 +969,6 @@
     "landmark": "Quedas de Calandula",
     "wildlife": "Palanca-negra-gigante",
     "funFact": "Tem o português como língua oficial.",
-    "imageUrl": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "No meu país, a língua oficial é português.",
       "Minha capital é Luanda.",
@@ -279,16 +977,87 @@
     ],
     "typicalDish": "Muamba de galinha",
     "famousAnimal": "Palanca-negra-gigante",
-    "capitalImageUrl": "https://picsum.photos/seed/angola-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/angola-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/angola-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/angola-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/angola-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/ao.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/angola-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/angola-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/angola-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/angola-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/angola-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "mocambique",
     "name": "Moçambique",
-    "flagImageUrl": "https://flagcdn.com/w320/mz.png",
     "capital": "Maputo",
     "region": "Sudeste da África",
     "language": "Português",
@@ -296,7 +1065,6 @@
     "landmark": "Ilha de Moçambique",
     "wildlife": "Dugongo",
     "funFact": "Seu litoral é banhado pelo Oceano Índico.",
-    "imageUrl": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Tenho um longo litoral no Oceano Índico.",
       "Minha capital é Maputo.",
@@ -305,16 +1073,87 @@
     ],
     "typicalDish": "Matapa",
     "famousAnimal": "Dugongo",
-    "capitalImageUrl": "https://picsum.photos/seed/mocambique-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/mocambique-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/mocambique-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/mocambique-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/mocambique-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/mz.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/mocambique-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/mocambique-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/mocambique-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/mocambique-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/mocambique-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "camaroes",
     "name": "Camarões",
-    "flagImageUrl": "https://flagcdn.com/w320/cm.png",
     "capital": "Yaoundé",
     "region": "África Central",
     "language": "Francês e inglês",
@@ -322,7 +1161,6 @@
     "landmark": "Monte Camarões",
     "wildlife": "Gorilas e mandris",
     "funFact": "É chamado de 'África em miniatura' por sua diversidade de paisagens.",
-    "imageUrl": "https://images.unsplash.com/photo-1459794122278-762e7b861a37?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Sou conhecido como 'África em miniatura'.",
       "Tenho um vulcão chamado Monte Camarões.",
@@ -331,16 +1169,87 @@
     ],
     "typicalDish": "Ndolé",
     "famousAnimal": "Mandril",
-    "capitalImageUrl": "https://picsum.photos/seed/camaroes-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/camaroes-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/camaroes-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/camaroes-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/camaroes-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1459794122278-762e7b861a37?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1459794122278-762e7b861a37?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/cm.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/camaroes-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/camaroes-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/camaroes-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/camaroes-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/camaroes-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "cabo-verde",
     "name": "Cabo Verde",
-    "flagImageUrl": "https://flagcdn.com/w320/cv.png",
     "capital": "Praia",
     "region": "Arquipélago no Atlântico",
     "language": "Português e crioulo cabo-verdiano",
@@ -348,7 +1257,6 @@
     "landmark": "Pico do Fogo",
     "wildlife": "Tartarugas marinhas",
     "funFact": "É formado por ilhas vulcânicas no Oceano Atlântico.",
-    "imageUrl": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Sou um conjunto de ilhas no Atlântico.",
       "Minha capital se chama Praia.",
@@ -357,16 +1265,87 @@
     ],
     "typicalDish": "Cachupa",
     "famousAnimal": "Tartaruga-marinha",
-    "capitalImageUrl": "https://picsum.photos/seed/cabo-verde-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/cabo-verde-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/cabo-verde-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/cabo-verde-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/cabo-verde-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/cv.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/cabo-verde-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/cabo-verde-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/cabo-verde-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/cabo-verde-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/cabo-verde-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "costa-do-marfim",
     "name": "Costa do Marfim",
-    "flagImageUrl": "https://flagcdn.com/w320/ci.png",
     "capital": "Yamoussoukro",
     "region": "Oeste da África",
     "language": "Francês",
@@ -374,7 +1353,6 @@
     "landmark": "Basílica de Nossa Senhora da Paz",
     "wildlife": "Hipopótamos",
     "funFact": "É um importante produtor mundial de cacau.",
-    "imageUrl": "https://images.unsplash.com/photo-1531177076125-6f61c6a8db6c?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Sou um dos grandes produtores de cacau.",
       "Minha capital política é Yamoussoukro.",
@@ -383,16 +1361,87 @@
     ],
     "typicalDish": "Attiéké com peixe",
     "famousAnimal": "Hipopótamo",
-    "capitalImageUrl": "https://picsum.photos/seed/costa-do-marfim-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/costa-do-marfim-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/costa-do-marfim-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/costa-do-marfim-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/costa-do-marfim-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1531177076125-6f61c6a8db6c?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1531177076125-6f61c6a8db6c?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/ci.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/costa-do-marfim-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/costa-do-marfim-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/costa-do-marfim-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/costa-do-marfim-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/costa-do-marfim-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   },
   {
     "id": "senegal",
     "name": "Senegal",
-    "flagImageUrl": "https://flagcdn.com/w320/sn.png",
     "capital": "Dacar",
     "region": "Oeste da África",
     "language": "Francês",
@@ -400,7 +1449,6 @@
     "landmark": "Ilha de Gorée",
     "wildlife": "Pelicanos e flamingos",
     "funFact": "A cidade de Dacar é conhecida por eventos culturais e esportivos internacionais.",
-    "imageUrl": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=900&q=80",
     "hints": [
       "Tenho uma capital costeira chamada Dacar.",
       "Minha ilha de Gorée é histórica.",
@@ -409,10 +1457,82 @@
     ],
     "typicalDish": "Thieboudienne",
     "famousAnimal": "Pelicano",
-    "capitalImageUrl": "https://picsum.photos/seed/senegal-capitalimageurl/900/600",
-    "languageImageUrl": "https://picsum.photos/seed/senegal-languageimageurl/900/600",
-    "typicalDishImageUrl": "https://picsum.photos/seed/senegal-typicaldishimageurl/900/600",
-    "famousAnimalImageUrl": "https://picsum.photos/seed/senegal-famousanimalimageurl/900/600",
-    "landmarkImageUrl": "https://picsum.photos/seed/senegal-landmarkimageurl/900/600"
+    "image": {
+      "src": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=900&q=80",
+      "credit": {
+        "sourceName": "Unsplash",
+        "sourceUrl": "https://unsplash.com",
+        "creatorName": "Unsplash Contributor",
+        "creatorUrl": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=900&q=80",
+        "licenseName": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license"
+      }
+    },
+    "flagImage": {
+      "src": "https://flagcdn.com/w320/sn.png",
+      "credit": {
+        "sourceName": "FlagCDN",
+        "sourceUrl": "https://flagcdn.com",
+        "creatorName": "FlagCDN",
+        "creatorUrl": "https://flagcdn.com",
+        "licenseName": "Usage Terms",
+        "licenseUrl": "https://flagcdn.com"
+      }
+    },
+    "capitalImage": {
+      "src": "https://picsum.photos/seed/senegal-capitalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "languageImage": {
+      "src": "https://picsum.photos/seed/senegal-languageimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "typicalDishImage": {
+      "src": "https://picsum.photos/seed/senegal-typicaldishimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "famousAnimalImage": {
+      "src": "https://picsum.photos/seed/senegal-famousanimalimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    },
+    "landmarkImage": {
+      "src": "https://picsum.photos/seed/senegal-landmarkimageurl/900/600",
+      "credit": {
+        "sourceName": "Picsum Photos",
+        "sourceUrl": "https://picsum.photos",
+        "creatorName": "Picsum Photos",
+        "creatorUrl": "https://picsum.photos",
+        "licenseName": "Public Demo Service Terms",
+        "licenseUrl": "https://picsum.photos"
+      }
+    }
   }
 ]

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_ROUNDS } from '../constants';
-import type { RoundState } from '../types';
+import type { ImageAsset, RoundState } from '../types';
 import { ProgressFootsteps } from './ProgressFootsteps';
 
 interface DiscoveryScreenProps {
@@ -14,13 +14,17 @@ interface DiscoveryScreenProps {
 interface InfoCardProps {
   label: string;
   value: string;
-  imageSrc: string;
+  imageAsset?: ImageAsset;
   imageAlt: string;
   fallbackImageSrc: string;
 }
 
-const InfoCard = ({ label, value, imageSrc, imageAlt, fallbackImageSrc }: InfoCardProps) => {
-  const [currentImageSrc, setCurrentImageSrc] = useState(imageSrc);
+const InfoCard = ({ label, value, imageAsset, imageAlt, fallbackImageSrc }: InfoCardProps) => {
+  const [currentImageSrc, setCurrentImageSrc] = useState(imageAsset?.src ?? fallbackImageSrc);
+
+  useEffect(() => {
+    setCurrentImageSrc(imageAsset?.src ?? fallbackImageSrc);
+  }, [imageAsset?.src, fallbackImageSrc]);
 
   return (
     <div className="rounded-2xl bg-color-paper p-3 shadow-photo">
@@ -67,43 +71,43 @@ export const DiscoveryScreen = ({
     {
       label: 'Capital',
       value: country.capital,
-      imageSrc: country.capitalImageUrl ?? country.imageUrl,
-      fallbackImageSrc: country.imageUrl,
+      imageAsset: country.capitalImage ?? country.image,
+      fallbackImageSrc: country.image.src,
       imageAlt: `Paisagem da capital ${country.capital}, em ${country.name}`,
     },
     {
       label: 'Bandeira',
       value: `Bandeira de ${country.name}`,
-      imageSrc: country.flagImageUrl,
+      imageAsset: country.flagImage,
       fallbackImageSrc: asEncodedSvgIcon('🏳️'),
       imageAlt: `Bandeira de ${country.name}`,
     },
     {
       label: 'Idioma',
       value: country.language,
-      imageSrc: country.languageImageUrl ?? asEncodedSvgIcon('🗣️'),
+      imageAsset: country.languageImage,
       fallbackImageSrc: asEncodedSvgIcon('🗣️'),
       imageAlt: `Ícone representando os idiomas falados em ${country.name}`,
     },
     {
       label: 'Prato Típico',
       value: typicalDish,
-      imageSrc: country.typicalDishImageUrl ?? asEncodedSvgIcon('🍲'),
+      imageAsset: country.typicalDishImage,
       fallbackImageSrc: asEncodedSvgIcon('🍲'),
       imageAlt: `Ilustração de prato típico de ${country.name}`,
     },
     {
       label: 'Animal Famoso',
       value: famousAnimal,
-      imageSrc: country.famousAnimalImageUrl ?? asEncodedSvgIcon('🦁'),
+      imageAsset: country.famousAnimalImage,
       fallbackImageSrc: asEncodedSvgIcon('🦁'),
       imageAlt: `Foto de um ${famousAnimal} nativo de ${country.name}`,
     },
     {
       label: 'Ponto Turístico',
       value: country.landmark,
-      imageSrc: country.landmarkImageUrl ?? country.imageUrl,
-      fallbackImageSrc: country.imageUrl,
+      imageAsset: country.landmarkImage ?? country.image,
+      fallbackImageSrc: country.image.src,
       imageAlt: `Imagem de um ponto turístico de ${country.name}`,
     },
   ];
@@ -152,7 +156,7 @@ export const DiscoveryScreen = ({
             key={card.label}
             label={card.label}
             value={card.value}
-            imageSrc={card.imageSrc}
+            imageAsset={card.imageAsset}
             fallbackImageSrc={card.fallbackImageSrc}
             imageAlt={card.imageAlt}
           />
