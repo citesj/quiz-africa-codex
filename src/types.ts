@@ -1,15 +1,13 @@
-export interface ImageCredit {
-  sourceName: string;
-  sourceUrl: string;
-  creatorName: string;
-  creatorUrl: string;
-  licenseName: string;
-  licenseUrl: string;
-}
-
 export interface ImageAsset {
   src: string;
-  credit: ImageCredit;
+  title: string;
+  author: string;
+  sourceUrl: string;
+  license: string;
+  licenseUrl: string;
+  modified: boolean;
+  modificationNote?: string;
+  attributionText: string;
 }
 
 export interface CountryCore {
