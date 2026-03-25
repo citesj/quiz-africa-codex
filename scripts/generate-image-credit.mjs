@@ -7,7 +7,7 @@ const IMAGE_CREDITS_PATH = resolve('src/data/imageCredits.json');
 const COUNTRY_DATA_PATH = resolve('src/data/countryData.json');
 const COMMONS_API_URL = 'https://commons.wikimedia.org/w/api.php';
 
-function parseArgs(argv) {
+export function parseArgs(argv) {
   const parsed = {};
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -184,6 +184,19 @@ async function runSingleMode(args) {
   const fileTitleArg = args.fileTitle?.trim();
   const imageUrlArg = args.imageUrl?.trim();
 
+function resolveFileTitle({ sourcePageUrl, fileTitle }) {
+  const rawFileTitle = isNonEmptyString(fileTitle)
+    ? fileTitle
+    : extractFileTitleFromSourceUrl(sourcePageUrl);
+
+  if (!isNonEmptyString(rawFileTitle)) {
+    throw new Error('Não foi possível determinar o título do arquivo. Use --fileTitle explicitamente.');
+  }
+
+  return normalizeFileTitle(rawFileTitle);
+}
+
+export async function upsertImageCredit({ countryId, field, sourcePageUrl, fileTitle, imageUrl }) {
   if (!isNonEmptyString(countryId)) {
     throw new Error('Parâmetro obrigatório ausente: --countryId');
   }
@@ -192,7 +205,7 @@ async function runSingleMode(args) {
     throw new Error('Parâmetro obrigatório ausente: --field');
   }
 
-  if (!isNonEmptyString(sourcePageUrlArg) && !isNonEmptyString(fileTitleArg)) {
+  if (!isNonEmptyString(sourcePageUrl) && !isNonEmptyString(fileTitle)) {
     throw new Error('Informe --sourcePageUrl ou --fileTitle.');
   }
 
@@ -294,7 +307,10 @@ async function main() {
   await runSingleMode(args);
 }
 
-main().catch((error) => {
-  console.error(`❌ ${error.message}`);
-  process.exit(1);
-});
+const isEntrypoint = import.meta.url === new URL(process.argv[1], 'file:').href;
+if (isEntrypoint) {
+  main().catch((error) => {
+    console.error(`❌ ${error.message}`);
+    process.exit(1);
+  });
+}
