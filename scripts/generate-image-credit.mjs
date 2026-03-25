@@ -117,13 +117,33 @@ function buildSourcePageUrl(fileTitle) {
 
 function shouldKeepOriginalSourcePageUrl(sourcePageUrl) {
   try {
-    return new URL(sourcePageUrl).hostname.toLowerCase() === 'commons.wikimedia.org';
+    const host = new URL(sourcePageUrl).hostname.toLowerCase();
+    return host === 'commons.wikimedia.org' || host.endsWith('.wikipedia.org');
   } catch {
     return false;
   }
 }
 
-async function fetchWikimediaImageInfo(fileTitle) {
+function getApiUrlFromSourcePageUrl(sourcePageUrl) {
+  if (!isNonEmptyString(sourcePageUrl)) {
+    return COMMONS_API_URL;
+  }
+
+  try {
+    const url = new URL(sourcePageUrl);
+    const host = url.hostname.toLowerCase();
+
+    if (host === 'commons.wikimedia.org' || host.endsWith('.wikipedia.org')) {
+      return `${url.origin}/w/api.php`;
+    }
+  } catch {
+    return COMMONS_API_URL;
+  }
+
+  return COMMONS_API_URL;
+}
+
+async function fetchWikimediaImageInfo(fileTitle, apiUrl = COMMONS_API_URL) {
   const params = new URLSearchParams({
     action: 'query',
     format: 'json',
@@ -134,14 +154,14 @@ async function fetchWikimediaImageInfo(fileTitle) {
     origin: '*',
   });
 
-  const response = await fetch(`${COMMONS_API_URL}?${params.toString()}`, {
+  const response = await fetch(`${apiUrl}?${params.toString()}`, {
     headers: {
       'User-Agent': 'QuizAfricaCodexBot/1.0 (https://github.com/citesj/quiz-africa-codex; citesj@edu.pmsj.sc.gov.br)'
     }
   });
 
   if (!response.ok) {
-    throw new Error(`Falha ao consultar Wikimedia Commons (HTTP ${response.status}).`);
+    throw new Error(`Falha ao consultar API MediaWiki (HTTP ${response.status}) em ${apiUrl}.`);
   }
 
   const payload = await response.json();
@@ -149,7 +169,7 @@ async function fetchWikimediaImageInfo(fileTitle) {
   const imageinfo = page?.imageinfo?.[0];
 
   if (!imageinfo?.url) {
-    throw new Error(`Arquivo não encontrado ou sem dados de imagem para "${fileTitle}".`);
+    throw new Error(`Arquivo não encontrado ou sem dados de imagem para "${fileTitle}" em ${apiUrl}.`);
   }
 
   return imageinfo;
@@ -238,7 +258,27 @@ async function buildNormalizedCredit({
   fileTitle,
   imageUrl,
 }) {
-  const imageinfo = await fetchWikimediaImageInfo(fileTitle);
+  const sourceApiUrl = getApiUrlFromSourcePageUrl(sourcePageUrl);
+  const apiCandidates = [sourceApiUrl, COMMONS_API_URL].filter(
+    (value, index, array) => array.indexOf(value) === index,
+  );
+
+  let imageinfo;
+  let lastError;
+
+  for (const apiUrl of apiCandidates) {
+    try {
+      imageinfo = await fetchWikimediaImageInfo(fileTitle, apiUrl);
+      break;
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  if (!imageinfo) {
+    throw lastError;
+  }
+
   const normalizedCredit = normalizeWikimediaCredit({
     countryId,
     field,
