@@ -12,6 +12,7 @@ Este procedimento deve ser seguido **sempre que uma nova imagem for adicionada**
    - link permanente da página do arquivo,
    - URL do arquivo original.
 3. Confirme se a licença permite o uso no projeto (incluindo redistribuição).
+4. Se você tiver apenas o link da imagem no Wikipedia (ex.: `pt.wikipedia.org/wiki/Ficheiro:...`), ele também pode ser usado no script de geração: o processo converte automaticamente para a página equivalente no Commons.
 
 ## 2) Baixar arquivo em resolução adequada
 
@@ -98,6 +99,7 @@ Regras:
 - `countryId` obrigatório no nível raiz;
 - `items` deve ser array não vazio;
 - cada item deve ter `field` e `sourcePageUrl`.
+- `sourcePageUrl` pode ser de `commons.wikimedia.org/wiki/File:...` **ou** de algum domínio do Wikipedia (`...wikipedia.org/wiki/Ficheiro:...`, `.../wiki/File:...`, etc.).
 
 O script busca metadados no Wikimedia Commons, faz upsert em `imageCredits.json` por `countryId + field` e prioriza o `imageUrl` já existente em `countryData.json` para manter consistência com a validação.
 

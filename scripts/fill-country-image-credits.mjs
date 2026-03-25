@@ -21,7 +21,7 @@ function normalizeInputItem(item, index) {
 
   if (!isNonEmptyString(countryId) || !isNonEmptyString(field) || !isNonEmptyString(sourcePageUrl)) {
     throw new Error(
-      `Item ${index} inválido: campos obrigatórios { countryId, field, sourcePageUrl } devem ser strings não vazias.`,
+      `Item ${index} inválido: campos obrigatórios { countryId, field, sourcePageUrl } devem ser strings não vazias (sourcePageUrl aceita Commons ou Wikipedia).`,
     );
   }
 

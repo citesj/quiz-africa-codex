@@ -58,23 +58,69 @@ function normalizeFileTitle(fileTitle) {
 function extractFileTitleFromSourceUrl(sourcePageUrl) {
   try {
     const parsedUrl = new URL(sourcePageUrl);
-    if (parsedUrl.hostname !== 'commons.wikimedia.org') {
+    const host = parsedUrl.hostname.toLowerCase();
+    const isCommonsHost = host === 'commons.wikimedia.org';
+    const isWikipediaHost =
+      host.endsWith('.wikipedia.org') || host.endsWith('.m.wikipedia.org');
+
+    if (!isCommonsHost && !isWikipediaHost) {
       return '';
     }
 
-    const match = parsedUrl.pathname.match(/\/wiki\/(File:[^/]+)/i);
+    const match = parsedUrl.pathname.match(/\/wiki\/([^/]+)/i);
     if (!match) {
       return '';
     }
 
-    return decodeURIComponent(match[1]);
+    const rawTitle = decodeURIComponent(match[1]).replaceAll('_', ' ').trim();
+    const normalizedNamespaceTitle = normalizeFileNamespace(rawTitle);
+    if (!normalizedNamespaceTitle) {
+      return '';
+    }
+
+    return normalizedNamespaceTitle;
   } catch {
     return '';
   }
 }
 
+function normalizeFileNamespace(rawTitle) {
+  const [namespace, ...rest] = rawTitle.split(':');
+  if (!namespace || rest.length === 0) {
+    return '';
+  }
+
+  const namespaceNormalized = namespace.trim().toLowerCase();
+  const fileNamespaces = new Set([
+    'file',
+    'ficheiro',
+    'arquivo',
+    'datei',
+    'fichier',
+    'dosya',
+    'soubor',
+    'plik',
+    'fitxategi',
+    'bestand',
+  ]);
+
+  if (!fileNamespaces.has(namespaceNormalized)) {
+    return '';
+  }
+
+  return `File:${rest.join(':').trim()}`;
+}
+
 function buildSourcePageUrl(fileTitle) {
   return `https://commons.wikimedia.org/wiki/${encodeURIComponent(fileTitle).replace('%3A', ':')}`;
+}
+
+function shouldKeepOriginalSourcePageUrl(sourcePageUrl) {
+  try {
+    return new URL(sourcePageUrl).hostname.toLowerCase() === 'commons.wikimedia.org';
+  } catch {
+    return false;
+  }
 }
 
 async function fetchWikimediaImageInfo(fileTitle) {
@@ -242,9 +288,10 @@ export async function upsertImageCredit({ countryId, field, sourcePageUrl, fileT
   }
 
   const finalFileTitle = normalizeFileTitle(rawFileTitle);
-  const finalSourcePageUrl = isNonEmptyString(sourcePageUrl)
-    ? sourcePageUrl
-    : buildSourcePageUrl(finalFileTitle);
+  const finalSourcePageUrl =
+    isNonEmptyString(sourcePageUrl) && shouldKeepOriginalSourcePageUrl(sourcePageUrl)
+      ? sourcePageUrl
+      : buildSourcePageUrl(finalFileTitle);
 
   const normalizedCredit = await buildNormalizedCredit({
     countryId,
