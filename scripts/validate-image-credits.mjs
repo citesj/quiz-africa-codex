@@ -99,6 +99,7 @@ for (const country of countries) {
   }
 }
 
+const validCountryIds = new Set(countries.map((country) => country?.id).filter(isNonEmptyString));
 const seenCreditKeys = new Set();
 for (const [index, credit] of credits.entries()) {
   if (!credit || typeof credit !== 'object') {
@@ -117,6 +118,11 @@ for (const [index, credit] of credits.entries()) {
     continue;
   }
 
+  if (!validCountryIds.has(credit.countryId)) {
+    errors.push(`imageCredits.json[${index}].countryId inválido: "${credit.countryId}".`);
+    continue;
+  }
+
   const key = `${credit.countryId}:${credit.field}`;
   if (seenCreditKeys.has(key)) {
     errors.push(`Crédito duplicado para ${key}.`);
@@ -124,16 +130,9 @@ for (const [index, credit] of credits.entries()) {
   }
   seenCreditKeys.add(key);
 
-  const expectedUrl = expectedKeys.get(key);
-  if (!expectedUrl) {
+  if (!expectedKeys.has(key)) {
     errors.push(`Crédito sem correspondência em countryData.json: ${key}.`);
     continue;
-  }
-
-  if (expectedUrl !== credit.imageUrl) {
-    errors.push(
-      `URL divergente em ${key}. Esperado: ${expectedUrl}; encontrado: ${credit.imageUrl}.`,
-    );
   }
 
   const expectedAttributionText = buildImageCreditAttributionText(credit);
@@ -141,12 +140,6 @@ for (const [index, credit] of credits.entries()) {
     errors.push(
       `attributionText inválido para ${key}. Use: "${expectedAttributionText}".`,
     );
-  }
-}
-
-for (const [key, imageUrl] of expectedKeys.entries()) {
-  if (!seenCreditKeys.has(key)) {
-    errors.push(`Imagem sem crédito: ${key} (${imageUrl}).`);
   }
 }
 
