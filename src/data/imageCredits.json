@@ -9,7 +9,7 @@
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
     "attributionText": "Bandeira do Egito, via Wikimedia Commons. Obra original por Constitution of The Arab Republic of Egypt.",
     "retrievedAt": "2026-03-25"
-},
+  },
   {
     "imageKey": "egito-capital",
     "countryId": "egito",
@@ -1219,5 +1219,83 @@
     "licenseUrl": "https://picsum.photos/",
     "attributionText": "Ponto turístico: Ilha de Gorée — imagem placeholder de Picsum Photos.",
     "retrievedAt": "2026-03-24"
+  },
+  {
+    "countryId": "egito",
+    "field": "flagImageUrl",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg",
+    "author": "See File history below for details.",
+    "title": "Flag of Egypt",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Egypt.svg",
+    "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg",
+    "lastModified": "1984-01-01",
+    "attributionText": "Flag of Egypt — See File history below for details.. Licença: Public domain. Fonte: https://commons.wikimedia.org/wiki/File:Flag_of_Egypt.svg"
+  },
+  {
+    "countryId": "egito",
+    "field": "capitalImageUrl",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Cairo_Skyline_%282020%29.jpg",
+    "author": "Faris El-Gwely",
+    "title": "Cairo Skyline (2020)",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Cairo_Skyline_(2020).jpg",
+    "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Cairo_Skyline_%282020%29.jpg",
+    "lastModified": "2025-12-27",
+    "attributionText": "Cairo Skyline (2020) — Faris El-Gwely. Licença: CC BY 4.0. Fonte: https://commons.wikimedia.org/wiki/File:Cairo_Skyline_(2020).jpg"
+  },
+  {
+    "countryId": "egito",
+    "field": "languageImageUrl",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Arabic_albayancalligraphy.svg",
+    "author": "murraytheb",
+    "title": "Arabic albayancalligraphy",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Arabic_albayancalligraphy.svg",
+    "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Arabic_albayancalligraphy.svg",
+    "lastModified": "2008-01-02",
+    "attributionText": "Arabic albayancalligraphy — murraytheb. Licença: Public domain. Fonte: https://commons.wikimedia.org/wiki/File:Arabic_albayancalligraphy.svg"
+  },
+  {
+    "countryId": "egito",
+    "field": "typicalDishImageUrl",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Egyptian_food_Koshary.jpg",
+    "author": "Dina Said",
+    "title": "Egyptian food Koshary",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Egyptian_food_Koshary.jpg",
+    "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Egyptian_food_Koshary.jpg",
+    "lastModified": "2014-11-19",
+    "attributionText": "Egyptian food Koshary — Dina Said. Licença: CC BY-SA 4.0. Fonte: https://commons.wikimedia.org/wiki/File:Egyptian_food_Koshary.jpg"
+  },
+  {
+    "countryId": "egito",
+    "field": "famousAnimalImageUrl",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/NileCrocodile.jpg",
+    "author": "Dewet",
+    "title": "NileCrocodile",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg",
+    "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/NileCrocodile.jpg",
+    "lastModified": "2005-00-00",
+    "attributionText": "NileCrocodile — Dewet. Licença: CC BY-SA 2.0. Fonte: https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg"
+  },
+  {
+    "countryId": "egito",
+    "field": "landmarkImageUrl",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Pyramids_of_the_Giza_Necropolis.jpg",
+    "author": "KennyOMG",
+    "title": "Pyramids of the Giza Necropolis",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Pyramids_of_the_Giza_Necropolis.jpg",
+    "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Pyramids_of_the_Giza_Necropolis.jpg",
+    "lastModified": "2009-07-31",
+    "attributionText": "Pyramids of the Giza Necropolis — KennyOMG. Licença: CC BY-SA 4.0. Fonte: https://commons.wikimedia.org/wiki/File:Pyramids_of_the_Giza_Necropolis.jpg"
   }
 ]
