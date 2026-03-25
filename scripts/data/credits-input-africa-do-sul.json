@@ -24,6 +24,10 @@
     {
       "field": "landmarkImageUrl",
       "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Boulders_Beach_Suedafrika.jpg"
+    },
+    {
+      "field": "currencyImageUrl",
+      "sourcePageUrl": "https://en.wikipedia.org/wiki/South_African_rand#/media/File:South_African_rand_-_2023_banknotes.jpg"
     }
   ]
 }

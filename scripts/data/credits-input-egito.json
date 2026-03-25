@@ -24,6 +24,10 @@
     {
       "field": "landmarkImageUrl",
       "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Pyramids_of_the_Giza_Necropolis.jpg"
+    },
+    {
+      "field": "currencyImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:EGP_200_Pounds_Apr_2007_(Back).jpg"
     }
   ]
 }
