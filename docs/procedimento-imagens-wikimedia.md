@@ -67,35 +67,39 @@ npm run validate:image-credits
 
 Se houver erro, corrija antes de commitar.
 
-## 7) Fluxo em lote para preencher créditos
+## 7) Geração em lote de créditos (opcional)
 
-Use `scripts/fill-country-image-credits.mjs` para processar múltiplos créditos de uma vez.
+Para acelerar o cadastro de créditos por país, use o script:
 
-### Formato do arquivo de entrada
+```bash
+node scripts/generate-image-credit.mjs --input caminho/do/arquivo.json
+```
 
-O arquivo deve conter um array JSON, com cada item no formato:
+Formato esperado do arquivo de entrada:
 
 ```json
 {
   "countryId": "egito",
-  "field": "imageUrl",
-  "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Giza_Pyramid_Complex.jpg"
+  "items": [
+    {
+      "field": "flagImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Egypt.svg"
+    },
+    {
+      "field": "capitalImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Cairo_Skyline_(2020).jpg"
+    }
+  ]
 }
 ```
 
-Exemplo pronto: `scripts/data/credits-input-egito.json`.
+Regras:
 
-### Comando de execução em lote
+- `countryId` obrigatório no nível raiz;
+- `items` deve ser array não vazio;
+- cada item deve ter `field` e `sourcePageUrl`.
 
-```bash
-node scripts/fill-country-image-credits.mjs --input scripts/data/credits-input-egito.json
-```
-
-Esse fluxo:
-
-1. Processa cada item usando internamente a mesma lógica de geração de crédito do script unitário.
-2. Ao final executa `scripts/validate-image-credits.mjs`.
-3. Em caso de falha, imprime os erros de validação agrupados por `countryId:field`.
+O script busca metadados no Wikimedia Commons, faz upsert em `imageCredits.json` por `countryId + field` e prioriza o `imageUrl` já existente em `countryData.json` para manter consistência com a validação.
 
 ---
 

@@ -4,6 +4,7 @@ import { resolve } from 'node:path';
 import { normalizeWikimediaCredit } from './lib/normalizeWikimediaCredit.mjs';
 
 const IMAGE_CREDITS_PATH = resolve('src/data/imageCredits.json');
+const COUNTRY_DATA_PATH = resolve('src/data/countryData.json');
 const COMMONS_API_URL = 'https://commons.wikimedia.org/w/api.php';
 
 export function parseArgs(argv) {
@@ -112,9 +113,76 @@ async function readImageCredits() {
   return parsed;
 }
 
-async function writeImageCredits(credits) {
-  await writeFile(IMAGE_CREDITS_PATH, `${JSON.stringify(credits, null, 2)}\n`, 'utf8');
+async function readCountryData() {
+  const raw = await readFile(COUNTRY_DATA_PATH, 'utf8');
+  const parsed = JSON.parse(raw);
+
+  if (!Array.isArray(parsed)) {
+    throw new Error('src/data/countryData.json deve conter um array.');
+  }
+
+  return parsed;
 }
+
+function getCountryImageUrl(countryData, countryId, field) {
+  const country = countryData.find((entry) => entry?.id === countryId);
+  if (!country || typeof country !== 'object') {
+    return '';
+  }
+
+  const value = country[field];
+  return isNonEmptyString(value) ? value : '';
+}
+
+async function upsertCredits(normalizedCredits) {
+  const credits = await readImageCredits();
+  const updates = [];
+
+  for (const normalizedCredit of normalizedCredits) {
+    const existingIndex = credits.findIndex(
+      (credit) =>
+        credit?.countryId === normalizedCredit.countryId && credit?.field === normalizedCredit.field,
+    );
+
+    if (existingIndex >= 0) {
+      credits[existingIndex] = normalizedCredit;
+      updates.push({ action: 'atualizado', credit: normalizedCredit });
+      continue;
+    }
+
+    credits.push(normalizedCredit);
+    updates.push({ action: 'criado', credit: normalizedCredit });
+  }
+
+  await writeFile(IMAGE_CREDITS_PATH, `${JSON.stringify(credits, null, 2)}\n`, 'utf8');
+  return updates;
+}
+
+async function buildNormalizedCredit({
+  countryId,
+  field,
+  sourcePageUrl,
+  fileTitle,
+  imageUrl,
+}) {
+  const imageinfo = await fetchWikimediaImageInfo(fileTitle);
+  const normalizedCredit = normalizeWikimediaCredit({
+    countryId,
+    field,
+    imageUrl: isNonEmptyString(imageUrl) ? imageUrl : imageinfo.url,
+    sourcePageUrl,
+    extmetadata: imageinfo.extmetadata,
+  });
+
+  return normalizedCredit;
+}
+
+async function runSingleMode(args) {
+  const countryId = args.countryId?.trim();
+  const field = args.field?.trim();
+  const sourcePageUrlArg = args.sourcePageUrl?.trim();
+  const fileTitleArg = args.fileTitle?.trim();
+  const imageUrlArg = args.imageUrl?.trim();
 
 function resolveFileTitle({ sourcePageUrl, fileTitle }) {
   const rawFileTitle = isNonEmptyString(fileTitle)
@@ -141,55 +209,102 @@ export async function upsertImageCredit({ countryId, field, sourcePageUrl, fileT
     throw new Error('Informe --sourcePageUrl ou --fileTitle.');
   }
 
-  const normalizedFileTitle = resolveFileTitle({ sourcePageUrl, fileTitle });
-  const imageinfo = await fetchWikimediaImageInfo(normalizedFileTitle);
-  const normalizedSourcePageUrl = isNonEmptyString(sourcePageUrl)
-    ? sourcePageUrl.trim()
-    : buildSourcePageUrl(normalizedFileTitle);
+  const rawFileTitle = isNonEmptyString(fileTitleArg)
+    ? fileTitleArg
+    : extractFileTitleFromSourceUrl(sourcePageUrlArg);
 
-  const normalizedCredit = normalizeWikimediaCredit({
-    countryId: countryId.trim(),
-    field: field.trim(),
-    imageUrl: isNonEmptyString(imageUrl) ? imageUrl.trim() : imageinfo.url,
-    sourcePageUrl: normalizedSourcePageUrl,
-    extmetadata: imageinfo.extmetadata,
-  });
-
-  const credits = await readImageCredits();
-  const existingIndex = credits.findIndex(
-    (credit) => credit?.countryId === normalizedCredit.countryId && credit?.field === normalizedCredit.field,
-  );
-
-  let action = 'criado';
-  if (existingIndex >= 0) {
-    credits[existingIndex] = normalizedCredit;
-    action = 'atualizado';
-  } else {
-    credits.push(normalizedCredit);
+  if (!isNonEmptyString(rawFileTitle)) {
+    throw new Error('Não foi possível determinar o título do arquivo. Use --fileTitle explicitamente.');
   }
 
-  await writeImageCredits(credits);
+  const fileTitle = normalizeFileTitle(rawFileTitle);
+  const sourcePageUrl = isNonEmptyString(sourcePageUrlArg)
+    ? sourcePageUrlArg
+    : buildSourcePageUrl(fileTitle);
 
-  return {
-    action,
-    credit: normalizedCredit,
-  };
+  const normalizedCredit = await buildNormalizedCredit({
+    countryId,
+    field,
+    sourcePageUrl,
+    fileTitle,
+    imageUrl: imageUrlArg,
+  });
+
+  const updates = await upsertCredits([normalizedCredit]);
+  for (const update of updates) {
+    console.log(`✅ Crédito ${update.action} para ${update.credit.countryId}/${update.credit.field}`);
+    console.log(`   title: ${update.credit.title}`);
+    console.log(`   author: ${update.credit.author}`);
+    console.log(`   sourcePageUrl: ${update.credit.sourcePageUrl}`);
+  }
+}
+
+async function runBatchMode(inputPath) {
+  const rawInput = await readFile(resolve(inputPath), 'utf8');
+  const parsedInput = JSON.parse(rawInput);
+
+  const countryId = parsedInput?.countryId?.trim();
+  const items = parsedInput?.items;
+
+  if (!isNonEmptyString(countryId)) {
+    throw new Error('Arquivo de entrada inválido: "countryId" é obrigatório.');
+  }
+
+  if (!Array.isArray(items) || items.length === 0) {
+    throw new Error('Arquivo de entrada inválido: "items" deve ser um array não vazio.');
+  }
+
+  const countryData = await readCountryData();
+  const normalizedCredits = [];
+
+  for (const [index, item] of items.entries()) {
+    const field = item?.field?.trim();
+    const sourcePageUrl = item?.sourcePageUrl?.trim();
+    if (!isNonEmptyString(field)) {
+      throw new Error(`Arquivo de entrada inválido: items[${index}].field é obrigatório.`);
+    }
+
+    if (!isNonEmptyString(sourcePageUrl)) {
+      throw new Error(`Arquivo de entrada inválido: items[${index}].sourcePageUrl é obrigatório.`);
+    }
+
+    const rawFileTitle = extractFileTitleFromSourceUrl(sourcePageUrl);
+    if (!isNonEmptyString(rawFileTitle)) {
+      throw new Error(
+        `Não foi possível extrair o título do arquivo em items[${index}] a partir de ${sourcePageUrl}.`,
+      );
+    }
+
+    const fileTitle = normalizeFileTitle(rawFileTitle);
+    const countryImageUrl = getCountryImageUrl(countryData, countryId, field);
+
+    normalizedCredits.push(
+      await buildNormalizedCredit({
+        countryId,
+        field,
+        sourcePageUrl,
+        fileTitle,
+        imageUrl: countryImageUrl,
+      }),
+    );
+  }
+
+  const updates = await upsertCredits(normalizedCredits);
+  console.log(`✅ Processamento em lote concluído para ${countryId}: ${updates.length} crédito(s).`);
+
+  for (const update of updates) {
+    console.log(`   • ${update.credit.field}: ${update.action}`);
+  }
 }
 
 async function main() {
   const args = parseArgs(process.argv.slice(2));
-  const result = await upsertImageCredit({
-    countryId: args.countryId,
-    field: args.field,
-    sourcePageUrl: args.sourcePageUrl,
-    fileTitle: args.fileTitle,
-    imageUrl: args.imageUrl,
-  });
+  if (isNonEmptyString(args.input)) {
+    await runBatchMode(args.input);
+    return;
+  }
 
-  console.log(`✅ Crédito ${result.action} para ${result.credit.countryId}/${result.credit.field}`);
-  console.log(`   title: ${result.credit.title}`);
-  console.log(`   author: ${result.credit.author}`);
-  console.log(`   sourcePageUrl: ${result.credit.sourcePageUrl}`);
+  await runSingleMode(args);
 }
 
 const isEntrypoint = import.meta.url === new URL(process.argv[1], 'file:').href;
