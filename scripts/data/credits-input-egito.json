@@ -1,0 +1,12 @@
+[
+  {
+    "countryId": "egito",
+    "field": "imageUrl",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Giza_Pyramid_Complex.jpg"
+  },
+  {
+    "countryId": "egito",
+    "field": "landmarkImageUrl",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Great_Sphinx_of_Giza_-_20080716a.jpg"
+  }
+]
