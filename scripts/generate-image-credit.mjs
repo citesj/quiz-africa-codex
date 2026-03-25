@@ -86,7 +86,12 @@ async function fetchWikimediaImageInfo(fileTitle) {
     origin: '*',
   });
 
-  const response = await fetch(`${COMMONS_API_URL}?${params.toString()}`);
+  const response = await fetch(`${COMMONS_API_URL}?${params.toString()}`, {
+    headers: {
+      'User-Agent': 'QuizAfricaCodexBot/1.0 (https://github.com/citesj/quiz-africa-codex; citesj@edu.pmsj.sc.gov.br)'
+    }
+  });
+
   if (!response.ok) {
     throw new Error(`Falha ao consultar Wikimedia Commons (HTTP ${response.status}).`);
   }
@@ -274,6 +279,8 @@ async function runBatchMode(inputPath) {
 
     const fileTitle = normalizeFileTitle(rawFileTitle);
     const countryImageUrl = getCountryImageUrl(countryData, countryId, field);
+
+    if (index > 0) await sleep(1000);
 
     normalizedCredits.push(
       await buildNormalizedCredit({
