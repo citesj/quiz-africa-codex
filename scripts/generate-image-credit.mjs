@@ -7,6 +7,8 @@ const IMAGE_CREDITS_PATH = resolve('src/data/imageCredits.json');
 const COUNTRY_DATA_PATH = resolve('src/data/countryData.json');
 const COMMONS_API_URL = 'https://commons.wikimedia.org/w/api.php';
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 export function parseArgs(argv) {
   const parsed = {};
 
