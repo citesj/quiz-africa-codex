@@ -78,6 +78,19 @@
     "attributionText": "Pyramids of the Giza Necropolis — KennyOMG. Licença: CC BY-SA 4.0. Fonte: https://commons.wikimedia.org/wiki/File:Pyramids_of_the_Giza_Necropolis.jpg"
   },
   {
+    "countryId": "egito",
+    "field": "currencyImageUrl",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/EGP_200_Pounds_Apr_2007_%28Back%29.jpg",
+    "author": "Szajci",
+    "title": "EGP 200 Pounds Apr 2007 (Back)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:EGP_200_Pounds_Apr_2007_(Back).jpg",
+    "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/EGP_200_Pounds_Apr_2007_%28Back%29.jpg",
+    "lastModified": "2012-04-19",
+    "attributionText": "EGP 200 Pounds Apr 2007 (Back) — Szajci. Licença: CC BY-SA 3.0. Fonte: https://commons.wikimedia.org/wiki/File:EGP_200_Pounds_Apr_2007_(Back).jpg"
+  },
+  {
     "countryId": "africa-do-sul",
     "field": "flagImageUrl",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg",
@@ -154,5 +167,18 @@
     "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Boulders_Beach_Suedafrika.jpg",
     "lastModified": "2017-01-05",
     "attributionText": "Boulders Beach Suedafrika — Olga Ernst. Licença: CC BY-SA 4.0. Fonte: https://commons.wikimedia.org/wiki/File:Boulders_Beach_Suedafrika.jpg"
+  },
+{  
+    "countryId": "africa-do-sul",
+    "field": "currencyImageUrl",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/EGP_200_Pounds_Apr_2007_%28Back%29.jpg",
+    "author": "Szajci",
+    "title": "EGP 200 Pounds Apr 2007 (Back)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:EGP_200_Pounds_Apr_2007_(Back).jpg",
+    "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/EGP_200_Pounds_Apr_2007_%28Back%29.jpg",
+    "lastModified": "2012-04-19",
+    "attributionText": "EGP 200 Pounds Apr 2007 (Back) — Szajci. Licença: CC BY-SA 3.0. Fonte: https://commons.wikimedia.org/wiki/File:EGP_200_Pounds_Apr_2007_(Back).jpg"
   }
 ]
