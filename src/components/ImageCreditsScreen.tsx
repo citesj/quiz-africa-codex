@@ -29,15 +29,15 @@ export const ImageCreditsScreen = ({ onBack }: ImageCreditsScreenProps) => {
 
       <ul className="max-h-[60vh] space-y-3 overflow-auto rounded-2xl border border-color-ink/15 bg-color-paper/70 p-4">
         {imageCredits.map((credit) => (
-          <li key={credit.imageKey} className="border-b border-color-ink/10 pb-3 last:border-b-0 last:pb-0">
-            <p className="font-semibold text-color-ink">{credit.imageKey}</p>
+          <li key={`${credit.countryId}:${credit.field}`} className="border-b border-color-ink/10 pb-3 last:border-b-0 last:pb-0">
+            <p className="font-semibold text-color-ink">{credit.countryId}:{credit.field}</p>
             <p className="text-sm text-color-ink/80">País: {credit.countryId}</p>
             <p className="text-sm text-color-ink/80">Título: {credit.title}</p>
             <p className="text-sm text-color-ink/80">Autor: {credit.author}</p>
             <p className="text-sm text-color-ink/80">
               Fonte:{' '}
-              <a href={credit.sourceUrl} target="_blank" rel="noreferrer" className="underline underline-offset-2">
-                {credit.sourceUrl}
+              <a href={credit.sourcePageUrl} target="_blank" rel="noreferrer" className="underline underline-offset-2">
+                {credit.sourcePageUrl}
               </a>
             </p>
             <p className="text-sm text-color-ink/80">
@@ -48,7 +48,7 @@ export const ImageCreditsScreen = ({ onBack }: ImageCreditsScreenProps) => {
               )
             </p>
             <p className="text-sm text-color-ink/80">Atribuição: {credit.attributionText}</p>
-            <p className="text-xs text-color-ink/60">Coletado em: {credit.retrievedAt}</p>
+            <p className="text-xs text-color-ink/60">Última atualização do arquivo: {credit.lastModified}</p>
           </li>
         ))}
       </ul>

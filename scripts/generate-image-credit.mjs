@@ -131,14 +131,34 @@ async function readCountryData() {
   return parsed;
 }
 
+const COUNTRY_FIELD_BY_CREDIT_FIELD = {
+  imageUrl: 'image',
+  flagImageUrl: 'flagImage',
+  capitalImageUrl: 'capitalImage',
+  languageImageUrl: 'languageImage',
+  typicalDishImageUrl: 'typicalDishImage',
+  famousAnimalImageUrl: 'famousAnimalImage',
+  landmarkImageUrl: 'landmarkImage',
+};
+
 function getCountryImageUrl(countryData, countryId, field) {
   const country = countryData.find((entry) => entry?.id === countryId);
   if (!country || typeof country !== 'object') {
     return '';
   }
 
-  const value = country[field];
-  return isNonEmptyString(value) ? value : '';
+  const countryField = COUNTRY_FIELD_BY_CREDIT_FIELD[field] ?? field;
+  const value = country[countryField];
+
+  if (isNonEmptyString(value)) {
+    return value;
+  }
+
+  if (value && typeof value === 'object' && isNonEmptyString(value.src)) {
+    return value.src;
+  }
+
+  return '';
 }
 
 async function upsertCredits(normalizedCredits) {
