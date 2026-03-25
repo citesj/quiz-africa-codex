@@ -184,17 +184,14 @@ async function runSingleMode(args) {
   const fileTitleArg = args.fileTitle?.trim();
   const imageUrlArg = args.imageUrl?.trim();
 
-function resolveFileTitle({ sourcePageUrl, fileTitle }) {
-  const rawFileTitle = isNonEmptyString(fileTitle)
-    ? fileTitle
-    : extractFileTitleFromSourceUrl(sourcePageUrl);
-
-  if (!isNonEmptyString(rawFileTitle)) {
-    throw new Error('Não foi possível determinar o título do arquivo. Use --fileTitle explicitamente.');
-  }
-
-  return normalizeFileTitle(rawFileTitle);
-}
+  await upsertImageCredit({ 
+    countryId, 
+    field, 
+    sourcePageUrl: sourcePageUrlArg, 
+    fileTitle: fileTitleArg, 
+    imageUrl: imageUrlArg 
+  });
+} 
 
 export async function upsertImageCredit({ countryId, field, sourcePageUrl, fileTitle, imageUrl }) {
   if (!isNonEmptyString(countryId)) {
@@ -209,25 +206,25 @@ export async function upsertImageCredit({ countryId, field, sourcePageUrl, fileT
     throw new Error('Informe --sourcePageUrl ou --fileTitle.');
   }
 
-  const rawFileTitle = isNonEmptyString(fileTitleArg)
-    ? fileTitleArg
-    : extractFileTitleFromSourceUrl(sourcePageUrlArg);
+  const rawFileTitle = isNonEmptyString(fileTitle)
+    ? fileTitle
+    : extractFileTitleFromSourceUrl(sourcePageUrl);
 
   if (!isNonEmptyString(rawFileTitle)) {
     throw new Error('Não foi possível determinar o título do arquivo. Use --fileTitle explicitamente.');
   }
 
-  const fileTitle = normalizeFileTitle(rawFileTitle);
-  const sourcePageUrl = isNonEmptyString(sourcePageUrlArg)
-    ? sourcePageUrlArg
-    : buildSourcePageUrl(fileTitle);
+  const finalFileTitle = normalizeFileTitle(rawFileTitle);
+  const finalSourcePageUrl = isNonEmptyString(sourcePageUrl)
+    ? sourcePageUrl
+    : buildSourcePageUrl(finalFileTitle);
 
   const normalizedCredit = await buildNormalizedCredit({
     countryId,
     field,
-    sourcePageUrl,
-    fileTitle,
-    imageUrl: imageUrlArg,
+    sourcePageUrl: finalSourcePageUrl,
+    fileTitle: finalFileTitle,
+    imageUrl: imageUrl,
   });
 
   const updates = await upsertCredits([normalizedCredit]);
