@@ -67,6 +67,36 @@ npm run validate:image-credits
 
 Se houver erro, corrija antes de commitar.
 
+## 7) Fluxo em lote para preencher créditos
+
+Use `scripts/fill-country-image-credits.mjs` para processar múltiplos créditos de uma vez.
+
+### Formato do arquivo de entrada
+
+O arquivo deve conter um array JSON, com cada item no formato:
+
+```json
+{
+  "countryId": "egito",
+  "field": "imageUrl",
+  "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Giza_Pyramid_Complex.jpg"
+}
+```
+
+Exemplo pronto: `scripts/data/credits-input-egito.json`.
+
+### Comando de execução em lote
+
+```bash
+node scripts/fill-country-image-credits.mjs --input scripts/data/credits-input-egito.json
+```
+
+Esse fluxo:
+
+1. Processa cada item usando internamente a mesma lógica de geração de crédito do script unitário.
+2. Ao final executa `scripts/validate-image-credits.mjs`.
+3. Em caso de falha, imprime os erros de validação agrupados por `countryId:field`.
+
 ---
 
 ## Validação automatizada (opcional adotada no projeto)
