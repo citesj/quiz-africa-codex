@@ -29,12 +29,37 @@ const REQUIRED_CREDIT_FIELDS = [
   'attributionText',
 ];
 
+const COUNTRY_FIELD_BY_CREDIT_FIELD = {
+  imageUrl: 'image',
+  flagImageUrl: 'flagImage',
+  capitalImageUrl: 'capitalImage',
+  languageImageUrl: 'languageImage',
+  typicalDishImageUrl: 'typicalDishImage',
+  famousAnimalImageUrl: 'famousAnimalImage',
+  landmarkImageUrl: 'landmarkImage',
+};
+
 function readJson(path) {
   return JSON.parse(readFileSync(path, 'utf8'));
 }
 
 function isNonEmptyString(value) {
   return typeof value === 'string' && value.trim().length > 0;
+}
+
+function resolveCountryImageUrl(country, creditField) {
+  const countryField = COUNTRY_FIELD_BY_CREDIT_FIELD[creditField] ?? creditField;
+  const value = country[countryField];
+
+  if (isNonEmptyString(value)) {
+    return value;
+  }
+
+  if (value && typeof value === 'object' && isNonEmptyString(value.src)) {
+    return value.src;
+  }
+
+  return '';
 }
 
 function fail(messages) {
@@ -64,7 +89,7 @@ for (const country of countries) {
   }
 
   for (const field of IMAGE_FIELDS) {
-    const imageUrl = country[field];
+    const imageUrl = resolveCountryImageUrl(country, field);
     if (!isNonEmptyString(imageUrl)) {
       continue;
     }

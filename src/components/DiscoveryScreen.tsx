@@ -71,11 +71,11 @@ export const DiscoveryScreen = ({
       imageAlt: `Paisagem da capital ${country.capital}, em ${country.name}`,
     },
     {
-      label: 'Bandeira',
-      value: `Bandeira de ${country.name}`,
-      imageSrc: country.flagImage.src,
-      fallbackImageSrc: asEncodedSvgIcon('🏳️'),
-      imageAlt: `Bandeira de ${country.name}`,
+      label: 'Moeda',
+      value: country.currency,
+      imageSrc: asEncodedSvgIcon('💰'),
+      fallbackImageSrc: asEncodedSvgIcon('💰'),
+      imageAlt: `Ícone representando a moeda oficial de ${country.name}`,
     },
     {
       label: 'Idioma',
@@ -140,7 +140,15 @@ export const DiscoveryScreen = ({
 
       <div className="space-y-1 pt-1">
         <p className="font-body text-sm text-color-ink/70">País revelado</p>
-        <h3 className="font-title text-2xl font-extrabold text-color-ink md:text-3xl">{country.name}</h3>
+        <div className="flex items-center gap-3">
+          <img
+            src={country.flagImage.src}
+            alt={`Bandeira de ${country.name}`}
+            className="h-10 w-14 rounded-md border border-color-ink/20 object-cover shadow-photo"
+            loading="lazy"
+          />
+          <h3 className="font-title text-2xl font-extrabold text-color-ink md:text-3xl">{country.name}</h3>
+        </div>
         <p className="font-body text-sm text-color-ink/75">Rodada {round.roundNumber} de {TOTAL_ROUNDS} concluída</p>
       </div>
 
