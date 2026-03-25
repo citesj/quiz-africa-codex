@@ -67,6 +67,40 @@ npm run validate:image-credits
 
 Se houver erro, corrija antes de commitar.
 
+## 7) Geração em lote de créditos (opcional)
+
+Para acelerar o cadastro de créditos por país, use o script:
+
+```bash
+node scripts/generate-image-credit.mjs --input caminho/do/arquivo.json
+```
+
+Formato esperado do arquivo de entrada:
+
+```json
+{
+  "countryId": "egito",
+  "items": [
+    {
+      "field": "flagImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Egypt.svg"
+    },
+    {
+      "field": "capitalImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Cairo_Skyline_(2020).jpg"
+    }
+  ]
+}
+```
+
+Regras:
+
+- `countryId` obrigatório no nível raiz;
+- `items` deve ser array não vazio;
+- cada item deve ter `field` e `sourcePageUrl`.
+
+O script busca metadados no Wikimedia Commons, faz upsert em `imageCredits.json` por `countryId + field` e prioriza o `imageUrl` já existente em `countryData.json` para manter consistência com a validação.
+
 ---
 
 ## Validação automatizada (opcional adotada no projeto)
