@@ -1,80 +1,69 @@
 [
   {
-    "imageKey": "egito-cover",
-    "countryId": "egito",
-    "author": "Autor não identificado (Unsplash)",
-    "title": "Imagem principal de Egito",
-    "sourceUrl": "https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=900&q=80",
-    "license": "Unsplash License",
-    "licenseUrl": "https://unsplash.com/license",
-    "attributionText": "Imagem principal de Egito — Unsplash (ver licença no link).",
-    "retrievedAt": "2026-03-24"
-  },
-  {
     "imageKey": "egito-flag",
     "countryId": "egito",
-    "author": "FlagCDN / Flagpedia",
-    "title": "Bandeira de Egito",
-    "sourceUrl": "https://flagcdn.com/w320/eg.png",
-    "license": "Conforme termos do provedor",
-    "licenseUrl": "https://flagpedia.net/download/api",
-    "attributionText": "Bandeira de Egito — arquivo de bandeira via FlagCDN/Flagpedia.",
-    "retrievedAt": "2026-03-24"
-  },
+    "author": "Constitution of The Arab Republic of Egypt",
+    "title": "Bandeira: Egito",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Egypt.svg",
+    "license": "Public Domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionText": "Bandeira do Egito, via Wikimedia Commons. Obra original por Constitution of The Arab Republic of Egypt.",
+    "retrievedAt": "2026-03-25"
+},
   {
     "imageKey": "egito-capital",
     "countryId": "egito",
-    "author": "Picsum Photos (placeholder)",
+    "author": "Faris El-Gwely",
     "title": "Capital: Cairo",
-    "sourceUrl": "https://picsum.photos/seed/egito-capitalimageurl/900/600",
-    "license": "Não especificada (imagem placeholder)",
-    "licenseUrl": "https://picsum.photos/",
-    "attributionText": "Capital: Cairo — imagem placeholder de Picsum Photos.",
-    "retrievedAt": "2026-03-24"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cairo_Skyline_(2020).jpg",
+    "license": "Creative Commons Attribution 4.0 International license",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "attributionText": "Dr. Faris El-Gwely Faris El-Gwely creator QS:P170,Q117800644 (https://commons.wikimedia.org/wiki/File:Cairo_Skyline_(2020).jpg), https://creativecommons.org/licenses/by/4.0/legalcode",
+    "retrievedAt": "2026-03-25"
   },
   {
     "imageKey": "egito-language",
     "countryId": "egito",
-    "author": "Picsum Photos (placeholder)",
+    "author": "Murraytheb",
     "title": "Idioma: Árabe",
-    "sourceUrl": "https://picsum.photos/seed/egito-languageimageurl/900/600",
-    "license": "Não especificada (imagem placeholder)",
-    "licenseUrl": "https://picsum.photos/",
-    "attributionText": "Idioma: Árabe — imagem placeholder de Picsum Photos.",
-    "retrievedAt": "2026-03-24"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arabic_albayancalligraphy.svg",
+    "license": "Public Domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionText": "Idioma do Egito, via Wikimedia Commons. Obra original por Murraytheb.",
+    "retrievedAt": "2026-03-25"
   },
   {
     "imageKey": "egito-dish",
     "countryId": "egito",
-    "author": "Picsum Photos (placeholder)",
+    "author": "Dina Said",
     "title": "Prato típico: Koshari",
-    "sourceUrl": "https://picsum.photos/seed/egito-typicaldishimageurl/900/600",
-    "license": "Não especificada (imagem placeholder)",
-    "licenseUrl": "https://picsum.photos/",
-    "attributionText": "Prato típico: Koshari — imagem placeholder de Picsum Photos.",
-    "retrievedAt": "2026-03-24"
+    "sourceUrl": "https://en.wikipedia.org/wiki/File:Egyptian_food_Koshary.jpg",
+    "license": "Creative Commons Attribution 4.0 International license",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "attributionText": "Dina Said (https://commons.wikimedia.org/wiki/File:Egyptian_food_Koshary.jpg), https://creativecommons.org/licenses/by-sa/4.0/legalcode.",
+    "retrievedAt": "2026-03-25"
   },
   {
     "imageKey": "egito-animal",
     "countryId": "egito",
-    "author": "Picsum Photos (placeholder)",
+    "author": "Dewet",
     "title": "Animal famoso: Crocodilo-do-nilo",
-    "sourceUrl": "https://picsum.photos/seed/egito-famousanimalimageurl/900/600",
-    "license": "Não especificada (imagem placeholder)",
-    "licenseUrl": "https://picsum.photos/",
-    "attributionText": "Animal famoso: Crocodilo-do-nilo — imagem placeholder de Picsum Photos.",
-    "retrievedAt": "2026-03-24"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg",
+    "license": "Creative Commons Attribution Share Alike 2.0 Generic License",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/legalcode",
+    "attributionText": "Dewet (https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg), „NileCrocodile“, https://creativecommons.org/licenses/by-sa/2.0/legalcode",
+    "retrievedAt": "2026-03-25"
   },
   {
     "imageKey": "egito-landmark",
     "countryId": "egito",
     "author": "Picsum Photos (placeholder)",
     "title": "Ponto turístico: Pirâmides de Gizé",
-    "sourceUrl": "https://picsum.photos/seed/egito-landmarkimageurl/900/600",
-    "license": "Não especificada (imagem placeholder)",
-    "licenseUrl": "https://picsum.photos/",
-    "attributionText": "Ponto turístico: Pirâmides de Gizé — imagem placeholder de Picsum Photos.",
-    "retrievedAt": "2026-03-24"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pyramids_of_the_Giza_Necropolis.jpg",
+    "license": "Creative Commons Attribution 4.0 International license",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+    "attributionText": "KennyOMG (https://commons.wikimedia.org/wiki/File:Pyramids_of_the_Giza_Necropolis.jpg), https://creativecommons.org/licenses/by-sa/4.0/legalcode",
+    "retrievedAt": "2026-03-25"
   },
   {
     "imageKey": "africa-do-sul-cover",
