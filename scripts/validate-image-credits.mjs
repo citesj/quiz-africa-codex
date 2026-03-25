@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { buildImageCreditAttributionText } from './lib/normalizeWikimediaCredit.mjs';
 
 const COUNTRY_DATA_PATH = resolve('src/data/countryData.json');
 const IMAGE_CREDITS_PATH = resolve('src/data/imageCredits.json');
@@ -30,10 +31,6 @@ const REQUIRED_CREDIT_FIELDS = [
 
 function readJson(path) {
   return JSON.parse(readFileSync(path, 'utf8'));
-}
-
-function buildAttributionText(credit) {
-  return `${credit.title} — ${credit.author}. Licença: ${credit.license}. Fonte: ${credit.sourcePageUrl}`;
 }
 
 function isNonEmptyString(value) {
@@ -114,7 +111,7 @@ for (const [index, credit] of credits.entries()) {
     );
   }
 
-  const expectedAttributionText = buildAttributionText(credit);
+  const expectedAttributionText = buildImageCreditAttributionText(credit);
   if (credit.attributionText !== expectedAttributionText) {
     errors.push(
       `attributionText inválido para ${key}. Use: "${expectedAttributionText}".`,
