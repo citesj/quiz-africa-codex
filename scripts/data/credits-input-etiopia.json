@@ -1,0 +1,33 @@
+{
+  "countryId": "etiopia",
+  "items": [
+    {
+      "field": "flagImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Ethiopia.svg"
+    },
+    {
+      "field": "capitalImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Addis_abeba_meskele_square_(cropped).jpg"
+    },
+    {
+      "field": "languageImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ethiopian_anthem_(since_1992)_in_amharic.jpg"
+    },
+    {
+      "field": "typicalDishImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Injera_with_eight_kinds_of_stew.jpg"
+    },
+    {
+      "field": "famousAnimalImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ethiopian_wolf_(Canis_simensis_citernii).jpg"
+    },
+    {
+      "field": "landmarkImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Bet_Abba_Libanos_(5499043130).jpg"
+    },
+    {
+      "field": "currencyImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:ETHW2020-200r.jpg"
+    }
+  ]
+}
