@@ -1,0 +1,33 @@
+{
+  "countryId": "gana",
+  "items": [
+    {
+      "field": "flagImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Ghana.svg"
+    },
+    {
+      "field": "capitalImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Acca.jpg"
+    },
+    {
+      "field": "languageImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:English-brackets.png"
+    },
+    {
+      "field": "typicalDishImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Fufu_and_light_soup_in_asanka.jpg"
+    },
+    {
+      "field": "famousAnimalImageUrl",
+      "sourcePageUrl": "https://en.wikipedia.org/wiki/File:2012-tawny-eagle-0.jpg"
+    },
+    {
+      "field": "landmarkImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Cape_Coast_Castle_Museum_2012-09-01_15-08-26.jpg"
+    },
+    {
+      "field": "currencyImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:50_Ghana_Cedis.jpg"
+    }
+  ]
+}
