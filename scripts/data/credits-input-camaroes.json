@@ -1,0 +1,33 @@
+{
+  "countryId": "camaroes",
+  "items": [
+    {
+      "field": "flagImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Cameroon.svg"
+    },
+    {
+      "field": "capitalImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Yaound%C3%A9_1.jpg"
+    },
+    {
+      "field": "languageImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Arret.jpg"
+    },
+    {
+      "field": "typicalDishImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ndol%C3%A8_%C3%A0_la_morue.jpg"
+    },
+    {
+      "field": "famousAnimalImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Mandrill_Albert_September_2015_Zoo_Berlin_(2).jpg"
+    },
+    {
+      "field": "landmarkImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Mount_Cameroon_view_from_Buea_(Soppo).jpg"
+    },
+    {
+      "field": "currencyImageUrl",
+      "sourcePageUrl": "https://en.wikipedia.org/wiki/File:Central_African_CFA_franc_(1000-franc_bill).jpg"
+    }
+  ]
+}
