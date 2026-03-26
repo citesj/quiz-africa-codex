@@ -1,0 +1,33 @@
+{
+  "countryId": "tanzania",
+  "items": [
+    {
+      "field": "flagImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Tanzania.svg"
+    },
+    {
+      "field": "capitalImageUrl",
+      "sourcePageUrl": "https://www.facebook.com/photo/?fbid=1276745511129278&set=a.488245813312589"
+    },
+    {
+      "field": "languageImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Swahili-pn.jpg"
+    },
+    {
+      "field": "typicalDishImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Ugali_%26_Sukuma_Wiki.jpg"
+    },
+    {
+      "field": "famousAnimalImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg"
+    },
+    {
+      "field": "landmarkImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Kilimanjaro_from_Amboseli.jpg"
+    },
+    {
+      "field": "currencyImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:TZSn10000v.jpg"
+    }
+  ]
+}
