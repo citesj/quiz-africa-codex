@@ -1,0 +1,33 @@
+{
+  "countryId": "angola",
+  "items": [
+    {
+      "field": "flagImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Angola.svg"
+    },
+    {
+      "field": "capitalImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Luanda_2025_focused_(cropped).jpg"
+    },
+    {
+      "field": "languageImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Avenidalenin.jpg"
+    },
+    {
+      "field": "typicalDishImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Poulet_%C3%A0_la_moambe.JPG"
+    },
+    {
+      "field": "famousAnimalImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Giant_Sable_Bull.png"
+    },
+    {
+      "field": "landmarkImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Kalandula_waterfalls_of_the_Lucala-River_in_Malange,_Angola.JPG"
+    },
+    {
+      "field": "currencyImageUrl",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Bank_note_of_50_Angolan_kwanzas.jpg"
+    }
+  ]
+}
