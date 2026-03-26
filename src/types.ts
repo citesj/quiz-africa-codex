@@ -1,16 +1,23 @@
-export interface ImageAsset {
-  src: string;
-  title: string;
-  author: string;
-  sourceUrl: string;
-  license: string;
-  licenseUrl: string;
-  modified: boolean;
-  modificationNote?: string;
-  attributionText: string;
+export type CountryImageKind =
+  | 'flag'
+  | 'capital'
+  | 'currency'
+  | 'language'
+  | 'typicalDish'
+  | 'famousAnimal'
+  | 'landmark';
+
+export interface CountryImages {
+  flag?: string;
+  capital?: string;
+  currency?: string;
+  language?: string;
+  typicalDish?: string;
+  famousAnimal?: string;
+  landmark?: string;
 }
 
-export interface CountryCore {
+export interface Country {
   id: string;
   name: string;
   capital: string;
@@ -21,23 +28,10 @@ export interface CountryCore {
   wildlife: string;
   typicalDish?: string;
   famousAnimal?: string;
-  capitalImage?: ImageAsset;
-  languageImage?: ImageAsset;
-  typicalDishImage?: ImageAsset;
-  famousAnimalImage?: ImageAsset;
-  landmarkImage?: ImageAsset;
   funFact: string;
-  image: ImageAsset;
   hints: [string, string, string, string];
+  images?: CountryImages;
 }
-
-export interface CountryDiscovery {
-  flagImage: ImageAsset;
-  typicalDish?: string;
-  famousAnimal?: string;
-}
-
-export type Country = CountryCore & CountryDiscovery;
 
 export type GamePhase = 'welcome' | 'quiz' | 'discovery' | 'completed';
 

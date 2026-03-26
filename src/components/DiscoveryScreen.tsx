@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_ROUNDS } from '../constants';
-import type { RoundState } from '../types';
+import type { CountryImageKind, RoundState } from '../types';
+import { getCountryImageSrc } from '../utils/countryImages';
 import { ProgressFootsteps } from './ProgressFootsteps';
 
 interface DiscoveryScreenProps {
@@ -46,6 +47,19 @@ const asEncodedSvgIcon = (emoji: string) =>
     `<svg xmlns='http://www.w3.org/2000/svg' width='240' height='160'><rect width='100%' height='100%' fill='#f6f0de'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='84'>${emoji}</text></svg>`,
   )}`;
 
+const IMAGE_PLACEHOLDERS: Record<CountryImageKind, string> = {
+  flag: asEncodedSvgIcon('🏳️'),
+  capital: asEncodedSvgIcon('🏙️'),
+  currency: asEncodedSvgIcon('💰'),
+  language: asEncodedSvgIcon('🗣️'),
+  typicalDish: asEncodedSvgIcon('🍲'),
+  famousAnimal: asEncodedSvgIcon('🦁'),
+  landmark: asEncodedSvgIcon('🗺️'),
+};
+
+const getImageWithFallback = (round: RoundState, kind: CountryImageKind): string =>
+  getCountryImageSrc(round.country, kind) ?? IMAGE_PLACEHOLDERS[kind];
+
 export const DiscoveryScreen = ({
   round,
   encouragementMessage,
@@ -66,43 +80,43 @@ export const DiscoveryScreen = ({
     {
       label: 'Capital',
       value: country.capital,
-      imageSrc: country.capitalImage?.src ?? country.image.src,
-      fallbackImageSrc: country.image.src,
+      imageSrc: getImageWithFallback(round, 'capital'),
+      fallbackImageSrc: IMAGE_PLACEHOLDERS.capital,
       imageAlt: `Paisagem da capital ${country.capital}, em ${country.name}`,
     },
     {
       label: 'Moeda',
       value: country.currency,
-      imageSrc: asEncodedSvgIcon('💰'),
-      fallbackImageSrc: asEncodedSvgIcon('💰'),
-      imageAlt: `Ícone representando a moeda oficial de ${country.name}`,
+      imageSrc: getImageWithFallback(round, 'currency'),
+      fallbackImageSrc: IMAGE_PLACEHOLDERS.currency,
+      imageAlt: `Imagem representando a moeda oficial de ${country.name}`,
     },
     {
       label: 'Idioma',
       value: country.language,
-      imageSrc: country.languageImage?.src ?? asEncodedSvgIcon('🗣️'),
-      fallbackImageSrc: asEncodedSvgIcon('🗣️'),
-      imageAlt: `Ícone representando os idiomas falados em ${country.name}`,
+      imageSrc: getImageWithFallback(round, 'language'),
+      fallbackImageSrc: IMAGE_PLACEHOLDERS.language,
+      imageAlt: `Imagem representando os idiomas falados em ${country.name}`,
     },
     {
       label: 'Prato Típico',
       value: typicalDish,
-      imageSrc: country.typicalDishImage?.src ?? asEncodedSvgIcon('🍲'),
-      fallbackImageSrc: asEncodedSvgIcon('🍲'),
+      imageSrc: getImageWithFallback(round, 'typicalDish'),
+      fallbackImageSrc: IMAGE_PLACEHOLDERS.typicalDish,
       imageAlt: `Ilustração de prato típico de ${country.name}`,
     },
     {
       label: 'Animal Famoso',
       value: famousAnimal,
-      imageSrc: country.famousAnimalImage?.src ?? asEncodedSvgIcon('🦁'),
-      fallbackImageSrc: asEncodedSvgIcon('🦁'),
+      imageSrc: getImageWithFallback(round, 'famousAnimal'),
+      fallbackImageSrc: IMAGE_PLACEHOLDERS.famousAnimal,
       imageAlt: `Foto de um ${famousAnimal} nativo de ${country.name}`,
     },
     {
       label: 'Ponto Turístico',
       value: country.landmark,
-      imageSrc: country.landmarkImage?.src ?? country.image.src,
-      fallbackImageSrc: country.image.src,
+      imageSrc: getImageWithFallback(round, 'landmark'),
+      fallbackImageSrc: IMAGE_PLACEHOLDERS.landmark,
       imageAlt: `Imagem de um ponto turístico de ${country.name}`,
     },
   ];
@@ -142,7 +156,7 @@ export const DiscoveryScreen = ({
         <p className="font-body text-sm text-color-ink/70">País revelado</p>
         <div className="flex items-center gap-3">
           <img
-            src={country.flagImage.src}
+            src={getImageWithFallback(round, 'flag')}
             alt={`Bandeira de ${country.name}`}
             className="h-10 w-14 rounded-md border border-color-ink/20 object-cover shadow-photo"
             loading="lazy"
