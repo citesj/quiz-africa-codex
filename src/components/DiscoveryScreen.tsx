@@ -23,6 +23,10 @@ interface InfoCardProps {
 const InfoCard = ({ label, value, imageSrc, imageAlt, fallbackImageSrc }: InfoCardProps) => {
   const [currentImageSrc, setCurrentImageSrc] = useState(imageSrc);
 
+  useEffect(() => {
+    setCurrentImageSrc(imageSrc);
+  }, [imageSrc]);
+
   return (
     <div className="rounded-2xl bg-color-paper p-3 shadow-photo">
       <dt className="font-title text-sm font-bold uppercase tracking-wide text-color-ink/90">{label}</dt>
