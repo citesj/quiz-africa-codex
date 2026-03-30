@@ -30,17 +30,19 @@ const InfoCard = ({ label, value, imageSrc, imageAlt, fallbackImageSrc }: InfoCa
   return (
     <div className="rounded-2xl bg-color-paper p-3 shadow-photo">
       <dt className="font-title text-sm font-bold uppercase tracking-wide text-color-ink/90">{label}</dt>
-      <img
-        src={currentImageSrc}
-        alt={imageAlt}
-        className="mt-2 h-24 w-full rounded-lg object-cover"
-        loading="lazy"
-        onError={() => {
-          if (currentImageSrc !== fallbackImageSrc) {
-            setCurrentImageSrc(fallbackImageSrc);
-          }
-        }}
-      />
+      <div className="mt-2 h-36 w-full rounded-lg overflow-hidden bg-color-paper">
+        <img
+          src={currentImageSrc}
+          alt={imageAlt}
+          className="w-full h-full object-cover object-center"
+          loading="lazy"
+          onError={() => {
+            if (currentImageSrc !== fallbackImageSrc) {
+              setCurrentImageSrc(fallbackImageSrc);
+            }
+          }}
+        />
+      </div>
       <dd className={`mt-3 text-color-ink ${BODY_TEXT_MIN_SIZE_CLASS}`}>{value}</dd>
     </div>
   );
@@ -159,12 +161,14 @@ export const DiscoveryScreen = ({
       <div className="space-y-1 pt-1">
         <p className="font-body text-sm text-color-ink/70">País revelado</p>
         <div className="flex items-center gap-3">
-          <img
-            src={getImageWithFallback(round, 'flag')}
-            alt={`Bandeira de ${country.name}`}
-            className="h-10 w-14 rounded-md border border-color-ink/20 object-cover shadow-photo"
-            loading="lazy"
-          />
+          <div className="h-12 w-16 rounded-md overflow-hidden border border-color-ink/20 shadow-photo">
+            <img
+              src={getImageWithFallback(round, 'flag')}
+              alt={`Bandeira de ${country.name}`}
+              className="w-full h-full object-cover object-center"
+              loading="lazy"
+            />
+          </div>
           <h3 className="font-title text-2xl font-extrabold text-color-ink md:text-3xl">{country.name}</h3>
         </div>
         <p className="font-body text-sm text-color-ink/75">Rodada {round.roundNumber} de {TOTAL_ROUNDS} concluída</p>
