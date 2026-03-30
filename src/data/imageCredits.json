@@ -156,18 +156,18 @@
     "attributionText": "020 The lion king Snyggve in the Serengeti National Park Photo by Giles Laurent — Giles Laurent. Licença: CC BY-SA 4.0. Fonte: https://commons.wikimedia.org/wiki/File:020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg"
   },
   {
-  "countryId": "africa-do-sul",
-  "field": "landmarkImageUrl",
-  "imageUrl": "https://cdn.britannica.com/43/99843-050-E6E4F181/Table-Mountain-Cape-Town-South-Africa.jpg",
-  "author": "Glowimages/Getty Images",
-  "title": "Table Mountain, South Africa",
-  "license": "Copyrighted",
-  "licenseUrl": "https://www.britannica.com/copyright",
-  "sourcePageUrl": "https://www.britannica.com/place/Table-Mountain-South-Africa#/media/1/579761/99894",
-  "originalFileUrl": "https://cdn.britannica.com/43/99843-050-E6E4F181/Table-Mountain-Cape-Town-South-Africa.jpg",
-  "lastModified": "2026-03-30",
-  "attributionText": "Table Mountain, South Africa — Glowimages/Getty Images. Fonte: Encyclopædia Britannica. Disponível em: https://www.britannica.com/place/Table-Mountain-South-Africa"
-},
+    "countryId": "africa-do-sul",
+    "field": "landmarkImageUrl",
+    "imageUrl": "https://cdn.britannica.com/43/99843-050-E6E4F181/Table-Mountain-Cape-Town-South-Africa.jpg",
+    "author": "Glowimages/Getty Images",
+    "title": "Table Mountain, South Africa",
+    "license": "Copyrighted",
+    "licenseUrl": "https://www.britannica.com/copyright",
+    "sourcePageUrl": "https://www.britannica.com/place/Table-Mountain-South-Africa#/media/1/579761/99894",
+    "originalFileUrl": "https://cdn.britannica.com/43/99843-050-E6E4F181/Table-Mountain-Cape-Town-South-Africa.jpg",
+    "lastModified": "2026-03-30",
+    "attributionText": "Table Mountain, South Africa — Glowimages/Getty Images. Fonte: Encyclopædia Britannica. Disponível em: https://www.britannica.com/place/Table-Mountain-South-Africa"
+  },
   {
     "countryId": "africa-do-sul",
     "field": "currencyImageUrl",
@@ -871,17 +871,17 @@
     "attributionText": "Madagaskar stew 2019-10-01 — Z thomas. Licença: CC BY-SA 4.0. Fonte: https://commons.wikimedia.org/wiki/File:Madagaskar_stew_2019-10-01.jpg"
   },
   {
-    "countryId": "Madagascar",
+    "countryId": "madagascar",
     "field": "famousAnimalImageUrl",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Lepilemur_sahamalazensis_c.png",
-    "author": "Lepilemur_sahamalazensis_b.PNG : R. Hilgartner derivative work: WolfmanSF ( talk )",
-    "title": "Lepilemur sahamalazensis c",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "sourcePageUrl": "https://en.wikipedia.org/wiki/File:Lepilemur_sahamalazensis_c.png",
-    "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Lepilemur_sahamalazensis_c.png",
-    "lastModified": "2010-12-26",
-    "attributionText": "Lepilemur sahamalazensis c — Lepilemur_sahamalazensis_b.PNG : R. Hilgartner derivative work: WolfmanSF ( talk ). Licença: CC BY 2.0. Fonte: https://en.wikipedia.org/wiki/File:Lepilemur_sahamalazensis_c.png"
+    "imageUrl": "https://cdn.pixabay.com/photo/2018/02/20/12/35/mammal-3167407_1280.jpg",
+    "author": "PublicDomainPictures",
+    "title": "Lêmure de Cauda Anelada em Madagascar",
+    "license": "Pixabay Content License",
+    "licenseUrl": "https://pixabay.com/service/license-summary/",
+    "sourcePageUrl": "https://pixabay.com/pt/photos/mam%c3%adfero-pelagem-cauda-madag%c3%a1scar-3167407/",
+    "originalFileUrl": "https://pixabay.com/get/g798c86d8883d6a6296836108170c061d48820c7438466e01a45749f99e338c237f3747f15be3c03531b79f225890918d_1280.jpg",
+    "lastModified": "2018-02-20",
+    "attributionText": "Lêmure de Cauda Anelada em Madagascar — PublicDomainPictures. Licença: Pixabay License. Fonte: https://pixabay.com/pt/photos/mamífero-pelagem-cauda-madagáscar-3167407/"
   },
   {
     "countryId": "Madagascar",
@@ -999,7 +999,7 @@
     "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/200DhM.png",
     "lastModified": "2008-06-20",
     "attributionText": "200DhM — Hayko. Licença: CC BY-SA 4.0. Fonte: https://commons.wikimedia.org/wiki/File:200DhM.png"
-  },  
+  },
   {
     "countryId": "mocambique",
     "field": "flagImageUrl",
