@@ -156,18 +156,18 @@
     "attributionText": "020 The lion king Snyggve in the Serengeti National Park Photo by Giles Laurent — Giles Laurent. Licença: CC BY-SA 4.0. Fonte: https://commons.wikimedia.org/wiki/File:020_The_lion_king_Snyggve_in_the_Serengeti_National_Park_Photo_by_Giles_Laurent.jpg"
   },
   {
-    "countryId": "africa-do-sul",
-    "field": "landmarkImageUrl",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Boulders_Beach_Suedafrika.jpg",
-    "author": "Olga Ernst",
-    "title": "Boulders Beach Suedafrika",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Boulders_Beach_Suedafrika.jpg",
-    "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Boulders_Beach_Suedafrika.jpg",
-    "lastModified": "2017-01-05",
-    "attributionText": "Boulders Beach Suedafrika — Olga Ernst. Licença: CC BY-SA 4.0. Fonte: https://commons.wikimedia.org/wiki/File:Boulders_Beach_Suedafrika.jpg"
-  },
+  "countryId": "africa-do-sul",
+  "field": "landmarkImageUrl",
+  "imageUrl": "https://cdn.britannica.com/43/99843-050-E6E4F181/Table-Mountain-Cape-Town-South-Africa.jpg",
+  "author": "Glowimages/Getty Images",
+  "title": "Table Mountain, South Africa",
+  "license": "Copyrighted",
+  "licenseUrl": "https://www.britannica.com/copyright",
+  "sourcePageUrl": "https://www.britannica.com/place/Table-Mountain-South-Africa#/media/1/579761/99894",
+  "originalFileUrl": "https://cdn.britannica.com/43/99843-050-E6E4F181/Table-Mountain-Cape-Town-South-Africa.jpg",
+  "lastModified": "2026-03-30",
+  "attributionText": "Table Mountain, South Africa — Glowimages/Getty Images. Fonte: Encyclopædia Britannica. Disponível em: https://www.britannica.com/place/Table-Mountain-South-Africa"
+},
   {
     "countryId": "africa-do-sul",
     "field": "currencyImageUrl",
