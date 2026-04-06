@@ -28,12 +28,7 @@ const App = () => {
 
   return (
     <main className="min-h-screen bg-color-paper bg-paper p-4 font-body text-color-ink md:p-10">
-      <div className="mx-auto max-w-5xl rounded-[2rem] border border-color-ink/15 bg-color-paper/80 p-4 shadow-passport backdrop-blur-sm md:p-8">
-        <div className="mb-4 flex items-center justify-between text-sm font-semibold uppercase tracking-[0.2em] text-color-ink/70">
-          <span aria-hidden="true">✈ Diário de Bordo</span>
-          <span>Quiz Investigativo da África</span>
-          <span aria-hidden="true">📸 Álbum</span>
-        </div>
+
 
         <AnimatePresence mode="wait">
           {showImageCredits && (
@@ -85,16 +80,6 @@ const App = () => {
           )}
         </AnimatePresence>
 
-        <footer className="mt-6 text-right">
-          <button
-            type="button"
-            onClick={() => setShowImageCredits(true)}
-            className="text-xs text-color-ink/60 underline decoration-dotted underline-offset-4 transition hover:text-color-ink"
-          >
-            Créditos de imagens
-          </button>
-        </footer>
-      </div>
     </main>
   );
 };

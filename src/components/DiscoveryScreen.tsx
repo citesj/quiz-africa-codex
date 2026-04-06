@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_ROUNDS } from '../constants';
 import type { CountryImageKind, RoundState } from '../types';
 import { getCountryImageSrc } from '../utils/countryImages';
-import { ProgressFootsteps } from './ProgressFootsteps';
 
 interface DiscoveryScreenProps {
   round: RoundState;
@@ -139,7 +138,6 @@ export const DiscoveryScreen = ({
 
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <h2 className="font-title text-3xl font-extrabold text-color-ink">Diário de Descoberta</h2>
-        <ProgressFootsteps total={TOTAL_ROUNDS} current={round.roundNumber} />
       </div>
 
       <motion.p

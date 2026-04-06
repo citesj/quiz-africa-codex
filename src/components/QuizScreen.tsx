@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_HINTS, TOTAL_ROUNDS } from '../constants';
 import type { RoundState } from '../types';
-import { ProgressFootsteps } from './ProgressFootsteps';
 
 interface QuizScreenProps {
   round: RoundState;
@@ -13,13 +12,9 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
   <section className="space-y-6 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-8 shadow-passport">
     <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
       <h2 className="font-title text-3xl font-extrabold text-color-ink">Rodada {round.roundNumber}</h2>
-      <ProgressFootsteps total={TOTAL_ROUNDS} current={round.roundNumber} />
     </div>
 
     <div className="relative rounded-2xl border border-color-ink/15 bg-color-paper-deep/55 p-5">
-      <span aria-hidden="true" className="absolute -left-2 -top-3 rotate-[-7deg] rounded border-2 border-color-stamp px-2 py-1 text-xs font-bold text-color-stamp">
-        Ler dica
-      </span>
       <p className="mb-3 text-lg font-bold text-color-ink">Pistas reveladas: {round.revealedHints}/{TOTAL_HINTS}</p>
       <AnimatePresence mode="wait">
         <motion.ul
