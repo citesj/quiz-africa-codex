@@ -11,7 +11,6 @@ export const WelcomeScreen = ({ onStart, isPending }: WelcomeScreenProps) => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    className="relative mx-auto w-full max-w-4xl overflow-hidden rounded-3xl border border-[#f1d9a7] bg-[#fcf7ea] p-6 shadow-passport sm:p-10"
   >
     <motion.div
       initial={{ scale: 0.96, opacity: 0 }}
