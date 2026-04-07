@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_HINTS } from '../constants';
 import type { CountryImageKind } from '../types';
@@ -35,8 +36,24 @@ interface QuizScreenProps {
   onSelectAnswer: (countryId: string) => void;
 }
 
-export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenProps) => (
-  <section className="space-y-6 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-8 shadow-passport">
+export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenProps) => {
+  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+
+  useEffect(() => {
+    setSelectedOptionId(null);
+  }, [round.roundNumber]);
+
+  const handleConfirmAnswer = () => {
+    if (!selectedOptionId) {
+      return;
+    }
+
+    onSelectAnswer(selectedOptionId);
+    setSelectedOptionId(null);
+  };
+
+  return (
+    <section className="space-y-6 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-8 shadow-passport">
     <h2 className="font-title text-3xl font-extrabold text-color-ink">Rodada {round.roundNumber}</h2>
 
     <div className="rounded-2xl border border-color-ink/15 bg-color-paper-deep/55 p-5">
@@ -95,20 +112,53 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
       </button>
     </div>
 
-    <div className="grid gap-3 md:grid-cols-3">
-      {round.options.map((option, index) => (
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.96 }}
-          key={option.id}
-          type="button"
-          onClick={() => onSelectAnswer(option.id)}
-          className="rounded-2xl border-2 border-color-olive/70 bg-[#fffdf8] p-4 text-left text-xl font-bold text-color-ink shadow-photo transition hover:bg-[#faf2df] focus-visible:ring-4 focus-visible:ring-color-stamp focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
-        >
-          <span className="mr-2 rounded-lg bg-color-olive px-2 py-1 text-base text-white">{String.fromCharCode(65 + index)}</span>
-          {option.name}
-        </motion.button>
-      ))}
-    </div>
-  </section>
-);
+      <div className="grid gap-3 md:grid-cols-3">
+        {round.options.map((option, index) => {
+          const isSelected = selectedOptionId === option.id;
+          const hasSelection = selectedOptionId !== null;
+          const isDimmed = hasSelection && !isSelected;
+
+          return (
+            <motion.button
+              whileHover={hasSelection && !isSelected ? undefined : { scale: 1.02 }}
+              whileTap={{ scale: 0.96 }}
+              key={option.id}
+              type="button"
+              onClick={() => setSelectedOptionId(option.id)}
+              className={`rounded-2xl border-2 p-4 text-left text-xl font-bold text-color-ink shadow-photo transition focus-visible:ring-4 focus-visible:ring-color-stamp focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper ${
+                isSelected
+                  ? 'border-color-olive bg-[#f0e6cd] ring-2 ring-color-olive/70 ring-inset'
+                  : 'border-color-olive/70 bg-[#fffdf8]'
+              } ${isDimmed ? 'opacity-50' : ''} ${hasSelection ? '' : 'hover:bg-[#faf2df]'}`}
+            >
+              <span className="mr-2 rounded-lg bg-color-olive px-2 py-1 text-base text-white">
+                {String.fromCharCode(65 + index)}
+              </span>
+              {option.name}
+            </motion.button>
+          );
+        })}
+      </div>
+
+      <AnimatePresence>
+        {selectedOptionId && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            className="pt-2"
+          >
+            <button
+              type="button"
+              onClick={handleConfirmAnswer}
+              disabled={!selectedOptionId}
+              className="w-full rounded-2xl border-2 border-color-ink/20 bg-color-olive px-6 py-4 text-center text-2xl font-extrabold text-white shadow-passport transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper md:text-3xl"
+            >
+              Confirmar Resposta
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+};
