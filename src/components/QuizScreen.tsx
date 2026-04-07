@@ -4,14 +4,27 @@ import type { CountryImageKind } from '../types';
 import type { RoundState } from '../types';
 import { getCountryImageSrc } from '../utils/countryImages';
 
-const HINT_IMAGE_ORDER: CountryImageKind[] = [
+const HINT_IMAGE_ORDER = [
   'famousAnimal',
   'landmark',
   'typicalDish',
   'capital',
   'currency',
   'language',
-];
+] as const satisfies readonly CountryImageKind[];
+
+type HintImageKind = (typeof HINT_IMAGE_ORDER)[number];
+
+const HINT_LABELS: Record<HintImageKind, string> = {
+  famousAnimal: 'Animal Famoso',
+  landmark: 'Ponto Turístico',
+  typicalDish: 'Comida Típica',
+  capital: 'Capital',
+  currency: 'Moeda',
+  language: 'Idioma',
+};
+
+const LOCKED_HINT_LABEL = 'Pista Bloqueada';
 
 const HINT_IMAGE_FALLBACK =
   "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180'%3E%3Crect width='100%25' height='100%25' fill='%23efe5ca'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='54'%3E%F0%9F%93%B8%3C/text%3E%3C/svg%3E";
@@ -31,36 +44,45 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
     <div className="relative rounded-2xl border border-color-ink/15 bg-color-paper-deep/55 p-5">
       <p className="mb-3 text-lg font-bold text-color-ink">Pistas reveladas: {round.revealedHints}/{TOTAL_HINTS}</p>
       <AnimatePresence mode="wait">
-        <motion.div
+        <motion.ul
           key={round.revealedHints}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           className="grid grid-cols-2 gap-3 md:grid-cols-3"
         >
-          {HINT_IMAGE_ORDER.map((hintKind, index) => (
-            <div
-              key={hintKind}
-              className="overflow-hidden rounded-xl border border-color-ink/10 bg-[#fffdf8] shadow-photo"
-            >
-              {index < round.revealedHints ? (
-                <img
-                  src={getCountryImageSrc(round.country, hintKind) ?? HINT_IMAGE_FALLBACK}
-                  alt={`Dica visual ${index + 1}`}
-                  className="h-28 w-full object-cover object-center md:h-36"
-                  loading="lazy"
-                />
-              ) : (
-                <div
-                  aria-hidden="true"
-                  className="flex h-28 w-full items-center justify-center bg-color-paper-deep/80 text-4xl text-color-ink/70 md:h-36"
-                >
-                  ?
-                </div>
-              )}
-            </div>
-          ))}
-        </motion.div>
+          {HINT_IMAGE_ORDER.map((hintKind, index) => {
+            const isHintRevealed = index < round.revealedHints;
+            const hintLabel = isHintRevealed ? HINT_LABELS[hintKind] : LOCKED_HINT_LABEL;
+
+            return (
+              <li
+                key={hintKind}
+                className="flex list-none flex-col overflow-hidden rounded-xl border border-color-ink/10 bg-[#fffdf8] shadow-photo"
+              >
+                <span className="border-b border-color-ink/10 bg-color-paper-deep/60 px-3 py-2 text-xs font-extrabold uppercase tracking-[0.08em] text-color-ink md:text-sm">
+                  {hintLabel}
+                </span>
+
+                {isHintRevealed ? (
+                  <img
+                    src={getCountryImageSrc(round.country, hintKind) ?? HINT_IMAGE_FALLBACK}
+                    alt={`${hintLabel} do país`}
+                    className="h-28 w-full object-cover object-center md:h-36"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div
+                    aria-hidden="true"
+                    className="flex h-28 w-full items-center justify-center bg-color-paper-deep/80 text-4xl text-color-ink/70 md:h-36"
+                  >
+                    ?
+                  </div>
+                )}
+              </li>
+            );
+          })}
+        </motion.ul>
       </AnimatePresence>
       <button
         type="button"
