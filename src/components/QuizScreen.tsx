@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { TOTAL_HINTS } from '../constants';
+import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_HINTS } from '../constants';
 import type { CountryImageKind } from '../types';
 import type { RoundState } from '../types';
 import { getCountryImageSrc } from '../utils/countryImages';
@@ -88,7 +88,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
         type="button"
         onClick={onRevealHint}
         disabled={round.revealedHints >= TOTAL_HINTS}
-        className="mt-4 rounded-xl border-2 border-color-ink px-5 py-2 text-lg font-bold text-color-ink transition hover:bg-color-ink hover:text-[#fff9ea] disabled:opacity-50 focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
+        className="mt-4 rounded-xl border-2 border-color-ink px-6 py-3 text-lg font-bold text-color-ink transition hover:bg-color-ink hover:text-[#fff9ea] disabled:opacity-50 focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
       >
         Revelar próxima dica
       </button>
