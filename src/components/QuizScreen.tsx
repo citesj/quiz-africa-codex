@@ -70,6 +70,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
                     alt={`Pista de ${hintLabel}`}
                     className="h-28 w-full object-cover object-center md:h-36"
                     loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div

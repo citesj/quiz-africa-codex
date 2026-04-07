@@ -20,14 +20,24 @@ const kindBySuffix = new Map<string, CountryImageKind>(
   (Object.entries(SUFFIX_BY_KIND) as Array<[CountryImageKind, string]>).map(([kind, suffix]) => [suffix, kind]),
 );
 
+const EXTENSION_PRIORITY: Record<string, number> = {
+  webp: 4,
+  svg: 3,
+  png: 2,
+  jpg: 1,
+  jpeg: 1,
+};
+
 const imagesByCountry = new Map<string, Partial<Record<CountryImageKind, string>>>();
+const priorityByCountryAndKind = new Map<string, number>();
 
 Object.entries(imageModules).forEach(([modulePath, imageUrl]) => {
-  const match = modulePath.match(/countries\/([^/]+)\/[^/]+-([a-z]+)\.[^/.]+$/i);
+  const match = modulePath.match(/countries\/([^/]+)\/[^/]+-([a-z]+)\.([^.]+)$/i);
   const countryId = match?.[1];
   const suffix = match?.[2]?.toLowerCase();
+  const extension = match?.[3]?.toLowerCase();
 
-  if (!countryId || !suffix) {
+  if (!countryId || !suffix || !extension) {
     return;
   }
 
@@ -36,9 +46,18 @@ Object.entries(imageModules).forEach(([modulePath, imageUrl]) => {
     return;
   }
 
+  const nextPriority = EXTENSION_PRIORITY[extension] ?? 0;
+  const priorityKey = `${countryId}:${kind}`;
+  const existingPriority = priorityByCountryAndKind.get(priorityKey) ?? -1;
+
+  if (nextPriority < existingPriority) {
+    return;
+  }
+
   const existing = imagesByCountry.get(countryId) ?? {};
   existing[kind] = imageUrl;
   imagesByCountry.set(countryId, existing);
+  priorityByCountryAndKind.set(priorityKey, nextPriority);
 });
 
 function getImageByConvention(countryId: string, kind: CountryImageKind): string | undefined {
