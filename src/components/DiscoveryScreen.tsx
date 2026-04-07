@@ -32,15 +32,9 @@ export const DiscoveryScreen = ({
     <motion.section
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="relative space-y-5 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-8 shadow-passport"
+      className="space-y-5 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-8 shadow-passport"
     >
-      <span aria-hidden="true" className="absolute right-6 top-2 rotate-6 rounded border-2 border-color-stamp px-3 py-1 text-xs font-bold text-color-stamp">
-        Passaporte
-      </span>
-
-      <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-        <h2 className="font-title text-3xl font-extrabold text-color-ink">Diário de Descoberta</h2>
-      </div>
+      <h2 className="font-title text-3xl font-extrabold text-color-ink">Diário de Descoberta</h2>
 
       <motion.p
         ref={feedbackRef}
@@ -58,8 +52,7 @@ export const DiscoveryScreen = ({
         {encouragementMessage}
       </motion.p>
 
-      <div className="space-y-3 pt-1">
-        <p className="font-body text-sm text-color-ink/70">País revelado</p>
+      <div className="space-y-4 pt-1">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -73,13 +66,9 @@ export const DiscoveryScreen = ({
           />
         </motion.div>
         <h3 className="text-center font-title text-3xl font-extrabold text-color-ink md:text-4xl">{country.name}</h3>
-        <p className="text-center font-body text-sm text-color-ink/75">Rodada {round.roundNumber} de {TOTAL_ROUNDS} concluída</p>
       </div>
 
-      <p className="rounded-2xl bg-color-ochre/10 px-4 py-3 font-body text-color-ink shadow-photo">
-        <span className="font-title text-sm font-bold uppercase tracking-wide text-color-ink/90">Curiosidade</span>
-        <span className="mt-2 block">{country.funFact}</span>
-      </p>
+      <p className="rounded-2xl bg-color-ochre/10 px-4 py-3 font-body text-color-ink shadow-photo">{country.funFact}</p>
 
       <button
         type="button"
