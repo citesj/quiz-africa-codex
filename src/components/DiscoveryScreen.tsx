@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import { TOTAL_ROUNDS } from '../constants';
+import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_ROUNDS } from '../constants';
 import type { RoundState } from '../types';
 import { getCountryImageSrc } from '../utils/countryImages';
 
@@ -32,7 +32,7 @@ export const DiscoveryScreen = ({
     <motion.section
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="relative space-y-5 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-8 shadow-passport"
+      className="relative mx-auto w-full max-w-4xl space-y-4 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-4 shadow-passport sm:p-5 md:space-y-5 md:p-6 chromebook:max-w-5xl chromebook:p-5"
     >
       <span aria-hidden="true" className="absolute right-6 top-2 rotate-6 rounded border-2 border-color-stamp px-3 py-1 text-xs font-bold text-color-stamp">
         Passaporte
@@ -58,25 +58,25 @@ export const DiscoveryScreen = ({
         {encouragementMessage}
       </motion.p>
 
-      <div className="space-y-3 pt-1">
-        <p className="font-body text-sm text-color-ink/70">País revelado</p>
+      <div className="space-y-2 pt-1 md:space-y-3">
+        <p className={`font-body text-color-ink/70 ${BODY_TEXT_MIN_SIZE_CLASS}`}>País revelado</p>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mx-auto w-full max-w-md overflow-hidden rounded-xl border border-color-ink/20 shadow-photo"
+          className="mx-auto w-full max-w-sm overflow-hidden rounded-xl border border-color-ink/20 shadow-photo md:max-w-md chromebook:max-w-lg"
         >
           <img
             src={getCountryImageSrc(round.country, 'flag') ?? FLAG_FALLBACK}
             alt={`Bandeira de ${country.name}`}
-            className="h-auto w-full object-cover object-center"
+            className="h-auto max-h-[28vh] w-full object-contain object-center md:max-h-[32vh] chromebook:max-h-[30vh]"
             loading="lazy"
           />
         </motion.div>
         <h3 className="text-center font-title text-3xl font-extrabold text-color-ink md:text-4xl">{country.name}</h3>
-        <p className="text-center font-body text-sm text-color-ink/75">Rodada {round.roundNumber} de {TOTAL_ROUNDS} concluída</p>
+        <p className={`text-center font-body text-color-ink/75 ${BODY_TEXT_MIN_SIZE_CLASS}`}>Rodada {round.roundNumber} de {TOTAL_ROUNDS} concluída</p>
       </div>
 
-      <p className="rounded-2xl bg-color-ochre/10 px-4 py-3 font-body text-color-ink shadow-photo">
+      <p className={`rounded-2xl bg-color-ochre/10 px-4 py-3 font-body text-color-ink shadow-photo ${BODY_TEXT_MIN_SIZE_CLASS}`}>
         <span className="font-title text-sm font-bold uppercase tracking-wide text-color-ink/90">Curiosidade</span>
         <span className="mt-2 block">{country.funFact}</span>
       </p>

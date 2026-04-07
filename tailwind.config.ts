@@ -3,6 +3,14 @@ import type { Config } from 'tailwindcss';
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      chromebook: '1366px',
+      xl: '1536px',
+      '2xl': '1920px',
+    },
     extend: {
       colors: {
         'color-paper': '#F4EBD8',

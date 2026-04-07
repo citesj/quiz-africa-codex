@@ -20,16 +20,15 @@ const App = () => {
 
   if (!showImageCredits && gameState.phase === 'welcome') {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-color-paper bg-paper p-4 font-body text-color-ink md:p-10">
+      <main className="flex min-h-screen items-center justify-center bg-color-paper bg-paper p-3 font-body text-color-ink sm:p-4 md:p-6 chromebook:p-5">
         <WelcomeScreen onStart={startGame} isPending={isPending} />
       </main>
     );
   }
 
   return (
-    <main className="min-h-screen bg-color-paper bg-paper p-4 font-body text-color-ink md:p-10">
-
-
+    <main className="min-h-screen bg-color-paper bg-paper p-3 font-body text-color-ink sm:p-4 md:p-6 chromebook:p-5 lg:p-8">
+      <div className="mx-auto w-full max-w-4xl chromebook:max-w-5xl">
         <AnimatePresence mode="wait">
           {showImageCredits && (
             <motion.div key="image-credits" {...pageTransition}>
@@ -79,7 +78,7 @@ const App = () => {
             </>
           )}
         </AnimatePresence>
-
+      </div>
     </main>
   );
 };
