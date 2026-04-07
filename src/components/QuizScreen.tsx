@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { TOTAL_HINTS } from '../constants';
+import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_HINTS } from '../constants';
 import type { CountryImageKind } from '../types';
 import type { RoundState } from '../types';
 import { getCountryImageSrc } from '../utils/countryImages';
@@ -84,7 +84,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
         type="button"
         onClick={onRevealHint}
         disabled={round.revealedHints >= TOTAL_HINTS}
-        className="mt-4 rounded-xl border-2 border-color-ink px-5 py-2 text-lg font-bold text-color-ink transition hover:bg-color-ink hover:text-[#fff9ea] disabled:opacity-50 focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
+        className="mt-4 rounded-xl border-2 border-color-ink px-6 py-3 text-lg font-bold text-color-ink transition hover:bg-color-ink hover:text-[#fff9ea] disabled:opacity-50 focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
       >
         Revelar próxima dica
       </button>
@@ -100,7 +100,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
             key={option.id}
             type="button"
             onClick={() => onSelectAnswer(option.id)}
-            className="rounded-2xl border-2 border-color-olive/70 bg-[#fffdf8] p-4 text-left text-xl font-bold text-color-ink shadow-photo transition hover:bg-[#faf2df] focus-visible:ring-4 focus-visible:ring-color-stamp focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
+            className="min-h-20 rounded-2xl border-2 border-color-olive/70 bg-[#fffdf8] p-5 text-left text-lg font-bold text-color-ink shadow-photo transition hover:bg-[#faf2df] focus-visible:ring-4 focus-visible:ring-color-stamp focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper sm:p-6 md:p-5 md:text-xl"
           >
             <span className="mr-2 rounded-lg bg-color-olive px-2 py-1 text-base text-white">{String.fromCharCode(65 + index)}</span>
             {option.name}

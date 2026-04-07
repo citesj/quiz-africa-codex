@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import { TOTAL_ROUNDS } from '../constants';
+import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_ROUNDS } from '../constants';
 import type { RoundState } from '../types';
 import { getCountryImageSrc } from '../utils/countryImages';
 
@@ -56,12 +56,12 @@ export const DiscoveryScreen = ({
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mx-auto w-full max-w-md overflow-hidden rounded-xl border border-color-ink/20 shadow-photo"
+          className="mx-auto w-full max-w-sm overflow-hidden rounded-xl border border-color-ink/20 shadow-photo md:max-w-md chromebook:max-w-lg"
         >
           <img
             src={getCountryImageSrc(round.country, 'flag') ?? FLAG_FALLBACK}
             alt={`Bandeira de ${country.name}`}
-            className="h-auto w-full object-cover object-center"
+            className="h-auto max-h-[28vh] w-full object-contain object-center md:max-h-[32vh] chromebook:max-h-[30vh]"
             loading="lazy"
           />
         </motion.div>
