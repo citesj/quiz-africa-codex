@@ -16,15 +16,15 @@ const HINT_IMAGE_ORDER = [
 type HintImageKind = (typeof HINT_IMAGE_ORDER)[number];
 
 const HINT_LABELS: Record<HintImageKind, string> = {
-  famousAnimal: 'ANIMAL FAMOSO',
-  landmark: 'PONTO TURÍSTICO',
-  typicalDish: 'COMIDA TÍPICA',
-  capital: 'CAPITAL',
-  currency: 'MOEDA',
-  language: 'IDIOMA',
+  famousAnimal: 'Animal',
+  landmark: 'Lugar',
+  typicalDish: 'Comida',
+  capital: 'Capital',
+  currency: 'Moeda',
+  language: 'Idioma',
 };
 
-const LOCKED_HINT_LABEL = 'PISTA BLOQUEADA';
+const LOCKED_HINT_LABEL = 'Bloqueada';
 
 const HINT_IMAGE_FALLBACK =
   "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180'%3E%3Crect width='100%25' height='100%25' fill='%23efe5ca'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='54'%3E%F0%9F%93%B8%3C/text%3E%3C/svg%3E";
@@ -36,13 +36,13 @@ interface QuizScreenProps {
 }
 
 export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenProps) => (
-  <section className="mx-auto w-full max-w-4xl space-y-4 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-4 shadow-passport sm:p-5 md:space-y-5 md:p-6 chromebook:max-w-5xl chromebook:p-5">
-    <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-      <h2 className="font-title text-3xl font-extrabold text-color-ink">Rodada {round.roundNumber}</h2>
-    </div>
+  <section className="space-y-6 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-8 shadow-passport">
+    <h2 className="font-title text-3xl font-extrabold text-color-ink">Rodada {round.roundNumber}</h2>
 
-    <div className="relative rounded-2xl border border-color-ink/15 bg-color-paper-deep/55 p-5">
-      <p className={`mb-3 font-bold text-color-ink ${BODY_TEXT_MIN_SIZE_CLASS}`}>Pistas reveladas: {round.revealedHints}/{TOTAL_HINTS}</p>
+    <div className="rounded-2xl border border-color-ink/15 bg-color-paper-deep/55 p-5">
+      <p className="mb-3 text-sm font-semibold text-color-ink/80">
+        Pistas: {round.revealedHints}/{TOTAL_HINTS}
+      </p>
       <AnimatePresence mode="wait">
         <motion.ul
           key={round.revealedHints}
@@ -60,14 +60,14 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
                 key={hintKind}
                 className="flex list-none flex-col overflow-hidden rounded-xl border border-color-ink/10 bg-[#fffdf8] shadow-photo"
               >
-                <span className="border-b border-color-ink/10 bg-color-paper-deep/60 px-3 py-2 text-xs font-extrabold uppercase tracking-[0.08em] text-color-stamp md:text-sm">
+                <span className="border-b border-color-ink/10 bg-color-paper-deep/60 px-3 py-2 text-xs font-bold tracking-wide text-color-stamp">
                   {hintLabel}
                 </span>
 
                 {isHintRevealed ? (
                   <img
                     src={getCountryImageSrc(round.country, hintKind) ?? HINT_IMAGE_FALLBACK}
-                    alt={`${hintLabel} do país`}
+                    alt={`Pista de ${hintLabel}`}
                     className="h-28 w-full object-cover object-center md:h-36"
                     loading="lazy"
                   />
@@ -94,23 +94,20 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
       </button>
     </div>
 
-    <div>
-      <p className="mb-3 font-title text-2xl font-extrabold text-color-ink">Escolher país</p>
-      <div className="grid gap-4 sm:gap-5 md:grid-cols-2 md:gap-4 chromebook:grid-cols-3">
-        {round.options.map((option, index) => (
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.96 }}
-            key={option.id}
-            type="button"
-            onClick={() => onSelectAnswer(option.id)}
-            className="min-h-20 rounded-2xl border-2 border-color-olive/70 bg-[#fffdf8] p-5 text-left text-lg font-bold text-color-ink shadow-photo transition hover:bg-[#faf2df] focus-visible:ring-4 focus-visible:ring-color-stamp focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper sm:p-6 md:p-5 md:text-xl"
-          >
-            <span className="mr-2 rounded-lg bg-color-olive px-2 py-1 text-base text-white">{String.fromCharCode(65 + index)}</span>
-            {option.name}
-          </motion.button>
-        ))}
-      </div>
+    <div className="grid gap-3 md:grid-cols-3">
+      {round.options.map((option, index) => (
+        <motion.button
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.96 }}
+          key={option.id}
+          type="button"
+          onClick={() => onSelectAnswer(option.id)}
+          className="rounded-2xl border-2 border-color-olive/70 bg-[#fffdf8] p-4 text-left text-xl font-bold text-color-ink shadow-photo transition hover:bg-[#faf2df] focus-visible:ring-4 focus-visible:ring-color-stamp focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
+        >
+          <span className="mr-2 rounded-lg bg-color-olive px-2 py-1 text-base text-white">{String.fromCharCode(65 + index)}</span>
+          {option.name}
+        </motion.button>
+      ))}
     </div>
   </section>
 );
