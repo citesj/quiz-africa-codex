@@ -16,15 +16,15 @@ const HINT_IMAGE_ORDER = [
 type HintImageKind = (typeof HINT_IMAGE_ORDER)[number];
 
 const HINT_LABELS: Record<HintImageKind, string> = {
-  famousAnimal: 'Animal Famoso',
-  landmark: 'Ponto Turístico',
-  typicalDish: 'Comida Típica',
-  capital: 'Capital',
-  currency: 'Moeda',
-  language: 'Idioma',
+  famousAnimal: 'ANIMAL FAMOSO',
+  landmark: 'PONTO TURÍSTICO',
+  typicalDish: 'COMIDA TÍPICA',
+  capital: 'CAPITAL',
+  currency: 'MOEDA',
+  language: 'IDIOMA',
 };
 
-const LOCKED_HINT_LABEL = 'Pista Bloqueada';
+const LOCKED_HINT_LABEL = 'PISTA BLOQUEADA';
 
 const HINT_IMAGE_FALLBACK =
   "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180'%3E%3Crect width='100%25' height='100%25' fill='%23efe5ca'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='54'%3E%F0%9F%93%B8%3C/text%3E%3C/svg%3E";
