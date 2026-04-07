@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_HINTS } from '../constants';
 import type { CountryImageKind } from '../types';
@@ -37,19 +37,48 @@ interface QuizScreenProps {
 }
 
 export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenProps) => {
-  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [interactionPhase, setInteractionPhase] = useState<'idle' | 'selected' | 'tension' | 'resolution'>('idle');
+  const tensionTimeoutRef = useRef<number | null>(null);
+  const resolutionTimeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
-    setSelectedOptionId(null);
+    if (tensionTimeoutRef.current) window.clearTimeout(tensionTimeoutRef.current);
+    if (resolutionTimeoutRef.current) window.clearTimeout(resolutionTimeoutRef.current);
+    setSelectedId(null);
+    setInteractionPhase('idle');
   }, [round.roundNumber]);
 
-  const handleConfirmAnswer = () => {
-    if (!selectedOptionId) {
+  useEffect(
+    () => () => {
+      if (tensionTimeoutRef.current) window.clearTimeout(tensionTimeoutRef.current);
+      if (resolutionTimeoutRef.current) window.clearTimeout(resolutionTimeoutRef.current);
+    },
+    [],
+  );
+
+  const handleSelectOption = (optionId: string) => {
+    if (interactionPhase === 'tension' || interactionPhase === 'resolution') {
       return;
     }
+    setSelectedId(optionId);
+    setInteractionPhase('selected');
+  };
 
-    onSelectAnswer(selectedOptionId);
-    setSelectedOptionId(null);
+  const handleConfirmAnswer = () => {
+    if (!selectedId) return;
+
+    setInteractionPhase('tension');
+
+    tensionTimeoutRef.current = window.setTimeout(() => {
+      setInteractionPhase('resolution');
+
+      resolutionTimeoutRef.current = window.setTimeout(() => {
+        onSelectAnswer(selectedId);
+        setSelectedId(null);
+        setInteractionPhase('idle');
+      }, 1500);
+    }, 500);
   };
 
   return (
@@ -105,7 +134,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
       <button
         type="button"
         onClick={onRevealHint}
-        disabled={round.revealedHints >= TOTAL_HINTS}
+        disabled={round.revealedHints >= TOTAL_HINTS || interactionPhase === 'tension' || interactionPhase === 'resolution'}
         className="mt-4 rounded-xl border-2 border-color-ink px-6 py-3 text-lg font-bold text-color-ink transition hover:bg-color-ink hover:text-[#fff9ea] disabled:opacity-50 focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
       >
         Revelar próxima dica
@@ -113,27 +142,50 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
     </div>
 
       <div className="grid gap-3 md:grid-cols-3">
-        {round.options.map((option, index) => {
-          const isSelected = selectedOptionId === option.id;
-          const hasSelection = selectedOptionId !== null;
+        {round.options.map((option) => {
+          const isSelected = selectedId === option.id;
+          const hasSelection = interactionPhase !== 'idle' && selectedId !== null;
           const isDimmed = hasSelection && !isSelected;
+          const isCorrectSelection = interactionPhase === 'resolution' && isSelected && selectedId === round.country.id;
+          const isWrongSelection = interactionPhase === 'resolution' && isSelected && selectedId !== round.country.id;
+          const isCorrectAnswerReveal =
+            interactionPhase === 'resolution' && selectedId !== round.country.id && option.id === round.country.id;
+          const isLocked = interactionPhase === 'tension' || interactionPhase === 'resolution';
 
           return (
             <motion.button
-              whileHover={hasSelection && !isSelected ? undefined : { scale: 1.02 }}
+              whileHover={isLocked || (hasSelection && !isSelected) ? undefined : { scale: 1.02 }}
               whileTap={{ scale: 0.96 }}
+              animate={
+                isCorrectSelection
+                  ? { y: [0, -15, 0, -15, 0] }
+                  : isWrongSelection
+                    ? { x: [0, -10, 10, -10, 10, 0] }
+                    : isCorrectAnswerReveal
+                      ? { opacity: [1, 0.35, 1, 0.35, 1] }
+                      : interactionPhase === 'tension' && isSelected
+                        ? { scale: 0.95 }
+                        : interactionPhase === 'selected' && isSelected
+                          ? { scale: 1.05 }
+                          : { scale: 1 }
+              }
+              transition={{ duration: 0.6 }}
               key={option.id}
               type="button"
-              onClick={() => setSelectedOptionId(option.id)}
-              className={`rounded-2xl border-2 p-4 text-left text-xl font-bold text-color-ink shadow-photo transition focus-visible:ring-4 focus-visible:ring-color-stamp focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper ${
-                isSelected
-                  ? 'border-color-olive bg-[#f0e6cd] ring-2 ring-color-olive/70 ring-inset'
-                  : 'border-color-olive/70 bg-[#fffdf8]'
+              onClick={() => handleSelectOption(option.id)}
+              disabled={isLocked}
+              className={`flex justify-center rounded-2xl border-2 p-4 text-center text-xl font-bold text-color-ink shadow-photo transition focus-visible:ring-4 focus-visible:ring-color-stamp focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper disabled:cursor-not-allowed ${
+                isCorrectSelection
+                  ? 'border-green-700 bg-green-500 text-white'
+                  : isWrongSelection
+                    ? 'border-red-600 bg-red-400 text-white'
+                    : isCorrectAnswerReveal
+                      ? 'border-green-700 bg-green-500 text-white'
+                    : isSelected
+                      ? 'border-color-olive bg-[#f0e6cd] ring-4 ring-color-ochre'
+                      : 'border-color-olive/70 bg-[#fffdf8]'
               } ${isDimmed ? 'opacity-50' : ''} ${hasSelection ? '' : 'hover:bg-[#faf2df]'}`}
             >
-              <span className="mr-2 rounded-lg bg-color-olive px-2 py-1 text-base text-white">
-                {String.fromCharCode(65 + index)}
-              </span>
               {option.name}
             </motion.button>
           );
@@ -141,21 +193,22 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
       </div>
 
       <AnimatePresence>
-        {selectedOptionId && (
+        {interactionPhase === 'selected' && selectedId && (
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 8 }}
             className="pt-2"
           >
-            <button
+            <motion.button
               type="button"
               onClick={handleConfirmAnswer}
-              disabled={!selectedOptionId}
-              className="w-full rounded-2xl border-2 border-color-ink/20 bg-color-olive px-6 py-4 text-center text-2xl font-extrabold text-white shadow-passport transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper md:text-3xl"
+              animate={{ scale: [1, 1.03, 1] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+              className="w-full rounded-2xl border-2 border-color-ink/20 bg-color-olive px-6 py-4 text-center text-2xl font-extrabold text-white shadow-passport transition hover:brightness-110 focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper md:text-3xl"
             >
               Confirmar Resposta
-            </button>
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>
