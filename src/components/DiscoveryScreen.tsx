@@ -63,6 +63,7 @@ export const DiscoveryScreen = ({
             alt={`Bandeira de ${country.name}`}
             className="h-auto max-h-[28vh] w-full object-contain object-center md:max-h-[32vh] chromebook:max-h-[30vh]"
             loading="lazy"
+            decoding="async"
           />
         </motion.div>
         <h3 className="text-center font-title text-3xl font-extrabold text-color-ink md:text-4xl">{country.name}</h3>
