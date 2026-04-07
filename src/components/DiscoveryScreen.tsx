@@ -69,7 +69,12 @@ export const DiscoveryScreen = ({
         <h3 className="text-center font-title text-3xl font-extrabold text-color-ink md:text-4xl">{country.name}</h3>
       </div>
 
-      <p className="rounded-2xl bg-color-ochre/10 px-4 py-3 font-body text-color-ink shadow-photo">{country.funFact}</p>
+      <p className="rounded-2xl border border-color-ochre/30 bg-color-ochre/10 px-4 py-3 font-body text-color-ink shadow-photo">
+        <span className="mr-2 inline-flex rounded-full bg-color-terracotta/15 px-2.5 py-1 text-xs font-extrabold uppercase tracking-wide text-color-terracotta md:text-sm">
+          Curiosidade:
+        </span>
+        <span className={BODY_TEXT_MIN_SIZE_CLASS}>{country.funFact}</span>
+      </p>
 
       <button
         type="button"
