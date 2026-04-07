@@ -60,7 +60,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
                 key={hintKind}
                 className="flex list-none flex-col overflow-hidden rounded-xl border border-color-ink/10 bg-[#fffdf8] shadow-photo"
               >
-                <span className="border-b border-color-ink/10 bg-color-paper-deep/60 px-3 py-2 text-xs font-extrabold uppercase tracking-[0.08em] text-color-ink md:text-sm">
+                <span className="border-b border-color-ink/10 bg-color-paper-deep/60 px-3 py-2 text-xs font-extrabold uppercase tracking-[0.08em] text-color-stamp md:text-sm">
                   {hintLabel}
                 </span>
 
