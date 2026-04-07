@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_HINTS } from '../constants';
 import type { CountryImageKind } from '../types';
@@ -37,19 +37,36 @@ interface QuizScreenProps {
 }
 
 export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenProps) => {
-  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [isCorrectLocal, setIsCorrectLocal] = useState<boolean | null>(null);
+  const answerTimeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
-    setSelectedOptionId(null);
+    setSelectedId(null);
+    setIsCorrectLocal(null);
   }, [round.roundNumber]);
 
-  const handleConfirmAnswer = () => {
-    if (!selectedOptionId) {
+  useEffect(
+    () => () => {
+      if (answerTimeoutRef.current) {
+        window.clearTimeout(answerTimeoutRef.current);
+      }
+    },
+    [],
+  );
+
+  const handleSelectOption = (optionId: string) => {
+    if (selectedId !== null) {
       return;
     }
 
-    onSelectAnswer(selectedOptionId);
-    setSelectedOptionId(null);
+    const correct = optionId === round.country.id;
+    setSelectedId(optionId);
+    setIsCorrectLocal(correct);
+
+    answerTimeoutRef.current = window.setTimeout(() => {
+      onSelectAnswer(optionId);
+    }, 1500);
   };
 
   return (
@@ -113,52 +130,44 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
     </div>
 
       <div className="grid gap-3 md:grid-cols-3">
-        {round.options.map((option, index) => {
-          const isSelected = selectedOptionId === option.id;
-          const hasSelection = selectedOptionId !== null;
+        {round.options.map((option) => {
+          const isSelected = selectedId === option.id;
+          const hasSelection = selectedId !== null;
           const isDimmed = hasSelection && !isSelected;
+          const isCorrectSelection = isSelected && isCorrectLocal === true;
+          const isWrongSelection = isSelected && isCorrectLocal === false;
 
           return (
             <motion.button
               whileHover={hasSelection && !isSelected ? undefined : { scale: 1.02 }}
               whileTap={{ scale: 0.96 }}
+              animate={
+                isCorrectSelection
+                  ? { y: [0, -15, 0, -15, 0] }
+                  : isWrongSelection
+                    ? { x: [0, -10, 10, -10, 10, 0] }
+                    : undefined
+              }
+              transition={{ duration: 0.6 }}
               key={option.id}
               type="button"
-              onClick={() => setSelectedOptionId(option.id)}
-              className={`rounded-2xl border-2 p-4 text-left text-xl font-bold text-color-ink shadow-photo transition focus-visible:ring-4 focus-visible:ring-color-stamp focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper ${
-                isSelected
-                  ? 'border-color-olive bg-[#f0e6cd] ring-2 ring-color-olive/70 ring-inset'
-                  : 'border-color-olive/70 bg-[#fffdf8]'
+              onClick={() => handleSelectOption(option.id)}
+              disabled={selectedId !== null}
+              className={`flex justify-center rounded-2xl border-2 p-4 text-center text-xl font-bold text-color-ink shadow-photo transition focus-visible:ring-4 focus-visible:ring-color-stamp focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper disabled:cursor-not-allowed ${
+                isCorrectSelection
+                  ? 'border-green-700 bg-green-500 text-white'
+                  : isWrongSelection
+                    ? 'border-red-600 bg-red-400 text-white'
+                    : isSelected
+                      ? 'border-color-olive bg-[#f0e6cd] ring-2 ring-color-olive/70 ring-inset'
+                      : 'border-color-olive/70 bg-[#fffdf8]'
               } ${isDimmed ? 'opacity-50' : ''} ${hasSelection ? '' : 'hover:bg-[#faf2df]'}`}
             >
-              <span className="mr-2 rounded-lg bg-color-olive px-2 py-1 text-base text-white">
-                {String.fromCharCode(65 + index)}
-              </span>
               {option.name}
             </motion.button>
           );
         })}
       </div>
-
-      <AnimatePresence>
-        {selectedOptionId && (
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 8 }}
-            className="pt-2"
-          >
-            <button
-              type="button"
-              onClick={handleConfirmAnswer}
-              disabled={!selectedOptionId}
-              className="w-full rounded-2xl border-2 border-color-ink/20 bg-color-olive px-6 py-4 text-center text-2xl font-extrabold text-white shadow-passport transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60 focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper md:text-3xl"
-            >
-              Confirmar Resposta
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };
