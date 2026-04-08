@@ -23,6 +23,12 @@ export const DiscoveryScreen = ({
   const feedbackRef = useRef<HTMLParagraphElement>(null);
   const country = round.country;
   const nextButtonLabel = isLastRound ? 'Ver resultado final' : 'Próxima descoberta';
+  const canReadAloud =
+    typeof window !== 'undefined' &&
+    'speechSynthesis' in window &&
+    typeof window.speechSynthesis?.speak === 'function' &&
+    typeof window.speechSynthesis?.cancel === 'function' &&
+    typeof SpeechSynthesisUtterance !== 'undefined';
 
   useEffect(() => {
     feedbackRef.current?.focus();
@@ -30,11 +36,16 @@ export const DiscoveryScreen = ({
 
   useEffect(() => {
     return () => {
-      window.speechSynthesis.cancel();
+      if (canReadAloud) {
+        window.speechSynthesis.cancel();
+      }
     };
-  }, []);
+  }, [canReadAloud]);
 
   const handleReadAloud = () => {
+    if (!canReadAloud) {
+      return;
+    }
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(country.funFact);
     utterance.lang = 'pt-BR';
@@ -50,15 +61,17 @@ export const DiscoveryScreen = ({
     >
       <div className="flex items-center justify-between gap-3">
         <h2 className="font-title text-3xl font-extrabold text-color-ink">Diário de Descoberta</h2>
-        <motion.button
-          type="button"
-          whileTap={{ scale: 0.9 }}
-          onClick={handleReadAloud}
-          aria-label="Ouvir curiosidade"
-          className="rounded-full border border-color-ochre/60 bg-color-ochre/10 px-3 py-2 text-xl shadow-photo transition hover:bg-color-ochre/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
-        >
-          🔊
-        </motion.button>
+        {canReadAloud ? (
+          <motion.button
+            type="button"
+            whileTap={{ scale: 0.9 }}
+            onClick={handleReadAloud}
+            aria-label="Ouvir curiosidade"
+            className="rounded-full border border-color-ochre/60 bg-color-ochre/10 px-3 py-2 text-xl shadow-photo transition hover:bg-color-ochre/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
+          >
+            🔊
+          </motion.button>
+        ) : null}
       </div>
 
       <motion.p
