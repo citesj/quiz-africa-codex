@@ -4,7 +4,6 @@ export type CountryImageKind =
   | 'famousAnimal'
   | 'nature'
   | 'culture'
-  | 'sport'
   | 'shape'
   | 'landmark';
 
@@ -14,7 +13,6 @@ export interface CountryImages {
   famousAnimal?: string;
   nature?: string;
   culture?: string;
-  sport?: string;
   shape?: string;
   landmark?: string;
 }

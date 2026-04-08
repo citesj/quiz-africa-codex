@@ -12,7 +12,6 @@ const SUFFIX_BY_KIND: Record<CountryImageKind, string> = {
   famousAnimal: 'animal',
   nature: 'nature',
   culture: 'culture',
-  sport: 'sport',
   shape: 'shape',
   landmark: 'landmark',
 };

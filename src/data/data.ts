@@ -21,7 +21,6 @@ const IMAGE_FIELDS: CountryImageKind[] = [
   'famousAnimal',
   'nature',
   'culture',
-  'sport',
   'shape',
   'landmark',
 ];

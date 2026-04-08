@@ -9,7 +9,6 @@ const HINT_IMAGE_ORDER = [
   'famousAnimal',
   'nature',
   'culture',
-  'sport',
   'typicalDish',
   'shape',
   'landmark',
@@ -21,7 +20,6 @@ const HINT_LABELS: Record<HintImageKind, string> = {
   famousAnimal: 'Animal',
   nature: 'Natureza',
   culture: 'Cultura',
-  sport: 'Esporte',
   landmark: 'Lugar',
   typicalDish: 'Comida',
   shape: 'Mapa',
@@ -93,7 +91,6 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
     const hintMatchers: Record<HintImageKind, string[]> = {
       nature: ['natureza', 'deserto', 'savana', 'floresta', 'ilha', 'montanha', 'rio', 'praia'],
       culture: ['cultura', 'festa', 'máscara', 'roupa', 'dança', 'música', 'tradicion'],
-      sport: ['esporte', 'futebol', 'maratona', 'corrida', 'luta', 'rugby'],
       shape: ['mapa', 'formato', 'pareço', 'silhueta'],
       landmark: ['pirâm', 'monte', 'reserva', 'mesquita', 'castelo', 'igrejas', 'ilha', 'vulcão'],
       typicalDish: ['prato', 'comida', 'culinária'],
@@ -113,8 +110,6 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
         return 'Observe a paisagem, o clima e os biomas desse país!';
       case 'culture':
         return 'Repare nas roupas, tradições e celebrações culturais.';
-      case 'sport':
-        return 'Esse esporte ou brincadeira é bem popular por lá!';
       case 'shape':
         return 'Veja a silhueta no mapa e tente reconhecer o formato do país.';
       case 'landmark':
