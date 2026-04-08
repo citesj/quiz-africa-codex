@@ -33,7 +33,6 @@ const buildOptions = (correctCountry: Country, pool: Country[]): [Country, Count
 interface DiscoveryFeedbackArgs {
   isCorrect: boolean;
   hintsUsed: number;
-  selectedCountryName: string;
   correctCountryName: string;
 }
 
@@ -47,16 +46,15 @@ const getEncouragementByHints = (hintsUsed: number): string => {
 const buildDiscoveryFeedbackMessage = ({
   isCorrect,
   hintsUsed,
-  selectedCountryName,
   correctCountryName,
 }: DiscoveryFeedbackArgs): string => {
   const encouragement = isCorrect ? getEncouragementByHints(hintsUsed) : ENCOURAGEMENT_MESSAGES.incorrect;
 
   if (isCorrect) {
-    return `Era ${correctCountryName}. ${encouragement}`;
+    return `Na mosca! Era ${correctCountryName}. ${encouragement}`;
   }
 
-  return `Você escolheu ${selectedCountryName}, mas era ${correctCountryName}. ${encouragement}`;
+  return `Quase! O país misterioso era ${correctCountryName}. ${encouragement}`;
 };
 
 const getCountryOrFallback = (candidate: Country | undefined, fallback: Country): Country => candidate ?? fallback;
@@ -124,8 +122,6 @@ export const useGame = () => {
     setGameState((previous) => {
       if (!previous.round || previous.round.selectedCountryId) return previous;
       const isCorrect = countryId === previous.round.country.id;
-      const selectedCountryName =
-        previous.round.options.find((option) => option.id === countryId)?.name ?? 'uma opção';
 
       return {
         ...previous,
@@ -137,7 +133,6 @@ export const useGame = () => {
         encouragementMessage: buildDiscoveryFeedbackMessage({
           isCorrect,
           hintsUsed: previous.round.revealedHints,
-          selectedCountryName,
           correctCountryName: previous.round.country.name,
         }),
         phase: 'discovery',

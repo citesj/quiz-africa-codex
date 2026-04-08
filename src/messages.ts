@@ -1,10 +1,10 @@
 export const ENCOURAGEMENT_MESSAGES = {
   correctByHints: {
-    oneHint: 'Uau, você descobriu com apenas 1 dica! Um verdadeiro explorador!',
-    twoHints: 'Muito bem! Você conectou as pistas rapidinho!',
-    threeHints: 'Mandou bem! Seu olhar investigativo está afiado!',
-    fourOrMoreHints: 'Excelente persistência! Você conheceu o país!',
+    oneHint: 'Mandou bem!',
+    twoHints: 'Boa sacada!',
+    threeHints: 'Continue assim!',
+    fourOrMoreHints: 'Você consegue!',
   },
-  incorrect: 'Boa tentativa! Aprender também é explorar novos caminhos.',
-  final: 'Parabéns, explorador(a)! Seu álbum africano ficou incrível!',
+  incorrect: 'Quase lá!',
+  final: 'Parabéns, explorador!',
 } as const;

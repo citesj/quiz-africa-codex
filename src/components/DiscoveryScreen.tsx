@@ -28,13 +28,38 @@ export const DiscoveryScreen = ({
     feedbackRef.current?.focus();
   }, [round.roundNumber]);
 
+  useEffect(() => {
+    return () => {
+      window.speechSynthesis.cancel();
+    };
+  }, []);
+
+  const handleReadAloud = () => {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(country.funFact);
+    utterance.lang = 'pt-BR';
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
       className="space-y-5 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-8 shadow-passport"
     >
-      <h2 className="font-title text-3xl font-extrabold text-color-ink">Diário de Descoberta</h2>
+      <div className="flex items-center justify-between gap-3">
+        <h2 className="font-title text-3xl font-extrabold text-color-ink">Diário de Descoberta</h2>
+        <motion.button
+          type="button"
+          whileTap={{ scale: 0.9 }}
+          onClick={handleReadAloud}
+          aria-label="Ouvir curiosidade"
+          className="rounded-full border border-color-ochre/60 bg-color-ochre/10 px-3 py-2 text-xl shadow-photo transition hover:bg-color-ochre/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
+        >
+          🔊
+        </motion.button>
+      </div>
 
       <motion.p
         ref={feedbackRef}
@@ -46,7 +71,7 @@ export const DiscoveryScreen = ({
         className={`rounded-2xl border-2 p-4 text-lg font-bold leading-relaxed shadow-photo focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper md:text-xl ${
           round.isCorrect
             ? 'border-emerald-900 bg-emerald-100 text-emerald-950'
-            : 'border-red-900 bg-red-100 text-red-950'
+            : 'border-orange-800 bg-orange-100 text-orange-950'
         }`}
       >
         {encouragementMessage}
@@ -71,6 +96,14 @@ export const DiscoveryScreen = ({
 
       <p className="rounded-2xl border border-color-ochre/30 bg-color-ochre/10 px-4 py-3 font-body text-color-ink shadow-photo">
         <span className="mr-2 inline-flex rounded-full bg-color-terracotta/15 px-2.5 py-1 text-xs font-extrabold uppercase tracking-wide text-color-terracotta md:text-sm">
+          <motion.span
+            aria-hidden="true"
+            animate={{ y: [0, -4, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="mr-1 inline-flex"
+          >
+            💡
+          </motion.span>
           Curiosidade:
         </span>
         <span className={BODY_TEXT_MIN_SIZE_CLASS}>{country.funFact}</span>
