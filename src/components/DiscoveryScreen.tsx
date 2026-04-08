@@ -11,6 +11,13 @@ interface DiscoveryScreenProps {
   isLastRound: boolean;
 }
 
+const PREFIXOS_INVESTIGATIVOS = [
+  '🕵️ Segredo desbloqueado: ',
+  '💡 Você sabia que... ',
+  '🔎 Descoberta fantástica: ',
+  '🌍 Arquivo confidencial: ',
+];
+
 const FLAG_FALLBACK =
   "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='960' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f6f0de'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='180'%3E%F0%9F%8F%B3%EF%B8%8F%3C/text%3E%3C/svg%3E";
 
@@ -22,6 +29,9 @@ export const DiscoveryScreen = ({
 }: DiscoveryScreenProps) => {
   const feedbackRef = useRef<HTMLParagraphElement>(null);
   const country = round.country;
+  const prefixoEscolhido =
+    PREFIXOS_INVESTIGATIVOS[(round.roundNumber - 1) % PREFIXOS_INVESTIGATIVOS.length];
+  const textoCuriosidade = `${prefixoEscolhido}${country.funFact}`;
   const nextButtonLabel = isLastRound ? 'Ver resultado final' : 'Próxima descoberta';
   const canReadAloud =
     typeof window !== 'undefined' &&
@@ -47,7 +57,7 @@ export const DiscoveryScreen = ({
       return;
     }
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(country.funFact);
+    const utterance = new SpeechSynthesisUtterance(textoCuriosidade);
     utterance.lang = 'pt-BR';
     utterance.rate = 0.9;
     window.speechSynthesis.speak(utterance);
@@ -108,18 +118,10 @@ export const DiscoveryScreen = ({
       </div>
 
       <p className="rounded-2xl border border-color-ochre/30 bg-color-ochre/10 px-4 py-3 font-body text-color-ink shadow-photo">
-        <span className="mr-2 inline-flex rounded-full bg-color-terracotta/15 px-2.5 py-1 text-xs font-extrabold uppercase tracking-wide text-color-terracotta md:text-sm">
-          <motion.span
-            aria-hidden="true"
-            animate={{ y: [0, -4, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="mr-1 inline-flex"
-          >
-            💡
-          </motion.span>
-          Curiosidade:
+        <span className={BODY_TEXT_MIN_SIZE_CLASS}>
+          <span className="font-bold">{prefixoEscolhido}</span>
+          {country.funFact}
         </span>
-        <span className={BODY_TEXT_MIN_SIZE_CLASS}>{country.funFact}</span>
       </p>
 
       <button

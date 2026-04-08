@@ -8,7 +8,7 @@
     "currency": "Libra egípcia",
     "landmark": "Pirâmides de Gizé",
     "wildlife": "Falcão e crocodilo-do-nilo",
-    "funFact": "O Rio Nilo ajudou a criar uma das civilizações mais antigas do mundo.",
+    "funFact": "O Rio Nilo era tipo uma estrada gigante de água que alimentou faraós, pirâmides e cidades incríveis por milhares de anos!",
     "hints": [
       "Meu território é cortado por um rio muito famoso.",
       "Tenho pirâmides gigantes e muito antigas.",
@@ -27,7 +27,7 @@
     "currency": "Rand sul-africano",
     "landmark": "Table Mountain",
     "wildlife": "Leão, elefante e rinoceronte",
-    "funFact": "É um dos países com maior diversidade linguística oficial no mundo.",
+    "funFact": "Aqui cabem muitas culturas: são 11 línguas oficiais, como se a escola inteira tivesse vários jeitos de dizer “oi” no mesmo dia!",
     "hints": [
       "Tenho uma montanha famosa com topo achatado.",
       "Sou conhecido por safáris e pelos 'Big Five'.",
@@ -46,7 +46,7 @@
     "currency": "Xelim queniano",
     "landmark": "Reserva Maasai Mara",
     "wildlife": "Girafas, zebras e gnus",
-    "funFact": "A Grande Migração de animais passa por suas savanas.",
+    "funFact": "Na savana do Quênia, a Grande Migração parece um desfile sem fim: milhões de animais correndo juntos como um mega trânsito da natureza!",
     "hints": [
       "Sou famoso por savanas e corridas de animais.",
       "Minha reserva Maasai Mara é muito visitada.",
@@ -65,7 +65,7 @@
     "currency": "Dirrã marroquino",
     "landmark": "Mesquita Hassan II",
     "wildlife": "Macaco-de-gibraltar",
-    "funFact": "Tem cidades históricas conhecidas por mercados coloridos chamados souks.",
+    "funFact": "Nos souks de Marrocos, parece caça ao tesouro: ruas cheias de cores, cheiros e tapetes que deixam tudo com cara de filme de aventura!",
     "hints": [
       "Tenho mercados tradicionais chamados souks.",
       "Minha capital é Rabat.",
@@ -84,7 +84,7 @@
     "currency": "Naira",
     "landmark": "Rocha Zuma",
     "wildlife": "Antílopes e chimpanzés",
-    "funFact": "É o país mais populoso da África.",
+    "funFact": "Tem tanta gente morando aqui que 1 em cada 5 africanos é nigeriano. É o país mais lotado do continente!",
     "hints": [
       "Sou muito conhecido pela música afrobeat.",
       "Sou o país mais populoso da África.",
@@ -103,7 +103,7 @@
     "currency": "Xelim tanzaniano",
     "landmark": "Monte Kilimanjaro",
     "wildlife": "Leões e elefantes",
-    "funFact": "Abriga o monte Kilimanjaro, o ponto mais alto da África.",
+    "funFact": "A Tanzânia guarda o Kilimanjaro, uma montanha tão alta que seu topo parece encostar nas nuvens!",
     "hints": [
       "Tenho o monte mais alto da África.",
       "Meu país tem parques com muitos leões e elefantes.",
@@ -122,7 +122,7 @@
     "currency": "Ariary malgaxe",
     "landmark": "Avenida dos Baobás",
     "wildlife": "Lêmures",
-    "funFact": "É a quarta maior ilha do mundo.",
+    "funFact": "Mais de 80% dos animais e plantas daqui não existem em nenhum outro lugar do planeta. É como uma ilha secreta da natureza!",
     "hints": [
       "Sou uma grande ilha ao lado da África.",
       "Tenho animais famosos chamados lêmures.",
@@ -141,7 +141,7 @@
     "currency": "Birr etíope",
     "landmark": "Igrejas de Lalibela",
     "wildlife": "Lobo-etíope",
-    "funFact": "É um dos poucos países africanos que nunca foi colonizado por longo período.",
+    "funFact": "A Etiópia é super resistente: mesmo com invasões, manteve sua história viva por séculos, como um escudo de coragem!",
     "hints": [
       "Minhas montanhas guardam igrejas escavadas na rocha.",
       "Minha capital é Adis Abeba.",
@@ -160,7 +160,7 @@
     "currency": "Dinar argelino",
     "landmark": "Casbá de Argel",
     "wildlife": "Fennec",
-    "funFact": "É o maior país da África em área territorial.",
+    "funFact": "A Argélia é tão gigante que daria para viajar por dias e ainda continuar no mesmo país, atravessando muito deserto do Saara!",
     "hints": [
       "Grande parte do meu território fica no Saara.",
       "Sou o maior país africano em área.",
@@ -179,7 +179,7 @@
     "currency": "Cedi ganês",
     "landmark": "Castelo de Cape Coast",
     "wildlife": "Antílopes florestais",
-    "funFact": "Foi o primeiro país da África Subsaariana a conquistar independência no século XX.",
+    "funFact": "Gana foi o primeiro da África Subsaariana a conquistar independência no século 20. Virou inspiração para vários vizinhos gritarem “também conseguimos”!",
     "hints": [
       "Tenho litoral no Golfo da Guiné.",
       "Minha capital é Acra.",
@@ -198,7 +198,7 @@
     "currency": "Kwanza",
     "landmark": "Quedas de Calandula",
     "wildlife": "Palanca-negra-gigante",
-    "funFact": "Tem o português como língua oficial.",
+    "funFact": "Em Angola, as crianças também falam português como você. E tem palavra divertida: café da manhã pode ser chamado de “mata-bicho”!",
     "hints": [
       "No meu país, a língua oficial é português.",
       "Minha capital é Luanda.",
@@ -217,7 +217,7 @@
     "currency": "Metical",
     "landmark": "Ilha de Moçambique",
     "wildlife": "Mamba Negra",
-    "funFact": "Seu litoral é banhado pelo Oceano Índico.",
+    "funFact": "Em Moçambique também se fala português, só que com jeitos próprios super legais. E o mar do Índico fica tão perto que vira cenário do dia a dia!",
     "hints": [
       "Tenho um longo litoral no Oceano Índico.",
       "Minha capital é Maputo.",
@@ -236,7 +236,7 @@
     "currency": "Franco CFA",
     "landmark": "Monte Camarões",
     "wildlife": "Gorilas e mandris",
-    "funFact": "É chamado de 'África em miniatura' por sua diversidade de paisagens.",
+    "funFact": "Chamam Camarões de “África em miniatura” porque tem de quase tudo: praia, floresta, montanha e até vulcão no mesmo país!",
     "hints": [
       "Sou conhecido como 'África em miniatura'.",
       "Tenho um vulcão chamado Monte Camarões.",
@@ -255,7 +255,7 @@
     "currency": "Escudo cabo-verdiano",
     "landmark": "Pico do Fogo",
     "wildlife": "Tartarugas marinhas",
-    "funFact": "É formado por ilhas vulcânicas no Oceano Atlântico.",
+    "funFact": "Em Cabo Verde, você ouve português e crioulo juntos no cotidiano, como uma mistura musical de palavras. E tudo acontece em ilhas nascidas de vulcões!",
     "hints": [
       "Sou um conjunto de ilhas no Atlântico.",
       "Minha capital se chama Praia.",
@@ -274,7 +274,7 @@
     "currency": "Franco CFA",
     "landmark": "Basílica de Nossa Senhora da Paz",
     "wildlife": "Elefante Africano",
-    "funFact": "É um importante produtor mundial de cacau.",
+    "funFact": "Muita barra de chocolate começa aqui: a Costa do Marfim é uma das campeãs mundiais do cacau!",
     "hints": [
       "Sou um dos grandes produtores de cacau.",
       "Minha capital política é Yamoussoukro.",
@@ -293,7 +293,7 @@
     "currency": "Franco CFA",
     "landmark": "Ilha de Gorée",
     "wildlife": "Leão",
-    "funFact": "A cidade de Dacar é conhecida por eventos culturais e esportivos internacionais.",
+    "funFact": "Dacar pulsa com música, dança e corridas famosas, como se a cidade estivesse sempre em dia de festival!",
     "hints": [
       "Tenho uma capital costeira chamada Dacar.",
       "Minha ilha de Gorée é histórica.",
