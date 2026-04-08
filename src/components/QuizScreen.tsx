@@ -86,9 +86,24 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
     }, 500);
   };
 
-  const getHintSupportText = (hintKind: HintImageKind, index: number) => {
-    const hintFromData = round.country.hints[index];
-    if (hintFromData) return hintFromData;
+  const findNarrativeHintByKind = (hintKind: HintImageKind) => {
+    const normalizedHints = round.country.hints.map((hint) => hint.toLowerCase());
+    const hintMatchers: Record<HintImageKind, string[]> = {
+      capital: ['capital'],
+      language: ['falo', 'falamos', 'língua', 'idioma'],
+      currency: ['moeda'],
+      landmark: ['pirâm', 'monte', 'reserva', 'mesquita', 'castelo', 'igrejas', 'ilha', 'vulcão'],
+      typicalDish: ['prato', 'comida', 'culinária'],
+      famousAnimal: ['animal', 'safári', 'big five', 'lêmur', 'leão', 'girafa', 'crocodilo'],
+    };
+    const terms = hintMatchers[hintKind];
+    const matchIndex = normalizedHints.findIndex((hint) => terms.some((term) => hint.includes(term)));
+    return matchIndex >= 0 ? round.country.hints[matchIndex] : null;
+  };
+
+  const getHintSupportText = (hintKind: HintImageKind) => {
+    const narrativeHint = findNarrativeHintByKind(hintKind);
+    if (narrativeHint) return narrativeHint;
 
     switch (hintKind) {
       case 'capital':
@@ -159,7 +174,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
                         />
                       </button>
                       <p className="text-sm font-medium text-color-ink/90 p-2 bg-[#fffdf8] rounded-b-xl">
-                        {getHintSupportText(hintKind, index)}
+                        {getHintSupportText(hintKind)}
                       </p>
                     </>
                   ) : (
