@@ -7,11 +7,11 @@ import { getCountryImageSrc } from '../utils/countryImages';
 
 const HINT_IMAGE_ORDER = [
   'famousAnimal',
-  'landmark',
-  'typicalDish',
-  'capital',
   'currency',
   'language',
+  'typicalDish',
+  'landmark',
+  'capital',
 ] as const satisfies readonly CountryImageKind[];
 
 type HintImageKind = (typeof HINT_IMAGE_ORDER)[number];
@@ -38,6 +38,7 @@ interface QuizScreenProps {
 
 export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenProps) => {
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [interactionPhase, setInteractionPhase] = useState<'idle' | 'selected' | 'tension' | 'resolution'>('idle');
   const tensionTimeoutRef = useRef<number | null>(null);
   const resolutionTimeoutRef = useRef<number | null>(null);
@@ -49,6 +50,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
     if (tensionTimeoutRef.current) window.clearTimeout(tensionTimeoutRef.current);
     if (resolutionTimeoutRef.current) window.clearTimeout(resolutionTimeoutRef.current);
     setSelectedId(null);
+    setZoomedImage(null);
     setInteractionPhase('idle');
   }, [round.roundNumber]);
 
@@ -84,6 +86,32 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
     }, 500);
   };
 
+  const getHintSupportText = (hintKind: HintImageKind, index: number) => {
+    const hintFromData = round.country.hints[index];
+    if (hintFromData) return hintFromData;
+
+    switch (hintKind) {
+      case 'capital':
+        return `Minha capital se chama ${round.country.capital}.`;
+      case 'language':
+        return `Nós falamos ${round.country.language}.`;
+      case 'currency':
+        return `Nossa moeda é ${round.country.currency}.`;
+      case 'landmark':
+        return `Um lugar famoso daqui é ${round.country.landmark}.`;
+      case 'typicalDish':
+        return round.country.typicalDish
+          ? `Um prato típico daqui é ${round.country.typicalDish}.`
+          : 'Temos sabores típicos muito especiais!';
+      case 'famousAnimal':
+        return round.country.famousAnimal
+          ? `Um animal marcante daqui é ${round.country.famousAnimal}.`
+          : `Um animal importante daqui é ${round.country.wildlife}.`;
+      default:
+        return 'Observe com atenção essa pista!';
+    }
+  };
+
   return (
     <section className="space-y-6 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-8 shadow-passport">
       <h2 className="font-title text-3xl font-extrabold text-color-ink">Rodada {round.roundNumber}</h2>
@@ -103,6 +131,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
             {HINT_IMAGE_ORDER.map((hintKind, index) => {
               const isHintRevealed = index < round.revealedHints;
               const hintLabel = isHintRevealed ? HINT_LABELS[hintKind] : LOCKED_HINT_LABEL;
+              const imageSrc = getCountryImageSrc(round.country, hintKind) ?? HINT_IMAGE_FALLBACK;
 
               return (
                 <li
@@ -114,13 +143,25 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
                   </span>
 
                   {isHintRevealed ? (
-                    <img
-                      src={getCountryImageSrc(round.country, hintKind) ?? HINT_IMAGE_FALLBACK}
-                      alt={`Pista de ${hintLabel}`}
-                      className="h-28 w-full object-cover object-center md:h-36"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <>
+                      <button
+                        type="button"
+                        onClick={() => setZoomedImage(imageSrc)}
+                        className="group focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-inset"
+                        aria-label={`Ampliar imagem da pista ${hintLabel}`}
+                      >
+                        <img
+                          src={imageSrc}
+                          alt={`Pista de ${hintLabel}`}
+                          className="h-28 w-full cursor-zoom-in object-cover object-center transition-opacity hover:opacity-90 md:h-36"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </button>
+                      <p className="text-sm font-medium text-color-ink/90 p-2 bg-[#fffdf8] rounded-b-xl">
+                        {getHintSupportText(hintKind, index)}
+                      </p>
+                    </>
                   ) : (
                     <div
                       aria-hidden="true"
@@ -215,6 +256,31 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
               Confirmar Resposta
             </motion.button>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {zoomedImage && (
+          <motion.button
+            type="button"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setZoomedImage(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-color-ink/80 p-4 backdrop-blur-sm"
+            aria-label="Fechar imagem ampliada"
+          >
+            <motion.img
+              src={zoomedImage}
+              alt="Pista ampliada"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="max-h-full max-w-full rounded-2xl object-contain shadow-2xl"
+              onClick={(event) => event.stopPropagation()}
+            />
+          </motion.button>
         )}
       </AnimatePresence>
     </section>
