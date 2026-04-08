@@ -1,19 +1,21 @@
 export type CountryImageKind =
   | 'flag'
-  | 'capital'
-  | 'currency'
-  | 'language'
   | 'typicalDish'
   | 'famousAnimal'
+  | 'nature'
+  | 'culture'
+  | 'sport'
+  | 'shape'
   | 'landmark';
 
 export interface CountryImages {
   flag?: string;
-  capital?: string;
-  currency?: string;
-  language?: string;
   typicalDish?: string;
   famousAnimal?: string;
+  nature?: string;
+  culture?: string;
+  sport?: string;
+  shape?: string;
   landmark?: string;
 }
 
