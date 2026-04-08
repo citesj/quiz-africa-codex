@@ -12,7 +12,7 @@
     "hints": [
       "Meu país tem um rio gigante cortando áreas bem secas do deserto!",
       "Nossas festas têm danças, tambores e roupas com muita história antiga.",
-      "Um lugar famoso do meu país é Pirâmides de Gizé.",
+      "Minha capital é Cairo.",
       "No mapa, meu território parece um quadrado com um pedacinho triangular no Sinai."
     ],
     "typicalDish": "Koshari",
@@ -36,7 +36,7 @@
     "hints": [
       "Tenho savanas, costa oceânica e uma montanha famosa com topo reto!",
       "Minha cultura mistura muitas línguas, músicas e roupas tradicionais coloridas.",
-      "Um lugar famoso do meu país é Table Mountain.",
+      "Minha capital é Pretória (administrativa).",
       "No mapa, fico na pontinha de baixo do continente africano."
     ],
     "typicalDish": "Bobotie",
@@ -60,7 +60,7 @@
     "hints": [
       "Minha natureza tem savanas enormes e a Grande Migração dos animais!",
       "O povo Maasai é famoso por roupas vermelhas e danças com saltos altos.",
-      "Um lugar famoso do meu país é Reserva Maasai Mara.",
+      "Minha capital é Nairóbi.",
       "No mapa, pareço um bloco vertical na costa leste da África."
     ],
     "typicalDish": "Nyama Choma",
@@ -84,7 +84,7 @@
     "hints": [
       "Tenho dunas, montanhas e praias entre o Atlântico e o Mediterrâneo.",
       "Minhas medinas têm artesanato, roupas tradicionais e festivais com muita cor.",
-      "Um lugar famoso do meu país é Mesquita Hassan II.",
+      "Minha capital é Rabat.",
       "No mapa, fico no cantinho noroeste da África, pertinho da Europa."
     ],
     "typicalDish": "Cuscuz marroquino",
@@ -108,7 +108,7 @@
     "hints": [
       "Tenho manguezais, florestas e rios enormes cheios de vida.",
       "Minhas culturas têm máscaras, tecidos e festivais vibrantes em muitas regiões.",
-      "Um lugar famoso do meu país é Rocha Zuma.",
+      "Minha capital é Abuja.",
       "No mapa, pareço um grande bloco no oeste africano, acima do Golfo da Guiné."
     ],
     "typicalDish": "Jollof Rice",
@@ -132,7 +132,7 @@
     "hints": [
       "Tenho o Kilimanjaro e parques cheios de vida selvagem.",
       "As danças e capulanas mostram uma cultura viva e muito alegre.",
-      "Um lugar famoso do meu país é Monte Kilimanjaro.",
+      "Minha capital é Dodoma.",
       "No mapa, fico na costa leste, logo abaixo do Quênia."
     ],
     "typicalDish": "Ugali",
@@ -156,7 +156,7 @@
     "hints": [
       "Sou uma ilha com baobás gigantes e bichos que só existem aqui!",
       "Nossas roupas, músicas e danças misturam raízes africanas e austronésias.",
-      "Um lugar famoso do meu país é Avenida dos Baobás.",
+      "Minha capital é Antananarivo.",
       "No mapa, tenho formato de ilha alongada ao lado da costa africana."
     ],
     "typicalDish": "Romazava",
@@ -180,7 +180,7 @@
     "hints": [
       "Tenho montanhas altas, vales e paisagens incríveis do Chifre da África.",
       "Minhas festas religiosas têm roupas brancas e procissões bem marcantes.",
-      "Um lugar famoso do meu país é Igrejas de Lalibela.",
+      "Minha capital é Adis Abeba.",
       "No mapa, meu território fica no Chifre da África e parece um trapézio grande."
     ],
     "typicalDish": "Injera",
@@ -204,7 +204,7 @@
     "hints": [
       "Grande parte do meu território é o deserto do Saara com dunas gigantes.",
       "Minha cultura tem música rai, roupas tradicionais e mercados históricos.",
-      "Um lugar famoso do meu país é Casbá de Argel.",
+      "Minha capital é Argel.",
       "No mapa, sou um país enorme no norte da África com borda no Mediterrâneo."
     ],
     "typicalDish": "Cuscuz argelino",
@@ -228,7 +228,7 @@
     "hints": [
       "Tenho praias, florestas tropicais e clima quentinho o ano todo.",
       "Meus tecidos kente e festivais tradicionais são cheios de cor e significado.",
-      "Um lugar famoso do meu país é Castelo de Cape Coast.",
+      "Minha capital é Acra.",
       "No mapa, fico no Golfo da Guiné com formato compacto no oeste africano."
     ],
     "typicalDish": "Fufu com sopa leve",
@@ -252,7 +252,7 @@
     "hints": [
       "Tenho quedas-d’água gigantes, savanas e uma costa longa no Atlântico.",
       "Nossas danças e ritmos, como semba, fazem todo mundo se mexer.",
-      "Um lugar famoso do meu país é Quedas de Calandula.",
+      "Minha capital é Luanda.",
       "No mapa, fico na parte sudoeste da África, com litoral grande."
     ],
     "typicalDish": "Muamba de galinha",
@@ -276,7 +276,7 @@
     "hints": [
       "Tenho praias no Índico, recifes e ilhas lindas de água azul.",
       "Capulanas coloridas e danças tradicionais dão vida às festas.",
-      "Um lugar famoso do meu país é Ilha de Moçambique.",
+      "Minha capital é Maputo.",
       "No mapa, sou comprido de norte a sul na costa leste africana."
     ],
     "typicalDish": "Matapa",
@@ -300,7 +300,7 @@
     "hints": [
       "Sou chamado de África em miniatura por ter floresta, praia e montanha.",
       "Minhas máscaras e trajes tradicionais aparecem em festas incríveis.",
-      "Um lugar famoso do meu país é Monte Camarões.",
+      "Minha capital é Yaoundé.",
       "No mapa, fico na África Central com um formato que desce até o mar."
     ],
     "typicalDish": "Ndolé",
@@ -324,7 +324,7 @@
     "hints": [
       "Sou um arquipélago vulcânico com praias e montanhas no Atlântico.",
       "Morna, batuque e festas de rua mostram minha cultura insular vibrante.",
-      "Um lugar famoso do meu país é Pico do Fogo.",
+      "Minha capital é Praia.",
       "No mapa, pareço pontinhos de ilhas espalhadas no oceano."
     ],
     "typicalDish": "Cachupa",
@@ -348,7 +348,7 @@
     "hints": [
       "Tenho florestas tropicais e praias quentes no Golfo da Guiné.",
       "Máscaras, tecidos e danças tradicionais são marcas fortes da minha cultura.",
-      "Um lugar famoso do meu país é Basílica de Nossa Senhora da Paz.",
+      "Minha capital é Yamoussoukro.",
       "No mapa, fico no oeste africano e meu território parece um quadrilátero inclinado."
     ],
     "typicalDish": "Attiéké com peixe",
@@ -372,7 +372,7 @@
     "hints": [
       "Tenho savanas, manguezais e praias na ponta oeste da África.",
       "Nossas roupas coloridas e tambores deixam as festas super animadas.",
-      "Um lugar famoso do meu país é Ilha de Gorée.",
+      "Minha capital é Dacar.",
       "No mapa, fico como uma “ponta” do continente voltada para o Atlântico."
     ],
     "typicalDish": "Thieboudienne",

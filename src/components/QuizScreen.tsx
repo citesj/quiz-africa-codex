@@ -11,7 +11,7 @@ const HINT_IMAGE_ORDER = [
   'culture',
   'typicalDish',
   'shape',
-  'landmark',
+  'capital',
 ] as const satisfies readonly CountryImageKind[];
 
 type HintImageKind = (typeof HINT_IMAGE_ORDER)[number];
@@ -20,7 +20,7 @@ const HINT_LABELS: Record<HintImageKind, string> = {
   famousAnimal: 'Animal',
   nature: 'Natureza',
   culture: 'Cultura',
-  landmark: 'Lugar',
+  capital: 'Capital',
   typicalDish: 'Comida',
   shape: 'Mapa',
 };
@@ -92,7 +92,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
       nature: ['natureza', 'deserto', 'savana', 'floresta', 'ilha', 'montanha', 'rio', 'praia'],
       culture: ['cultura', 'festa', 'máscara', 'roupa', 'dança', 'música', 'tradicion'],
       shape: ['mapa', 'formato', 'pareço', 'silhueta'],
-      landmark: ['pirâm', 'monte', 'reserva', 'mesquita', 'castelo', 'igrejas', 'ilha', 'vulcão'],
+      capital: ['capital'],
       typicalDish: ['prato', 'comida', 'culinária'],
       famousAnimal: ['animal', 'safári', 'big five', 'lêmur', 'leão', 'girafa', 'crocodilo'],
     };
@@ -112,8 +112,8 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
         return 'Repare nas roupas, tradições e celebrações culturais.';
       case 'shape':
         return 'Veja a silhueta no mapa e tente reconhecer o formato do país.';
-      case 'landmark':
-        return `Um lugar famoso daqui é ${round.country.landmark}.`;
+      case 'capital':
+        return `Minha capital é ${round.country.capital}.`;
       case 'typicalDish':
         return round.country.typicalDish
           ? `Um prato típico daqui é ${round.country.typicalDish}.`

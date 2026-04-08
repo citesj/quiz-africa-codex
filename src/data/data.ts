@@ -17,6 +17,7 @@ const REQUIRED_FIELDS: Array<keyof Country> = [
 const OPTIONAL_STRING_FIELDS: Array<keyof Country> = ['typicalDish', 'famousAnimal'];
 const IMAGE_FIELDS: CountryImageKind[] = [
   'flag',
+  'capital',
   'typicalDish',
   'famousAnimal',
   'nature',
