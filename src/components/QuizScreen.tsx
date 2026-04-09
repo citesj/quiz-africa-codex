@@ -7,7 +7,7 @@ import { getCountryImageSrc } from '../utils/countryImages';
 
 const HINT_IMAGE_ORDER = [
   'famousAnimal',
-  'nature',
+  'language',
   'culture',
   'typicalDish',
   'shape',
@@ -18,7 +18,7 @@ type HintImageKind = (typeof HINT_IMAGE_ORDER)[number];
 
 const HINT_LABELS: Record<HintImageKind, string> = {
   famousAnimal: 'Animal',
-  nature: 'Natureza',
+  language: 'Idioma',
   culture: 'Cultura',
   capital: 'Capital',
   typicalDish: 'Comida',
@@ -89,7 +89,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
   const findNarrativeHintByKind = (hintKind: HintImageKind) => {
     const normalizedHints = round.country.hints.map((hint) => hint.toLowerCase());
     const hintMatchers: Record<HintImageKind, string[]> = {
-      nature: ['natureza', 'deserto', 'savana', 'floresta', 'ilha', 'montanha', 'rio', 'praia'],
+      language: ['idioma', 'língua', 'falamos', 'falo', 'oficial'],
       culture: ['cultura', 'festa', 'máscara', 'roupa', 'dança', 'música', 'tradicion'],
       shape: ['mapa', 'formato', 'pareço', 'silhueta'],
       capital: ['capital'],
@@ -106,8 +106,8 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
     if (narrativeHint) return narrativeHint;
 
     switch (hintKind) {
-      case 'nature':
-        return 'Observe a paisagem, o clima e os biomas desse país!';
+      case 'language':
+        return `No meu país falamos ${round.country.language}.`;
       case 'culture':
         return 'Repare nas roupas, tradições e celebrações culturais.';
       case 'shape':

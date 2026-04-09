@@ -18,9 +18,9 @@ const OPTIONAL_STRING_FIELDS: Array<keyof Country> = ['typicalDish', 'famousAnim
 const IMAGE_FIELDS: CountryImageKind[] = [
   'flag',
   'capital',
+  'language',
   'typicalDish',
   'famousAnimal',
-  'nature',
   'culture',
   'shape',
   'landmark',
