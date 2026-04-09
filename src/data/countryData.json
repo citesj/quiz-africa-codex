@@ -10,13 +10,18 @@
     "wildlife": "Falcão e crocodilo-do-nilo",
     "funFact": "O Rio Nilo era tipo uma estrada gigante de água que alimentou faraós, pirâmides e cidades incríveis por milhares de anos!",
     "hints": [
-      "Meu território é cortado por um rio muito famoso.",
-      "Tenho pirâmides gigantes e muito antigas.",
+      "No meu país falamos Árabe.",
+      "Nossas festas têm danças, tambores e roupas com muita história antiga.",
       "Minha capital é Cairo.",
-      "Fico no norte da África e falo árabe."
+      "No mapa, meu território parece um quadrado com um pedacinho triangular no Sinai."
     ],
     "typicalDish": "Koshari",
-    "famousAnimal": "Crocodilo-do-nilo"
+    "famousAnimal": "Crocodilo-do-nilo",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Egyptian%20folk%20dance.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Egypt%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Sahara%20in%20Egypt.jpg"
+    }
   },
   {
     "id": "africa-do-sul",
@@ -29,13 +34,18 @@
     "wildlife": "Leão, elefante e rinoceronte",
     "funFact": "Aqui cabem muitas culturas: são 11 línguas oficiais, como se a escola inteira tivesse vários jeitos de dizer “oi” no mesmo dia!",
     "hints": [
-      "Tenho uma montanha famosa com topo achatado.",
-      "Sou conhecido por safáris e pelos 'Big Five'.",
-      "Uma das minhas capitais é Pretória.",
-      "Fico no extremo sul do continente."
+      "No meu país falamos 11 línguas oficiais.",
+      "Minha cultura mistura muitas línguas, músicas e roupas tradicionais coloridas.",
+      "Minha capital é Pretória (administrativa).",
+      "No mapa, fico na pontinha de baixo do continente africano."
     ],
     "typicalDish": "Bobotie",
-    "famousAnimal": "Leão-africano"
+    "famousAnimal": "Leão-africano",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Zulu%20reed%20dance.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/South%20Africa%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Table%20Mountain%20from%20Bloubergstrand.jpg"
+    }
   },
   {
     "id": "quenia",
@@ -48,13 +58,18 @@
     "wildlife": "Girafas, zebras e gnus",
     "funFact": "Na savana do Quênia, a Grande Migração parece um desfile sem fim: milhões de animais correndo juntos como um mega trânsito da natureza!",
     "hints": [
-      "Sou famoso por savanas e corridas de animais.",
-      "Minha reserva Maasai Mara é muito visitada.",
+      "No meu país falamos Suaíli e inglês.",
+      "O povo Maasai é famoso por roupas vermelhas e danças com saltos altos.",
       "Minha capital é Nairóbi.",
-      "No leste africano, falo suaíli e inglês."
+      "No mapa, pareço um bloco vertical na costa leste da África."
     ],
     "typicalDish": "Nyama Choma",
-    "famousAnimal": "Girafa-masai"
+    "famousAnimal": "Girafa-masai",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Maasai%20tribe%20in%20Kenya.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Maasai%20Mara%20at%20sundown.jpg"
+    }
   },
   {
     "id": "marrocos",
@@ -67,13 +82,18 @@
     "wildlife": "Macaco-de-gibraltar",
     "funFact": "Nos souks de Marrocos, parece caça ao tesouro: ruas cheias de cores, cheiros e tapetes que deixam tudo com cara de filme de aventura!",
     "hints": [
-      "Tenho mercados tradicionais chamados souks.",
+      "No meu país falamos Árabe e amazigue.",
+      "Minhas medinas têm artesanato, roupas tradicionais e festivais com muita cor.",
       "Minha capital é Rabat.",
-      "Fico perto do estreito de Gibraltar.",
-      "No norte africano, falo árabe e amazigue."
+      "No mapa, fico no cantinho noroeste da África, pertinho da Europa."
     ],
     "typicalDish": "Cuscuz marroquino",
-    "famousAnimal": "Macaco-de-gibraltar"
+    "famousAnimal": "Macaco-de-gibraltar",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Moroccan%20souk.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Morocco%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Erg%20Chebbi%20dunes%2C%20Morocco.jpg"
+    }
   },
   {
     "id": "nigeria",
@@ -86,13 +106,18 @@
     "wildlife": "Antílopes e chimpanzés",
     "funFact": "Tem tanta gente morando aqui que 1 em cada 5 africanos é nigeriano. É o país mais lotado do continente!",
     "hints": [
-      "Sou muito conhecido pela música afrobeat.",
-      "Sou o país mais populoso da África.",
+      "No meu país falamos Inglês.",
+      "Minhas culturas têm máscaras, tecidos e festivais vibrantes em muitas regiões.",
       "Minha capital é Abuja.",
-      "Fico no oeste africano e minha moeda é a naira."
+      "No mapa, pareço um grande bloco no oeste africano, acima do Golfo da Guiné."
     ],
     "typicalDish": "Jollof Rice",
-    "famousAnimal": "Chimpanzé"
+    "famousAnimal": "Chimpanzé",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Nigerian%20traditional%20attire.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Nigeria%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Niger%20river%20at%20Onitsha.jpg"
+    }
   },
   {
     "id": "tanzania",
@@ -105,13 +130,18 @@
     "wildlife": "Leões e elefantes",
     "funFact": "A Tanzânia guarda o Kilimanjaro, uma montanha tão alta que seu topo parece encostar nas nuvens!",
     "hints": [
-      "Tenho o monte mais alto da África.",
-      "Meu país tem parques com muitos leões e elefantes.",
+      "No meu país falamos Suaíli e inglês.",
+      "As danças e capulanas mostram uma cultura viva e muito alegre.",
       "Minha capital é Dodoma.",
-      "No leste africano, falo suaíli e inglês."
+      "No mapa, fico na costa leste, logo abaixo do Quênia."
     ],
     "typicalDish": "Ugali",
-    "famousAnimal": "Leão-africano"
+    "famousAnimal": "Leão-africano",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Tanzanian%20women%20in%20traditional%20dress.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Tanzania%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kilimanjaro.jpg"
+    }
   },
   {
     "id": "madagascar",
@@ -124,13 +154,18 @@
     "wildlife": "Lêmures",
     "funFact": "Mais de 80% dos animais e plantas daqui não existem em nenhum outro lugar do planeta. É como uma ilha secreta da natureza!",
     "hints": [
-      "Sou uma grande ilha ao lado da África.",
-      "Tenho animais famosos chamados lêmures.",
+      "No meu país falamos Malgaxe e francês.",
+      "Nossas roupas, músicas e danças misturam raízes africanas e austronésias.",
       "Minha capital é Antananarivo.",
-      "Fico no Oceano Índico."
+      "No mapa, tenho formato de ilha alongada ao lado da costa africana."
     ],
     "typicalDish": "Romazava",
-    "famousAnimal": "Lêmure-de-cauda-anelada"
+    "famousAnimal": "Lêmure-de-cauda-anelada",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Malagasy%20traditional%20dance.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Madagascar%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenue%20of%20the%20Baobabs%2C%20Madagascar.jpg"
+    }
   },
   {
     "id": "etiopia",
@@ -143,13 +178,18 @@
     "wildlife": "Lobo-etíope",
     "funFact": "A Etiópia é super resistente: mesmo com invasões, manteve sua história viva por séculos, como um escudo de coragem!",
     "hints": [
-      "Minhas montanhas guardam igrejas escavadas na rocha.",
+      "No meu país falamos Amárico.",
+      "Minhas festas religiosas têm roupas brancas e procissões bem marcantes.",
       "Minha capital é Adis Abeba.",
-      "Minha moeda é o birr.",
-      "Fico no leste africano e falo amárico."
+      "No mapa, meu território fica no Chifre da África e parece um trapézio grande."
     ],
     "typicalDish": "Injera",
-    "famousAnimal": "Lobo-etíope"
+    "famousAnimal": "Lobo-etíope",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Timkat%20festival%20in%20Ethiopia.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopia%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Simien%20Mountains%20National%20Park.jpg"
+    }
   },
   {
     "id": "argelia",
@@ -162,13 +202,18 @@
     "wildlife": "Fennec",
     "funFact": "A Argélia é tão gigante que daria para viajar por dias e ainda continuar no mesmo país, atravessando muito deserto do Saara!",
     "hints": [
-      "Grande parte do meu território fica no Saara.",
-      "Sou o maior país africano em área.",
+      "No meu país falamos Árabe e amazigue.",
+      "Minha cultura tem música rai, roupas tradicionais e mercados históricos.",
       "Minha capital é Argel.",
-      "Fico no norte da África."
+      "No mapa, sou um país enorme no norte da África com borda no Mediterrâneo."
     ],
     "typicalDish": "Cuscuz argelino",
-    "famousAnimal": "Raposa-fennec"
+    "famousAnimal": "Raposa-fennec",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Algerian%20traditional%20dress.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Algeria%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Sahara%20desert%20in%20Algeria.jpg"
+    }
   },
   {
     "id": "gana",
@@ -181,13 +226,18 @@
     "wildlife": "Antílopes florestais",
     "funFact": "Gana foi o primeiro da África Subsaariana a conquistar independência no século 20. Virou inspiração para vários vizinhos gritarem “também conseguimos”!",
     "hints": [
-      "Tenho litoral no Golfo da Guiné.",
+      "No meu país falamos Inglês.",
+      "Meus tecidos kente e festivais tradicionais são cheios de cor e significado.",
       "Minha capital é Acra.",
-      "Minha moeda é o cedi.",
-      "Fico no oeste da África e falo inglês."
+      "No mapa, fico no Golfo da Guiné com formato compacto no oeste africano."
     ],
     "typicalDish": "Fufu com sopa leve",
-    "famousAnimal": "Águia-rapace"
+    "famousAnimal": "Águia-rapace",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Kente%20cloth%20from%20Ghana.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Ghana%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Kakum%20National%20Park%20canopy%20walkway.jpg"
+    }
   },
   {
     "id": "angola",
@@ -200,13 +250,18 @@
     "wildlife": "Palanca-negra-gigante",
     "funFact": "Em Angola, as crianças também falam português como você. E tem palavra divertida: café da manhã pode ser chamado de “mata-bicho”!",
     "hints": [
-      "No meu país, a língua oficial é português.",
+      "No meu país falamos Português.",
+      "Nossas danças e ritmos, como semba, fazem todo mundo se mexer.",
       "Minha capital é Luanda.",
-      "Minha moeda é o kwanza.",
-      "Fico no sul do continente africano."
+      "No mapa, fico na parte sudoeste da África, com litoral grande."
     ],
     "typicalDish": "Muamba de galinha",
-    "famousAnimal": "Palanca-negra-gigante"
+    "famousAnimal": "Palanca-negra-gigante",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Angolan%20traditional%20dance.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Angola%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalandula%20Falls%20in%20Angola.jpg"
+    }
   },
   {
     "id": "mocambique",
@@ -219,13 +274,18 @@
     "wildlife": "Mamba Negra",
     "funFact": "Em Moçambique também se fala português, só que com jeitos próprios super legais. E o mar do Índico fica tão perto que vira cenário do dia a dia!",
     "hints": [
-      "Tenho um longo litoral no Oceano Índico.",
+      "No meu país falamos Português.",
+      "Capulanas coloridas e danças tradicionais dão vida às festas.",
       "Minha capital é Maputo.",
-      "Minha moeda é o metical.",
-      "No sudeste da África, também falo português."
+      "No mapa, sou comprido de norte a sul na costa leste africana."
     ],
     "typicalDish": "Matapa",
-    "famousAnimal": "Mamba Negra"
+    "famousAnimal": "Mamba Negra",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozambican%20traditional%20dance.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozambique%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Bazaruto%20Archipelago%20Mozambique.jpg"
+    }
   },
   {
     "id": "camaroes",
@@ -238,13 +298,18 @@
     "wildlife": "Gorilas e mandris",
     "funFact": "Chamam Camarões de “África em miniatura” porque tem de quase tudo: praia, floresta, montanha e até vulcão no mesmo país!",
     "hints": [
-      "Sou conhecido como 'África em miniatura'.",
-      "Tenho um vulcão chamado Monte Camarões.",
+      "No meu país falamos Francês e inglês.",
+      "Minhas máscaras e trajes tradicionais aparecem em festas incríveis.",
       "Minha capital é Yaoundé.",
-      "Fico na África Central e uso francês e inglês."
+      "No mapa, fico na África Central com um formato que desce até o mar."
     ],
     "typicalDish": "Ndolé",
-    "famousAnimal": "Mandril"
+    "famousAnimal": "Mandril",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Cameroon%20traditional%20mask.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Cameroon%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Cameroon.jpg"
+    }
   },
   {
     "id": "cabo-verde",
@@ -257,13 +322,18 @@
     "wildlife": "Tartarugas marinhas",
     "funFact": "Em Cabo Verde, você ouve português e crioulo juntos no cotidiano, como uma mistura musical de palavras. E tudo acontece em ilhas nascidas de vulcões!",
     "hints": [
-      "Sou um conjunto de ilhas no Atlântico.",
-      "Minha capital se chama Praia.",
-      "No meu país se fala português e crioulo.",
-      "Tenho origem vulcânica e fico próximo à costa africana."
+      "No meu país falamos Português e crioulo cabo-verdiano.",
+      "Morna, batuque e festas de rua mostram minha cultura insular vibrante.",
+      "Minha capital é Praia.",
+      "No mapa, pareço pontinhos de ilhas espalhadas no oceano."
     ],
     "typicalDish": "Cachupa",
-    "famousAnimal": "Tartaruga-marinha"
+    "famousAnimal": "Tartaruga-marinha",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape%20Verdean%20musicians.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape%20Verde%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Fogo%20volcano%20Cape%20Verde.jpg"
+    }
   },
   {
     "id": "costa-do-marfim",
@@ -276,13 +346,18 @@
     "wildlife": "Elefante Africano",
     "funFact": "Muita barra de chocolate começa aqui: a Costa do Marfim é uma das campeãs mundiais do cacau!",
     "hints": [
-      "Sou um dos grandes produtores de cacau.",
-      "Minha capital política é Yamoussoukro.",
-      "Minha língua oficial é francês.",
-      "Fico no oeste da África."
+      "No meu país falamos Francês.",
+      "Máscaras, tecidos e danças tradicionais são marcas fortes da minha cultura.",
+      "Minha capital é Yamoussoukro.",
+      "No mapa, fico no oeste africano e meu território parece um quadrilátero inclinado."
     ],
     "typicalDish": "Attiéké com peixe",
-    "famousAnimal": "Elefante Africano"
+    "famousAnimal": "Elefante Africano",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Dan%20mask%20from%20C%C3%B4te%20d%27Ivoire.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Ivory%20Coast%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Ta%C3%AF%20National%20Park.jpg"
+    }
   },
   {
     "id": "senegal",
@@ -295,12 +370,17 @@
     "wildlife": "Leão",
     "funFact": "Dacar pulsa com música, dança e corridas famosas, como se a cidade estivesse sempre em dia de festival!",
     "hints": [
-      "Tenho uma capital costeira chamada Dacar.",
-      "Minha ilha de Gorée é histórica.",
-      "Minha língua oficial é francês.",
-      "Fico no oeste africano, na ponta do continente."
+      "No meu país falamos Francês.",
+      "Nossas roupas coloridas e tambores deixam as festas super animadas.",
+      "Minha capital é Dacar.",
+      "No mapa, fico como uma “ponta” do continente voltada para o Atlântico."
     ],
     "typicalDish": "Thieboudienne",
-    "famousAnimal": "Leão"
+    "famousAnimal": "Leão",
+    "images": {
+      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Senegalese%20traditional%20dance.jpg",
+      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Senegal%20%28orthographic%20projection%29.svg",
+      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Sine-Saloum%20delta%20Senegal.jpg"
+    }
   }
 ]

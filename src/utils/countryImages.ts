@@ -9,10 +9,11 @@ const imageModules = import.meta.glob('../public/images/countries/*/*.{jpg,JPG,j
 const SUFFIX_BY_KIND: Record<CountryImageKind, string> = {
   flag: 'flag',
   capital: 'capital',
-  currency: 'currency',
   language: 'language',
   typicalDish: 'dish',
   famousAnimal: 'animal',
+  culture: 'culture',
+  shape: 'shape',
   landmark: 'landmark',
 };
 

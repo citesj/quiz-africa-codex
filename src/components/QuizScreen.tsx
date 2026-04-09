@@ -7,10 +7,10 @@ import { getCountryImageSrc } from '../utils/countryImages';
 
 const HINT_IMAGE_ORDER = [
   'famousAnimal',
-  'currency',
   'language',
+  'culture',
   'typicalDish',
-  'landmark',
+  'shape',
   'capital',
 ] as const satisfies readonly CountryImageKind[];
 
@@ -18,11 +18,11 @@ type HintImageKind = (typeof HINT_IMAGE_ORDER)[number];
 
 const HINT_LABELS: Record<HintImageKind, string> = {
   famousAnimal: 'Animal',
-  landmark: 'Lugar',
-  typicalDish: 'Comida',
-  capital: 'Capital',
-  currency: 'Moeda',
   language: 'Idioma',
+  culture: 'Cultura',
+  capital: 'Capital',
+  typicalDish: 'Comida',
+  shape: 'Mapa',
 };
 
 const LOCKED_HINT_LABEL = 'Bloqueada';
@@ -89,10 +89,10 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
   const findNarrativeHintByKind = (hintKind: HintImageKind) => {
     const normalizedHints = round.country.hints.map((hint) => hint.toLowerCase());
     const hintMatchers: Record<HintImageKind, string[]> = {
+      language: ['idioma', 'língua', 'falamos', 'falo', 'oficial'],
+      culture: ['cultura', 'festa', 'máscara', 'roupa', 'dança', 'música', 'tradicion'],
+      shape: ['mapa', 'formato', 'pareço', 'silhueta'],
       capital: ['capital'],
-      language: ['falo', 'falamos', 'língua', 'idioma'],
-      currency: ['moeda'],
-      landmark: ['pirâm', 'monte', 'reserva', 'mesquita', 'castelo', 'igrejas', 'ilha', 'vulcão'],
       typicalDish: ['prato', 'comida', 'culinária'],
       famousAnimal: ['animal', 'safári', 'big five', 'lêmur', 'leão', 'girafa', 'crocodilo'],
     };
@@ -106,14 +106,14 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
     if (narrativeHint) return narrativeHint;
 
     switch (hintKind) {
-      case 'capital':
-        return `Minha capital se chama ${round.country.capital}.`;
       case 'language':
-        return `Nós falamos ${round.country.language}.`;
-      case 'currency':
-        return `Nossa moeda é ${round.country.currency}.`;
-      case 'landmark':
-        return `Um lugar famoso daqui é ${round.country.landmark}.`;
+        return `No meu país falamos ${round.country.language}.`;
+      case 'culture':
+        return 'Repare nas roupas, tradições e celebrações culturais.';
+      case 'shape':
+        return 'Veja a silhueta no mapa e tente reconhecer o formato do país.';
+      case 'capital':
+        return `Minha capital é ${round.country.capital}.`;
       case 'typicalDish':
         return round.country.typicalDish
           ? `Um prato típico daqui é ${round.country.typicalDish}.`
