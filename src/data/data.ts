@@ -1,15 +1,11 @@
-import countryData from './countryData.json';
 import type { Country, CountryImageKind } from '../types';
+import countryData from './countryData.json';
 
 const REQUIRED_FIELDS: Array<keyof Country> = [
   'id',
   'name',
   'capital',
-  'region',
   'language',
-  'currency',
-  'landmark',
-  'wildlife',
   'funFact',
   'hints',
 ];

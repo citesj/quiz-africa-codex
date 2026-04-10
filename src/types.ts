@@ -23,11 +23,7 @@ export interface Country {
   id: string;
   name: string;
   capital: string;
-  region: string;
   language: string;
-  currency: string;
-  landmark: string;
-  wildlife: string;
   typicalDish?: string;
   famousAnimal?: string;
   funFact: string;

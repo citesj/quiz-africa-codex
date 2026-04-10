@@ -12,11 +12,7 @@ describe('countries data contract', () => {
       expect(country.id).toBeTypeOf('string');
       expect(country.name).toBeTypeOf('string');
       expect(country.capital).toBeTypeOf('string');
-      expect(country.region).toBeTypeOf('string');
       expect(country.language).toBeTypeOf('string');
-      expect(country.currency).toBeTypeOf('string');
-      expect(country.landmark).toBeTypeOf('string');
-      expect(country.wildlife).toBeTypeOf('string');
       expect(country.funFact).toBeTypeOf('string');
       expect(country.hints).toHaveLength(4);
       country.hints.forEach((hint) => {

@@ -1,17 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_HINTS } from '../constants';
-import type { CountryImageKind } from '../types';
-import type { RoundState } from '../types';
-import { getCountryImageSrc } from '../utils/countryImages';
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { TOTAL_HINTS } from "../constants";
+import type { CountryImageKind, RoundState } from "../types";
+import { getCountryImageSrc } from "../utils/countryImages";
 
 const HINT_IMAGE_ORDER = [
-  'famousAnimal',
-  'language',
-  'culture',
-  'typicalDish',
-  'shape',
-  'capital',
+  "famousAnimal",
+  "language",
+  "culture",
+  "typicalDish",
+  "shape",
+  "capital",
 ] as const satisfies readonly CountryImageKind[];
 
 type HintImageKind = (typeof HINT_IMAGE_ORDER)[number];
@@ -24,15 +23,15 @@ const NARRATIVE_HINT_INDEX_BY_KIND: Partial<Record<HintImageKind, number>> = {
 };
 
 const HINT_LABELS: Record<HintImageKind, string> = {
-  famousAnimal: 'Animal',
-  language: 'Idioma',
-  culture: 'Cultura',
-  capital: 'Capital',
-  typicalDish: 'Comida',
-  shape: 'Mapa',
+  famousAnimal: "Animal",
+  language: "Idioma",
+  culture: "Cultura",
+  capital: "Capital",
+  typicalDish: "Comida",
+  shape: "Mapa",
 };
 
-const LOCKED_HINT_LABEL = 'Bloqueada';
+const LOCKED_HINT_LABEL = "Bloqueada";
 
 const HINT_IMAGE_FALLBACK =
   "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='180'%3E%3Crect width='100%25' height='100%25' fill='%23efe5ca'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='54'%3E%F0%9F%93%B8%3C/text%3E%3C/svg%3E";
@@ -43,52 +42,64 @@ interface QuizScreenProps {
   onSelectAnswer: (countryId: string) => void;
 }
 
-export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenProps) => {
+export const QuizScreen = ({
+  round,
+  onRevealHint,
+  onSelectAnswer,
+}: QuizScreenProps) => {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
-  const [interactionPhase, setInteractionPhase] = useState<'idle' | 'selected' | 'tension' | 'resolution'>('idle');
+  const [interactionPhase, setInteractionPhase] = useState<
+    "idle" | "selected" | "tension" | "resolution"
+  >("idle");
   const tensionTimeoutRef = useRef<number | null>(null);
   const resolutionTimeoutRef = useRef<number | null>(null);
   const isHintsExhausted = round.revealedHints >= TOTAL_HINTS;
   const isHintButtonDisabled =
-    isHintsExhausted || interactionPhase === 'tension' || interactionPhase === 'resolution';
+    isHintsExhausted ||
+    interactionPhase === "tension" ||
+    interactionPhase === "resolution";
 
   useEffect(() => {
-    if (tensionTimeoutRef.current) window.clearTimeout(tensionTimeoutRef.current);
-    if (resolutionTimeoutRef.current) window.clearTimeout(resolutionTimeoutRef.current);
+    if (tensionTimeoutRef.current)
+      window.clearTimeout(tensionTimeoutRef.current);
+    if (resolutionTimeoutRef.current)
+      window.clearTimeout(resolutionTimeoutRef.current);
     setSelectedId(null);
     setZoomedImage(null);
-    setInteractionPhase('idle');
+    setInteractionPhase("idle");
   }, [round.roundNumber]);
 
   useEffect(
     () => () => {
-      if (tensionTimeoutRef.current) window.clearTimeout(tensionTimeoutRef.current);
-      if (resolutionTimeoutRef.current) window.clearTimeout(resolutionTimeoutRef.current);
+      if (tensionTimeoutRef.current)
+        window.clearTimeout(tensionTimeoutRef.current);
+      if (resolutionTimeoutRef.current)
+        window.clearTimeout(resolutionTimeoutRef.current);
     },
     [],
   );
 
   const handleSelectOption = (optionId: string) => {
-    if (interactionPhase === 'tension' || interactionPhase === 'resolution') {
+    if (interactionPhase === "tension" || interactionPhase === "resolution") {
       return;
     }
     setSelectedId(optionId);
-    setInteractionPhase('selected');
+    setInteractionPhase("selected");
   };
 
   const handleConfirmAnswer = () => {
     if (!selectedId) return;
 
-    setInteractionPhase('tension');
+    setInteractionPhase("tension");
 
     tensionTimeoutRef.current = window.setTimeout(() => {
-      setInteractionPhase('resolution');
+      setInteractionPhase("resolution");
 
       resolutionTimeoutRef.current = window.setTimeout(() => {
         onSelectAnswer(selectedId);
         setSelectedId(null);
-        setInteractionPhase('idle');
+        setInteractionPhase("idle");
       }, 1500);
     }, 500);
   };
@@ -107,30 +118,32 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
     if (narrativeHint) return narrativeHint;
 
     switch (hintKind) {
-      case 'language':
+      case "language":
         return `No meu país falamos ${round.country.language}.`;
-      case 'culture':
-        return 'Repare nas roupas, tradições e celebrações culturais.';
-      case 'shape':
-        return 'Veja a silhueta no mapa e tente reconhecer o formato do país.';
-      case 'capital':
+      case "culture":
+        return "Repare nas roupas, tradições e celebrações culturais.";
+      case "shape":
+        return "Veja a silhueta no mapa e tente reconhecer o formato do país.";
+      case "capital":
         return `Minha capital é ${round.country.capital}.`;
-      case 'typicalDish':
+      case "typicalDish":
         return round.country.typicalDish
           ? `Um prato típico daqui é ${round.country.typicalDish}.`
-          : 'Temos sabores típicos muito especiais!';
-      case 'famousAnimal':
+          : "Temos sabores típicos muito especiais!";
+      case "famousAnimal":
         return round.country.famousAnimal
           ? `Um animal marcante daqui é ${round.country.famousAnimal}.`
-          : `Um animal importante daqui é ${round.country.wildlife}.`;
+          : "Este país tem uma fauna muito especial.";
       default:
-        return 'Observe com atenção essa pista!';
+        return "Observe com atenção essa pista!";
     }
   };
 
   return (
     <section className="space-y-6 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-8 shadow-passport">
-      <h2 className="font-title text-3xl font-extrabold text-color-ink">Rodada {round.roundNumber}</h2>
+      <h2 className="font-title text-3xl font-extrabold text-color-ink">
+        Rodada {round.roundNumber}
+      </h2>
 
       <div className="rounded-2xl border border-color-ink/15 bg-color-paper-deep/55 p-5">
         <p className="mb-3 text-sm font-semibold text-color-ink/80">
@@ -146,8 +159,12 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
           >
             {HINT_IMAGE_ORDER.map((hintKind, index) => {
               const isHintRevealed = index < round.revealedHints;
-              const hintLabel = isHintRevealed ? HINT_LABELS[hintKind] : LOCKED_HINT_LABEL;
-              const imageSrc = getCountryImageSrc(round.country, hintKind) ?? HINT_IMAGE_FALLBACK;
+              const hintLabel = isHintRevealed
+                ? HINT_LABELS[hintKind]
+                : LOCKED_HINT_LABEL;
+              const imageSrc =
+                getCountryImageSrc(round.country, hintKind) ??
+                HINT_IMAGE_FALLBACK;
 
               return (
                 <li
@@ -199,24 +216,40 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
           disabled={isHintButtonDisabled}
           className="mt-4 rounded-xl bg-color-ochre px-6 py-3 text-lg font-bold text-[#fff9ea] shadow-photo transition-colors hover:brightness-105 disabled:cursor-not-allowed disabled:bg-color-paper-deep disabled:text-color-ink/50 disabled:shadow-none focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper"
         >
-          {isHintsExhausted ? 'Todas as pistas abertas!' : '🔍 Mostrar outra pista'}
+          {isHintsExhausted
+            ? "Todas as pistas abertas!"
+            : "🔍 Mostrar outra pista"}
         </motion.button>
       </div>
 
       <div className="grid gap-3 md:grid-cols-3">
-        {round.options.map((option) => {
+        {round.options.map(option => {
           const isSelected = selectedId === option.id;
-          const hasSelection = interactionPhase !== 'idle' && selectedId !== null;
+          const hasSelection =
+            interactionPhase !== "idle" && selectedId !== null;
           const isDimmed = hasSelection && !isSelected;
-          const isCorrectSelection = interactionPhase === 'resolution' && isSelected && selectedId === round.country.id;
-          const isWrongSelection = interactionPhase === 'resolution' && isSelected && selectedId !== round.country.id;
+          const isCorrectSelection =
+            interactionPhase === "resolution" &&
+            isSelected &&
+            selectedId === round.country.id;
+          const isWrongSelection =
+            interactionPhase === "resolution" &&
+            isSelected &&
+            selectedId !== round.country.id;
           const isCorrectAnswerReveal =
-            interactionPhase === 'resolution' && selectedId !== round.country.id && option.id === round.country.id;
-          const isLocked = interactionPhase === 'tension' || interactionPhase === 'resolution';
+            interactionPhase === "resolution" &&
+            selectedId !== round.country.id &&
+            option.id === round.country.id;
+          const isLocked =
+            interactionPhase === "tension" || interactionPhase === "resolution";
 
           return (
             <motion.button
-              whileHover={isLocked || (hasSelection && !isSelected) ? undefined : { scale: 1.02 }}
+              whileHover={
+                isLocked || (hasSelection && !isSelected)
+                  ? undefined
+                  : { scale: 1.02 }
+              }
               whileTap={{ scale: 0.96 }}
               animate={
                 isCorrectSelection
@@ -225,9 +258,9 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
                     ? { x: [0, -10, 10, -10, 10, 0] }
                     : isCorrectAnswerReveal
                       ? { opacity: [1, 0.35, 1, 0.35, 1] }
-                      : interactionPhase === 'tension' && isSelected
+                      : interactionPhase === "tension" && isSelected
                         ? { scale: 0.95 }
-                        : interactionPhase === 'selected' && isSelected
+                        : interactionPhase === "selected" && isSelected
                           ? { scale: 1.05 }
                           : { scale: 1 }
               }
@@ -238,15 +271,15 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
               disabled={isLocked}
               className={`flex justify-center rounded-2xl border-2 p-4 text-center text-xl font-bold text-color-ink shadow-photo transition focus-visible:ring-4 focus-visible:ring-color-stamp focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper disabled:cursor-not-allowed ${
                 isCorrectSelection
-                  ? 'border-green-700 bg-green-500 text-white'
+                  ? "border-green-700 bg-green-500 text-white"
                   : isWrongSelection
-                    ? 'border-red-600 bg-red-400 text-white'
+                    ? "border-red-600 bg-red-400 text-white"
                     : isCorrectAnswerReveal
-                      ? 'border-green-700 bg-green-500 text-white'
-                    : isSelected
-                      ? 'border-color-olive bg-[#f0e6cd] ring-4 ring-color-ochre'
-                      : 'border-color-olive/70 bg-[#fffdf8]'
-              } ${isDimmed ? 'opacity-50' : ''} ${hasSelection ? '' : 'hover:bg-[#faf2df]'}`}
+                      ? "border-green-700 bg-green-500 text-white"
+                      : isSelected
+                        ? "border-color-olive bg-[#f0e6cd] ring-4 ring-color-ochre"
+                        : "border-color-olive/70 bg-[#fffdf8]"
+              } ${isDimmed ? "opacity-50" : ""} ${hasSelection ? "" : "hover:bg-[#faf2df]"}`}
             >
               {option.name}
             </motion.button>
@@ -255,7 +288,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
       </div>
 
       <AnimatePresence>
-        {interactionPhase === 'selected' && selectedId && (
+        {interactionPhase === "selected" && selectedId && (
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -294,7 +327,7 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.2 }}
               className="max-h-full max-w-full rounded-2xl object-contain shadow-2xl"
-              onClick={(event) => event.stopPropagation()}
+              onClick={event => event.stopPropagation()}
             />
           </motion.button>
         )}
@@ -302,3 +335,4 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
     </section>
   );
 };
+
