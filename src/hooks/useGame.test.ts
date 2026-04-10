@@ -25,6 +25,41 @@ describe('useGame', () => {
     expect(activeRound?.revealedHints).toBe(1);
     expect(activeRound?.options).toHaveLength(3);
     expect(activeRound?.options.some((option) => option.id === activeRound.country.id)).toBe(true);
+
+    const optionIds = activeRound?.options.map((option) => option.id) ?? [];
+    expect(new Set(optionIds).size).toBe(optionIds.length);
+  });
+
+  it('mantem opcoes sem duplicidade e com pais correto em todas as rodadas', async () => {
+    const { result } = renderHook(() => useGame());
+
+    act(() => {
+      result.current.startGame();
+    });
+
+    await waitFor(() => {
+      expect(result.current.gameState.phase).toBe('quiz');
+      expect(result.current.gameState.round).not.toBeNull();
+    });
+
+    for (let i = 0; i < TOTAL_ROUNDS; i += 1) {
+      const activeRound = result.current.gameState.round;
+      if (!activeRound) {
+        throw new Error('Rodada ativa nao encontrada durante validacao de opcoes.');
+      }
+
+      const optionIds = activeRound.options.map((option) => option.id);
+      expect(activeRound.options).toHaveLength(3);
+      expect(new Set(optionIds).size).toBe(optionIds.length);
+      expect(optionIds).toContain(activeRound.country.id);
+
+      act(() => {
+        result.current.selectAnswer(activeRound.country.id);
+        result.current.goToNextRound();
+      });
+    }
+
+    expect(result.current.gameState.phase).toBe('completed');
   });
 
   it('revela pistas ate o limite permitido', async () => {

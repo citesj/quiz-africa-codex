@@ -1,5 +1,8 @@
 import type { Country, CountryImageKind } from '../types';
 
+const COUNTRY_IMAGE_FILE_PATTERN = /countries\/([^/]+)\/[^/]+-([a-z]+)\.([^.]+)$/i;
+const isDevEnvironment = Boolean(import.meta.env?.DEV);
+
 const imageModules = import.meta.glob('../public/images/countries/*/*.{jpg,JPG,jpeg,png,svg,webp}', {
   eager: true,
   query: '?url',
@@ -21,6 +24,8 @@ const kindBySuffix = new Map<string, CountryImageKind>(
   (Object.entries(SUFFIX_BY_KIND) as Array<[CountryImageKind, string]>).map(([kind, suffix]) => [suffix, kind]),
 );
 
+const KNOWN_IGNORED_SUFFIXES = new Set(['currency']);
+
 const EXTENSION_PRIORITY: Record<string, number> = {
   webp: 4,
   svg: 3,
@@ -33,17 +38,23 @@ const imagesByCountry = new Map<string, Partial<Record<CountryImageKind, string>
 const priorityByCountryAndKind = new Map<string, number>();
 
 Object.entries(imageModules).forEach(([modulePath, imageUrl]) => {
-  const match = modulePath.match(/countries\/([^/]+)\/[^/]+-([a-z]+)\.([^.]+)$/i);
+  const match = modulePath.match(COUNTRY_IMAGE_FILE_PATTERN);
   const countryId = match?.[1];
   const suffix = match?.[2]?.toLowerCase();
   const extension = match?.[3]?.toLowerCase();
 
   if (!countryId || !suffix || !extension) {
+    if (isDevEnvironment) {
+      console.warn(`[countryImages] Arquivo ignorado por padrao de nome invalido: ${modulePath}`);
+    }
     return;
   }
 
   const kind = kindBySuffix.get(suffix);
   if (!kind) {
+    if (isDevEnvironment && !KNOWN_IGNORED_SUFFIXES.has(suffix)) {
+      console.warn(`[countryImages] Arquivo ignorado por sufixo nao mapeado: ${modulePath}`);
+    }
     return;
   }
 

@@ -1,7 +1,7 @@
 import { useMemo, useState, useTransition } from 'react';
+import { OPTIONS_PER_ROUND, TOTAL_HINTS, TOTAL_ROUNDS } from '../constants';
 import { countries } from '../data/data';
 import { ENCOURAGEMENT_MESSAGES } from '../messages';
-import { OPTIONS_PER_ROUND, TOTAL_HINTS, TOTAL_ROUNDS } from '../constants';
 import type { Country, GameState, RoundState } from '../types';
 
 // O motor do jogo fica isolado no hook para manter UI declarativa e simples.
@@ -27,7 +27,31 @@ const buildOptions = (correctCountry: Country, pool: Country[]): [Country, Count
     0,
     OPTIONS_PER_ROUND - 1,
   );
-  return fisherYatesShuffle([correctCountry, ...distractors]) as [Country, Country, Country];
+
+  if (distractors.length !== OPTIONS_PER_ROUND - 1) {
+    throw new Error(
+      `Nao foi possivel montar as opcoes da rodada: esperado ${OPTIONS_PER_ROUND - 1} distratores, recebido ${distractors.length}.`,
+    );
+  }
+
+  const options = fisherYatesShuffle([correctCountry, ...distractors]);
+
+  if (options.length !== OPTIONS_PER_ROUND) {
+    throw new Error(
+      `Nao foi possivel montar as opcoes da rodada: esperado ${OPTIONS_PER_ROUND} opcoes, recebido ${options.length}.`,
+    );
+  }
+
+  const optionIds = new Set(options.map((country) => country.id));
+  if (optionIds.size !== OPTIONS_PER_ROUND) {
+    throw new Error('Nao foi possivel montar as opcoes da rodada: ids duplicados encontrados.');
+  }
+
+  if (!optionIds.has(correctCountry.id)) {
+    throw new Error('Nao foi possivel montar as opcoes da rodada: pais correto ausente nas opcoes.');
+  }
+
+  return options as [Country, Country, Country];
 };
 
 interface DiscoveryFeedbackArgs {
