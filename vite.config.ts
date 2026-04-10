@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
@@ -31,9 +31,7 @@ export default defineConfig({
       jpg: {
         quality: 100,
       },
-      gif: {
-        optimizationLevel: 1,
-      },
+      gif: {},
       cache: true,
       cacheLocation: '.cache/vite-image-optimizer',
       test: /\.(svg|webp)$/i,
