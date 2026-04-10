@@ -8,6 +8,23 @@ export type CountryImageKind =
   | 'shape'
   | 'landmark';
 
+export type CountryHintKind =
+  | 'famousAnimal'
+  | 'language'
+  | 'culture'
+  | 'typicalDish'
+  | 'shape'
+  | 'capital';
+
+export interface CountryHints {
+  famousAnimal?: string;
+  language: string;
+  culture: string;
+  typicalDish?: string;
+  shape: string;
+  capital: string;
+}
+
 export interface CountryImages {
   flag?: string;
   capital?: string;
@@ -22,12 +39,8 @@ export interface CountryImages {
 export interface Country {
   id: string;
   name: string;
-  capital: string;
-  language: string;
-  typicalDish?: string;
-  famousAnimal?: string;
   funFact: string;
-  hints: [string, string, string, string];
+  hints: CountryHints;
   images?: CountryImages;
 }
 

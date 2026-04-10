@@ -11,21 +11,21 @@ describe('countries data contract', () => {
     countries.forEach((country) => {
       expect(country.id).toBeTypeOf('string');
       expect(country.name).toBeTypeOf('string');
-      expect(country.capital).toBeTypeOf('string');
-      expect(country.language).toBeTypeOf('string');
       expect(country.funFact).toBeTypeOf('string');
-      expect(country.hints).toHaveLength(4);
-      country.hints.forEach((hint) => {
-        expect(hint).toBeTypeOf('string');
-      });
 
-      if (country.typicalDish !== undefined) {
-        expect(country.typicalDish).toBeTypeOf('string');
+      expect(country.hints.language).toBeTypeOf('string');
+      expect(country.hints.culture).toBeTypeOf('string');
+      expect(country.hints.capital).toBeTypeOf('string');
+      expect(country.hints.shape).toBeTypeOf('string');
+
+      if (country.hints.famousAnimal !== undefined) {
+        expect(country.hints.famousAnimal).toBeTypeOf('string');
       }
 
-      if (country.famousAnimal !== undefined) {
-        expect(country.famousAnimal).toBeTypeOf('string');
+      if (country.hints.typicalDish !== undefined) {
+        expect(country.hints.typicalDish).toBeTypeOf('string');
       }
+
     });
   });
 });

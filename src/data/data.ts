@@ -1,16 +1,23 @@
-import type { Country, CountryImageKind } from '../types';
+import type { Country, CountryHintKind, CountryImageKind } from '../types';
 import countryData from './countryData.json';
 
 const REQUIRED_FIELDS: Array<keyof Country> = [
   'id',
   'name',
-  'capital',
-  'language',
   'funFact',
   'hints',
 ];
 
-const OPTIONAL_STRING_FIELDS: Array<keyof Country> = ['typicalDish', 'famousAnimal'];
+const REQUIRED_HINT_FIELDS: Exclude<CountryHintKind, 'famousAnimal' | 'typicalDish'>[] = [
+  'language',
+  'culture',
+  'shape',
+  'capital',
+];
+const OPTIONAL_HINT_FIELDS: Extract<CountryHintKind, 'famousAnimal' | 'typicalDish'>[] = [
+  'famousAnimal',
+  'typicalDish',
+];
 const IMAGE_FIELDS: CountryImageKind[] = [
   'flag',
   'capital',
@@ -46,25 +53,34 @@ function assertCountry(rawCountry: unknown, index: number): asserts rawCountry i
 
     if (field === 'hints') {
       const hints = countryRecord.hints;
-      if (!Array.isArray(hints) || hints.length !== 4 || hints.some((hint) => typeof hint !== 'string')) {
-        throw new Error(
-          `[countries] País "${countryLabel}" inválido: campo "hints" deve ser uma tupla com 4 strings.`,
-        );
+      if (!hints || typeof hints !== 'object' || Array.isArray(hints)) {
+        throw new Error(`[countries] País "${countryLabel}" inválido: campo "hints" deve ser objeto.`);
+      }
+
+      const hintsRecord = hints as Record<string, unknown>;
+
+      for (const hintField of REQUIRED_HINT_FIELDS) {
+        const hintValue = hintsRecord[hintField];
+        if (typeof hintValue !== 'string') {
+          throw new Error(
+            `[countries] País "${countryLabel}" inválido: campo obrigatório "hints.${hintField}" deve ser string.`,
+          );
+        }
+      }
+
+      for (const hintField of OPTIONAL_HINT_FIELDS) {
+        const hintValue = hintsRecord[hintField];
+        if (hintValue !== undefined && typeof hintValue !== 'string') {
+          throw new Error(
+            `[countries] País "${countryLabel}" inválido: campo opcional "hints.${hintField}" deve ser string quando informado.`,
+          );
+        }
       }
       continue;
     }
 
     if (typeof countryRecord[field] !== 'string') {
       throw new Error(`[countries] País "${countryLabel}" inválido: campo "${field}" deve ser string.`);
-    }
-  }
-
-  for (const field of OPTIONAL_STRING_FIELDS) {
-    const value = countryRecord[field];
-    if (value !== undefined && typeof value !== 'string') {
-      throw new Error(
-        `[countries] País "${countryLabel}" inválido: campo opcional "${field}" deve ser string quando informado.`,
-      );
     }
   }
 

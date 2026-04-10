@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { TOTAL_HINTS } from "../constants";
-import type { CountryImageKind, RoundState } from "../types";
+import type { CountryHintKind, CountryImageKind, RoundState } from "../types";
 import { getCountryImageSrc } from "../utils/countryImages";
 
 const HINT_IMAGE_ORDER = [
@@ -14,13 +14,6 @@ const HINT_IMAGE_ORDER = [
 ] as const satisfies readonly CountryImageKind[];
 
 type HintImageKind = (typeof HINT_IMAGE_ORDER)[number];
-
-const NARRATIVE_HINT_INDEX_BY_KIND: Partial<Record<HintImageKind, number>> = {
-  language: 0,
-  culture: 1,
-  capital: 2,
-  shape: 3,
-};
 
 const HINT_LABELS: Record<HintImageKind, string> = {
   famousAnimal: "Animal",
@@ -105,12 +98,12 @@ export const QuizScreen = ({
   };
 
   const findNarrativeHintByKind = (hintKind: HintImageKind) => {
-    const hintIndex = NARRATIVE_HINT_INDEX_BY_KIND[hintKind];
-    if (hintIndex === undefined) {
+    const hintText = round.country.hints[hintKind as CountryHintKind];
+    if (!hintText) {
       return null;
     }
 
-    return round.country.hints[hintIndex] ?? null;
+    return hintText.trim().length > 0 ? hintText : null;
   };
 
   const getHintSupportText = (hintKind: HintImageKind) => {
@@ -119,21 +112,17 @@ export const QuizScreen = ({
 
     switch (hintKind) {
       case "language":
-        return `No meu país falamos ${round.country.language}.`;
+        return "Observe os indícios de idioma desta pista.";
       case "culture":
         return "Repare nas roupas, tradições e celebrações culturais.";
       case "shape":
         return "Veja a silhueta no mapa e tente reconhecer o formato do país.";
       case "capital":
-        return `Minha capital é ${round.country.capital}.`;
+        return "Repare nas pistas sobre a capital deste país.";
       case "typicalDish":
-        return round.country.typicalDish
-          ? `Um prato típico daqui é ${round.country.typicalDish}.`
-          : "Temos sabores típicos muito especiais!";
+        return "Temos sabores típicos muito especiais!";
       case "famousAnimal":
-        return round.country.famousAnimal
-          ? `Um animal marcante daqui é ${round.country.famousAnimal}.`
-          : "Este país tem uma fauna muito especial.";
+        return "Este país tem uma fauna muito especial.";
       default:
         return "Observe com atenção essa pista!";
     }

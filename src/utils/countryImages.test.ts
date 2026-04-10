@@ -17,10 +17,15 @@ const ALL_IMAGE_KINDS: CountryImageKind[] = [
 const createCountryFixture = (overrides: Partial<Country> = {}): Country => ({
   id: 'pais-teste',
   name: 'Pais Teste',
-  capital: 'Capital Teste',
-  language: 'Idioma Teste',
   funFact: 'Curiosidade teste',
-  hints: ['h1', 'h2', 'h3', 'h4'],
+  hints: {
+    language: 'h1',
+    culture: 'h2',
+    capital: 'h3',
+    shape: 'h4',
+    famousAnimal: 'h5',
+    typicalDish: 'h6',
+  },
   ...overrides,
 });
 
