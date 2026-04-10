@@ -16,6 +16,13 @@ const HINT_IMAGE_ORDER = [
 
 type HintImageKind = (typeof HINT_IMAGE_ORDER)[number];
 
+const NARRATIVE_HINT_INDEX_BY_KIND: Partial<Record<HintImageKind, number>> = {
+  language: 0,
+  culture: 1,
+  capital: 2,
+  shape: 3,
+};
+
 const HINT_LABELS: Record<HintImageKind, string> = {
   famousAnimal: 'Animal',
   language: 'Idioma',
@@ -87,18 +94,12 @@ export const QuizScreen = ({ round, onRevealHint, onSelectAnswer }: QuizScreenPr
   };
 
   const findNarrativeHintByKind = (hintKind: HintImageKind) => {
-    const normalizedHints = round.country.hints.map((hint) => hint.toLowerCase());
-    const hintMatchers: Record<HintImageKind, string[]> = {
-      language: ['idioma', 'língua', 'falamos', 'falo', 'oficial'],
-      culture: ['cultura', 'festa', 'máscara', 'roupa', 'dança', 'música', 'tradicion'],
-      shape: ['mapa', 'formato', 'pareço', 'silhueta'],
-      capital: ['capital'],
-      typicalDish: ['prato', 'comida', 'culinária'],
-      famousAnimal: ['animal', 'safári', 'big five', 'lêmur', 'leão', 'girafa', 'crocodilo'],
-    };
-    const terms = hintMatchers[hintKind];
-    const matchIndex = normalizedHints.findIndex((hint) => terms.some((term) => hint.includes(term)));
-    return matchIndex >= 0 ? round.country.hints[matchIndex] : null;
+    const hintIndex = NARRATIVE_HINT_INDEX_BY_KIND[hintKind];
+    if (hintIndex === undefined) {
+      return null;
+    }
+
+    return round.country.hints[hintIndex] ?? null;
   };
 
   const getHintSupportText = (hintKind: HintImageKind) => {

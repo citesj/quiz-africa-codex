@@ -19,7 +19,7 @@ const createCountryFixture = (overrides: Partial<Country> = {}): Country => ({
 
 describe('getCountryImageSrc', () => {
   it('prioriza override de imagem no objeto do pais', () => {
-    const customFlag = 'https://cdn.exemplo.com/flag-customizada.png';
+    const customFlag = '/images/countries/pais-teste/pais-teste-flag.png';
     const country = createCountryFixture({ images: { flag: customFlag } });
 
     const imageSrc = getCountryImageSrc(country, 'flag');

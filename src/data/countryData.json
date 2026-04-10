@@ -16,12 +16,7 @@
       "No mapa, meu território parece um quadrado com um pedacinho triangular no Sinai."
     ],
     "typicalDish": "Koshari",
-    "famousAnimal": "Crocodilo-do-nilo",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Egyptian%20folk%20dance.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Egypt%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Sahara%20in%20Egypt.jpg"
-    }
+    "famousAnimal": "Crocodilo-do-nilo"
   },
   {
     "id": "africa-do-sul",
@@ -40,12 +35,7 @@
       "No mapa, fico na pontinha de baixo do continente africano."
     ],
     "typicalDish": "Bobotie",
-    "famousAnimal": "Leão-africano",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Zulu%20reed%20dance.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/South%20Africa%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Table%20Mountain%20from%20Bloubergstrand.jpg"
-    }
+    "famousAnimal": "Leão-africano"
   },
   {
     "id": "quenia",
@@ -64,12 +54,7 @@
       "No mapa, pareço um bloco vertical na costa leste da África."
     ],
     "typicalDish": "Nyama Choma",
-    "famousAnimal": "Girafa-masai",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Maasai%20tribe%20in%20Kenya.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Kenya%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Maasai%20Mara%20at%20sundown.jpg"
-    }
+    "famousAnimal": "Girafa-masai"
   },
   {
     "id": "marrocos",
@@ -88,12 +73,7 @@
       "No mapa, fico no cantinho noroeste da África, pertinho da Europa."
     ],
     "typicalDish": "Cuscuz marroquino",
-    "famousAnimal": "Macaco-de-gibraltar",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Moroccan%20souk.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Morocco%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Erg%20Chebbi%20dunes%2C%20Morocco.jpg"
-    }
+    "famousAnimal": "Macaco-de-gibraltar"
   },
   {
     "id": "nigeria",
@@ -112,12 +92,7 @@
       "No mapa, pareço um grande bloco no oeste africano, acima do Golfo da Guiné."
     ],
     "typicalDish": "Jollof Rice",
-    "famousAnimal": "Chimpanzé",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Nigerian%20traditional%20attire.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Nigeria%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Niger%20river%20at%20Onitsha.jpg"
-    }
+    "famousAnimal": "Chimpanzé"
   },
   {
     "id": "tanzania",
@@ -136,12 +111,7 @@
       "No mapa, fico na costa leste, logo abaixo do Quênia."
     ],
     "typicalDish": "Ugali",
-    "famousAnimal": "Leão-africano",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Tanzanian%20women%20in%20traditional%20dress.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Tanzania%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Kilimanjaro.jpg"
-    }
+    "famousAnimal": "Leão-africano"
   },
   {
     "id": "madagascar",
@@ -160,12 +130,7 @@
       "No mapa, tenho formato de ilha alongada ao lado da costa africana."
     ],
     "typicalDish": "Romazava",
-    "famousAnimal": "Lêmure-de-cauda-anelada",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Malagasy%20traditional%20dance.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Madagascar%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenue%20of%20the%20Baobabs%2C%20Madagascar.jpg"
-    }
+    "famousAnimal": "Lêmure-de-cauda-anelada"
   },
   {
     "id": "etiopia",
@@ -184,12 +149,7 @@
       "No mapa, meu território fica no Chifre da África e parece um trapézio grande."
     ],
     "typicalDish": "Injera",
-    "famousAnimal": "Lobo-etíope",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Timkat%20festival%20in%20Ethiopia.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethiopia%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Simien%20Mountains%20National%20Park.jpg"
-    }
+    "famousAnimal": "Lobo-etíope"
   },
   {
     "id": "argelia",
@@ -208,12 +168,7 @@
       "No mapa, sou um país enorme no norte da África com borda no Mediterrâneo."
     ],
     "typicalDish": "Cuscuz argelino",
-    "famousAnimal": "Raposa-fennec",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Algerian%20traditional%20dress.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Algeria%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Sahara%20desert%20in%20Algeria.jpg"
-    }
+    "famousAnimal": "Raposa-fennec"
   },
   {
     "id": "gana",
@@ -232,12 +187,7 @@
       "No mapa, fico no Golfo da Guiné com formato compacto no oeste africano."
     ],
     "typicalDish": "Fufu com sopa leve",
-    "famousAnimal": "Águia-rapace",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Kente%20cloth%20from%20Ghana.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Ghana%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Kakum%20National%20Park%20canopy%20walkway.jpg"
-    }
+    "famousAnimal": "Águia-rapace"
   },
   {
     "id": "angola",
@@ -256,12 +206,7 @@
       "No mapa, fico na parte sudoeste da África, com litoral grande."
     ],
     "typicalDish": "Muamba de galinha",
-    "famousAnimal": "Palanca-negra-gigante",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Angolan%20traditional%20dance.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Angola%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalandula%20Falls%20in%20Angola.jpg"
-    }
+    "famousAnimal": "Palanca-negra-gigante"
   },
   {
     "id": "mocambique",
@@ -280,12 +225,7 @@
       "No mapa, sou comprido de norte a sul na costa leste africana."
     ],
     "typicalDish": "Matapa",
-    "famousAnimal": "Mamba Negra",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozambican%20traditional%20dance.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Mozambique%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Bazaruto%20Archipelago%20Mozambique.jpg"
-    }
+    "famousAnimal": "Mamba Negra"
   },
   {
     "id": "camaroes",
@@ -304,12 +244,7 @@
       "No mapa, fico na África Central com um formato que desce até o mar."
     ],
     "typicalDish": "Ndolé",
-    "famousAnimal": "Mandril",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Cameroon%20traditional%20mask.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Cameroon%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Cameroon.jpg"
-    }
+    "famousAnimal": "Mandril"
   },
   {
     "id": "cabo-verde",
@@ -328,12 +263,7 @@
       "No mapa, pareço pontinhos de ilhas espalhadas no oceano."
     ],
     "typicalDish": "Cachupa",
-    "famousAnimal": "Tartaruga-marinha",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape%20Verdean%20musicians.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape%20Verde%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Fogo%20volcano%20Cape%20Verde.jpg"
-    }
+    "famousAnimal": "Tartaruga-marinha"
   },
   {
     "id": "costa-do-marfim",
@@ -352,12 +282,7 @@
       "No mapa, fico no oeste africano e meu território parece um quadrilátero inclinado."
     ],
     "typicalDish": "Attiéké com peixe",
-    "famousAnimal": "Elefante Africano",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Dan%20mask%20from%20C%C3%B4te%20d%27Ivoire.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Ivory%20Coast%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Ta%C3%AF%20National%20Park.jpg"
-    }
+    "famousAnimal": "Elefante Africano"
   },
   {
     "id": "senegal",
@@ -376,11 +301,6 @@
       "No mapa, fico como uma “ponta” do continente voltada para o Atlântico."
     ],
     "typicalDish": "Thieboudienne",
-    "famousAnimal": "Leão",
-    "images": {
-      "culture": "https://commons.wikimedia.org/wiki/Special:FilePath/Senegalese%20traditional%20dance.jpg",
-      "shape": "https://commons.wikimedia.org/wiki/Special:FilePath/Senegal%20%28orthographic%20projection%29.svg",
-      "language": "https://commons.wikimedia.org/wiki/Special:FilePath/Sine-Saloum%20delta%20Senegal.jpg"
-    }
+    "famousAnimal": "Leão"
   }
 ]
