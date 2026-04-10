@@ -35,7 +35,7 @@
       "No mapa, fico na pontinha de baixo do continente africano."
     ],
     "typicalDish": "Bobotie",
-    "famousAnimal": "Leão-africano"
+    "famousAnimal": "Leão"
   },
   {
     "id": "quenia",
@@ -111,7 +111,7 @@
       "No mapa, fico na costa leste, logo abaixo do Quênia."
     ],
     "typicalDish": "Ugali",
-    "famousAnimal": "Leão-africano"
+    "famousAnimal": "Leopardo"
   },
   {
     "id": "madagascar",
@@ -301,6 +301,6 @@
       "No mapa, fico como uma “ponta” do continente voltada para o Atlântico."
     ],
     "typicalDish": "Thieboudienne",
-    "famousAnimal": "Leão"
+    "famousAnimal": "Hipopótamo"
   }
 ]
