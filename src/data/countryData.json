@@ -5,9 +5,9 @@
     "funFact": "O Rio Nilo era tipo uma estrada gigante de água que alimentou faraós, pirâmides e cidades incríveis por milhares de anos!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Crocodilo-do-nilo.",
-      "language": "No meu país falamos Árabe.",
-      "culture": "No meu país, as pessoas usavam desenhos de animais e objetos como se fossem letras para escrever mensagens.",
-      "typicalDish": "No meu país, um prato típico é Koshari.",
+      "language": "Aqui falamos Árabe.",
+      "culture": "Pessoas usavam desenhos de animais e objetos como se fossem letras para escrever mensagens.",
+      "typicalDish": "Um dos nossos pratos típicos é Koshari.",
       "shape": "No mapa, meu território parece um quadrado com um pedacinho triangular no Sinai.",
       "capital": "Minha capital é Cairo."
     }
@@ -18,9 +18,9 @@
     "funFact": "Aqui cabem muitas culturas: são 11 línguas oficiais, como se a escola inteira tivesse vários jeitos de dizer “oi” no mesmo dia!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Leão.",
-      "language": "No meu país falamos 11 línguas oficiais.",
+      "language": "Aqui falamos 11 línguas oficiais.",
       "culture": "Minha cultura usa roupas coloridas e padrões que são famosos no mundo todo.",
-      "typicalDish": "No meu país, um prato típico é Bobotie.",
+      "typicalDish": "Um dos nossos pratos típicos é Bobotie.",
       "shape": "No mapa, fico na pontinha de baixo do continente africano.",
       "capital": "Minha capital é Pretória (administrativa)."
     }
@@ -31,9 +31,9 @@
     "funFact": "Na savana do Quênia, a Grande Migração parece um desfile sem fim: milhões de animais correndo juntos como um mega trânsito da natureza!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Girafa-masai.",
-      "language": "No meu país falamos Suaíli e inglês.",
+      "language": "Aqui falamos Suaíli e inglês.",
       "culture": "O povo Maasai é conhecido por suas roupas vermelhas e danças saltitantes.",
-      "typicalDish": "No meu país, um prato típico é Nyama Choma.",
+      "typicalDish": "Um dos nossos pratos típicos é Nyama Choma.",
       "shape": "No mapa, pareço um bloco vertical na costa leste da África.",
       "capital": "Minha capital é Nairóbi."
     }
@@ -41,12 +41,12 @@
   {
     "id": "marrocos",
     "name": "Marrocos",
-    "funFact": "Nos souks de Marrocos, parece caça ao tesouro: ruas cheias de cores, cheiros e tapetes que deixam tudo com cara de filme de aventura!",
+    "funFact": "Nos souks (feiras) de Marrocos, parece caça ao tesouro: ruas cheias de cores, cheiros e tapetes que deixam tudo com cara de filme de aventura!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Macaco-de-gibraltar.",
-      "language": "No meu país falamos Árabe e amazigue.",
+      "language": "Aqui falamos Árabe e amazigue.",
       "culture": "Minhas medinas têm artesanato, roupas tradicionais e festivais com muita cor.",
-      "typicalDish": "No meu país, um prato típico é Cuscuz marroquino.",
+      "typicalDish": "Um dos nossos pratos típicos é Cuscuz marroquino.",
       "shape": "No mapa, fico no cantinho noroeste da África, pertinho da Europa.",
       "capital": "Minha capital é Rabat."
     }
@@ -57,9 +57,9 @@
     "funFact": "Tem tanta gente morando aqui que 1 em cada 5 africanos é nigeriano. É o país mais lotado do continente!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Chimpanzé.",
-      "language": "No meu país falamos Inglês.",
+      "language": "Aqui falamos Inglês.",
       "culture": "Meus festivais reais têm desfiles de cavalos vestidos com mantos coloridos.",
-      "typicalDish": "No meu país, um prato típico é Jollof Rice.",
+      "typicalDish": "Um dos nossos pratos típicos é Jollof Rice.",
       "shape": "No mapa, pareço um grande bloco no oeste africano, acima do Golfo da Guiné.",
       "capital": "Minha capital é Abuja."
     }
@@ -70,9 +70,9 @@
     "funFact": "A Tanzânia guarda o Kilimanjaro, uma montanha tão alta que seu topo parece encostar nas nuvens!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Leopardo.",
-      "language": "No meu país falamos Suaíli e inglês.",
+      "language": "Aqui falamos Suaíli e inglês.",
       "culture": "Minha arte usa cores muito fortes e desenhos de animais que parecem ter saído de um sonho.",
-      "typicalDish": "No meu país, um prato típico é Ugali.",
+      "typicalDish": "Um dos nossos pratos típicos é Ugali.",
       "shape": "No mapa, fico na costa leste, logo abaixo do Quênia.",
       "capital": "Minha capital é Dodoma."
     }
@@ -83,9 +83,9 @@
     "funFact": "Mais de 80% dos animais e plantas daqui não existem em nenhum outro lugar do planeta. É como uma ilha secreta da natureza!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Lêmure-de-cauda-anelada.",
-      "language": "No meu país falamos Malgaxe e francês.",
+      "language": "Aqui falamos Malgaxe e francês.",
       "culture": "No meu país, os contadores de histórias usam casacos vermelhos e tambores.",
-      "typicalDish": "No meu país, um prato típico é Romazava.",
+      "typicalDish": "Um dos nossos pratos típicos é Romazava.",
       "shape": "No mapa, tenho formato de ilha alongada ao lado da costa africana.",
       "capital": "Minha capital é Antananarivo."
     }
@@ -96,9 +96,9 @@
     "funFact": "A Etiópia é super resistente: mesmo com invasões, manteve sua história viva por séculos, como um escudo de coragem!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Lobo-etíope.",
-      "language": "No meu país falamos Amárico.",
+      "language": "Aqui falamos Amárico.",
       "culture": "No meu país, o café é preparado em uma jarra preta com um cheiro delicioso",
-      "typicalDish": "No meu país, um prato típico é Injera.",
+      "typicalDish": "Um dos nossos pratos típicos é Injera.",
       "shape": "No mapa, meu território fica no Chifre da África e parece um trapézio grande.",
       "capital": "Minha capital é Adis Abeba."
     }
@@ -109,9 +109,9 @@
     "funFact": "A Argélia é tão gigante que daria para viajar por dias e ainda continuar no mesmo país, atravessando muito deserto do Saara!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Raposa-fennec.",
-      "language": "No meu país falamos Árabe e amazigue.",
+      "language": "Aqui falamos Árabe e amazigue.",
       "culture": "Minhas músicas clássicas são tocadas em instrumentos de madeira com barriga redonda",
-      "typicalDish": "No meu país, um prato típico é Cuscuz argelino.",
+      "typicalDish": "Um dos nossos pratos típicos é Cuscuz argelino.",
       "shape": "No mapa, sou um país enorme no norte da África com borda no Mediterrâneo.",
       "capital": "Minha capital é Argel."
     }
@@ -122,9 +122,9 @@
     "funFact": "Gana foi o primeiro da África Subsaariana a conquistar independência no século 20. Virou inspiração para vários vizinhos gritarem “também conseguimos”!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Águia-rapace.",
-      "language": "No meu país falamos Inglês.",
+      "language": "Aqui falamos Inglês.",
       "culture": "Tenho desenhos secretos que dizem se uma pessoa é corajosa ou amiga.",
-      "typicalDish": "No meu país, um prato típico é Fufu com sopa leve.",
+      "typicalDish": "Um dos nossos pratos típicos é Fufu com sopa leve.",
       "shape": "No mapa, fico no Golfo da Guiné com formato compacto no oeste africano.",
       "capital": "Minha capital é Acra."
     }
@@ -135,9 +135,9 @@
     "funFact": "Em Angola, as crianças também falam português como você. E tem palavra divertida: café da manhã pode ser chamado de “mata-bicho”!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Palanca-negra-gigante.",
-      "language": "No meu país falamos Português.",
+      "language": "Aqui falamos Português.",
       "culture": "Minhas máscaras de madeira celebram a beleza das mães e das avós.",
-      "typicalDish": "No meu país, um prato típico é Muamba de galinha.",
+      "typicalDish": "Um dos nossos pratos típicos é Muamba de galinha.",
       "shape": "No mapa, fico na parte sudoeste da África, com litoral grande.",
       "capital": "Minha capital é Luanda."
     }
@@ -148,9 +148,9 @@
     "funFact": "Em Moçambique também se fala português, só que com jeitos próprios super legais. E o mar do Índico fica tão perto que vira cenário do dia a dia!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Mamba Negra.",
-      "language": "No meu país falamos Português.",
+      "language": "Aqui falamos Português.",
       "culture": "Meus artistas esculpem estátuas em madeiras tão escuras que parecem carvão.",
-      "typicalDish": "No meu país, um prato típico é Matapa.",
+      "typicalDish": "Um dos nossos pratos típicos é Matapa.",
       "shape": "No mapa, sou comprido de norte a sul na costa leste africana.",
       "capital": "Minha capital é Maputo."
     }
@@ -161,9 +161,9 @@
     "funFact": "Chamam Camarões de “África em miniatura” porque tem de quase tudo: praia, floresta, montanha e até vulcão no mesmo país!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Mandril.",
-      "language": "No meu país falamos Francês e inglês.",
+      "language": "Aqui falamos Francês e inglês.",
       "culture": "Minhas casas de barro parecem conchas de caracol gigantes viradas para baixo.",
-      "typicalDish": "No meu país, um prato típico é Ndolé.",
+      "typicalDish": "Um dos nossos pratos típicos é Ndolé.",
       "shape": "No mapa, fico na África Central com um formato que desce até o mar.",
       "capital": "Minha capital é Yaoundé."
     }
@@ -174,9 +174,9 @@
     "funFact": "Em Cabo Verde, você ouve português e crioulo juntos no cotidiano, como uma mistura musical de palavras. E tudo acontece em ilhas nascidas de vulcões!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Tartaruga-marinha.",
-      "language": "No meu país falamos Português e crioulo cabo-verdiano.",
+      "language": "Aqui falamos Português e crioulo.",
       "culture": "Meu jogo favorito é de madeira e usamos sementes para capturar as do amigo",
-      "typicalDish": "No meu país, um prato típico é Cachupa.",
+      "typicalDish": "Um dos nossos pratos típicos é Cachupa.",
       "shape": "No mapa, pareço pontinhos de ilhas espalhadas no oceano.",
       "capital": "Minha capital é Praia."
     }
@@ -187,9 +187,9 @@
     "funFact": "Muita barra de chocolate começa aqui: a Costa do Marfim é uma das campeãs mundiais do cacau!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Elefante Africano.",
-      "language": "No meu país falamos Francês.",
-      "culture": "Meus tambores são esculpidos em um único tronco de árvore e tocam alto.",
-      "typicalDish": "No meu país, um prato típico é Attiéké com peixe.",
+      "language": "Aqui falamos Francês.",
+      "culture": "Para fazer meus tambores, os artistas usam um tronco de árvore inteiro. Eles tiram a madeira de dentro até ficar oco e o som poder ecoar bem alto.",
+      "typicalDish": "Um dos nossos pratos típicos é Attiéké com peixe.",
       "shape": "No mapa, fico no oeste africano e meu território parece um quadrilátero inclinado.",
       "capital": "Minha capital é Yamoussoukro."
     }
@@ -200,9 +200,9 @@
     "funFact": "Dacar pulsa com música, dança e corridas famosas, como se a cidade estivesse sempre em dia de festival!",
     "hints": {
       "famousAnimal": "No meu país, um animal marcante é Hipopótamo.",
-      "language": "No meu país falamos Francês.",
+      "language": "Aqui falamos Francês.",
       "culture": "Meu instrumento real tem 21 cordas e é feito de uma abóbora gigante",
-      "typicalDish": "No meu país, um prato típico é Thieboudienne.",
+      "typicalDish": "Um dos nossos pratos típicos é Thieboudienne.",
       "shape": "No mapa, fico como uma “ponta” do continente voltada para o Atlântico.",
       "capital": "Minha capital é Dacar."
     }
