@@ -5,8 +5,7 @@ export type CountryImageKind =
   | 'typicalDish'
   | 'famousAnimal'
   | 'culture'
-  | 'shape'
-  | 'landmark';
+  | 'shape';
 
 export type CountryHintKind =
   | 'famousAnimal'
@@ -33,7 +32,6 @@ export interface CountryImages {
   famousAnimal?: string;
   culture?: string;
   shape?: string;
-  landmark?: string;
 }
 
 export interface Country {

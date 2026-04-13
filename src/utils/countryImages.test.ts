@@ -11,7 +11,6 @@ const ALL_IMAGE_KINDS: CountryImageKind[] = [
   'famousAnimal',
   'culture',
   'shape',
-  'landmark',
 ];
 
 const createCountryFixture = (overrides: Partial<Country> = {}): Country => ({

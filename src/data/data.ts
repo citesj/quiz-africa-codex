@@ -26,7 +26,6 @@ const IMAGE_FIELDS: CountryImageKind[] = [
   'famousAnimal',
   'culture',
   'shape',
-  'landmark',
 ];
 
 function getCountryLabel(rawCountry: unknown, index: number): string {

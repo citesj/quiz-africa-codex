@@ -17,14 +17,11 @@ const SUFFIX_BY_KIND: Record<CountryImageKind, string> = {
   famousAnimal: 'animal',
   culture: 'culture',
   shape: 'shape',
-  landmark: 'landmark',
 };
 
 const kindBySuffix = new Map<string, CountryImageKind>(
   (Object.entries(SUFFIX_BY_KIND) as Array<[CountryImageKind, string]>).map(([kind, suffix]) => [suffix, kind]),
 );
-
-const KNOWN_IGNORED_SUFFIXES = new Set(['currency']);
 
 const EXTENSION_PRIORITY: Record<string, number> = {
   webp: 4,
@@ -52,7 +49,7 @@ Object.entries(imageModules).forEach(([modulePath, imageUrl]) => {
 
   const kind = kindBySuffix.get(suffix);
   if (!kind) {
-    if (isDevEnvironment && !KNOWN_IGNORED_SUFFIXES.has(suffix)) {
+    if (isDevEnvironment) {
       console.warn(`[countryImages] Arquivo ignorado por sufixo nao mapeado: ${modulePath}`);
     }
     return;
