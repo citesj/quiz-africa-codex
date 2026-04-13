@@ -4,12 +4,12 @@
     "name": "Egito",
     "funFact": "O Rio Nilo era tipo uma estrada gigante de água que alimentou faraós, pirâmides e cidades incríveis por milhares de anos!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Crocodilo-do-nilo.",
-      "language": "Aqui falamos Árabe.",
-      "culture": "Pessoas usavam desenhos de animais e objetos como se fossem letras para escrever mensagens.",
-      "typicalDish": "Um dos nossos pratos típicos é Koshari.",
-      "shape": "No mapa, meu território parece um quadrado com um pedacinho triangular no Sinai.",
-      "capital": "Minha capital é Cairo."
+      "famousAnimal": "Crocodilo-do-nilo.",
+      "language": "Árabe.",
+      "culture": "Hieróglifos, escrita com desenhos de animais e objetos.",
+      "typicalDish": "Prato típico é Koshari.",
+      "shape": "Localizado no norte da África, próximo ao oriente médio.",
+      "capital": "Cairo."
     }
   },
   {
@@ -17,12 +17,12 @@
     "name": "África do Sul",
     "funFact": "Aqui cabem muitas culturas: são 11 línguas oficiais, como se a escola inteira tivesse vários jeitos de dizer “oi” no mesmo dia!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Leão.",
-      "language": "Aqui falamos 11 línguas oficiais.",
-      "culture": "Minha cultura usa roupas coloridas e padrões que são famosos no mundo todo.",
-      "typicalDish": "Um dos nossos pratos típicos é Bobotie.",
-      "shape": "No mapa, fico na pontinha de baixo do continente africano.",
-      "capital": "Minha capital é Pretória (administrativa)."
+      "famousAnimal": "Leão.",
+      "language": "11 línguas oficiais.",
+      "culture": "Roupas coloridas com padrões que são famosos no mundo todo.",
+      "typicalDish": "Prato típico é Bobotie.",
+      "shape": "Localizado na ponta de baixo do continente.",
+      "capital": "Pretória (administrativa)."
     }
   },
   {
@@ -30,12 +30,12 @@
     "name": "Quênia",
     "funFact": "Na savana do Quênia, a Grande Migração parece um desfile sem fim: milhões de animais correndo juntos como um mega trânsito da natureza!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Girafa-masai.",
-      "language": "Aqui falamos Suaíli e inglês.",
-      "culture": "O povo Maasai é conhecido por suas roupas vermelhas e danças saltitantes.",
-      "typicalDish": "Um dos nossos pratos típicos é Nyama Choma.",
-      "shape": "No mapa, pareço um bloco vertical na costa leste da África.",
-      "capital": "Minha capital é Nairóbi."
+      "famousAnimal": "Girafa-masai.",
+      "language": "Suaíli e inglês.",
+      "culture": "O povo Maasai usa roupas vermelhas e danças com saltos.",
+      "typicalDish": "Prato típico é Nyama Choma.",
+      "shape": "Localizado na costa leste da África.",
+      "capital": "Nairóbi."
     }
   },
   {
@@ -43,12 +43,12 @@
     "name": "Marrocos",
     "funFact": "Nos souks (feiras) de Marrocos, parece caça ao tesouro: ruas cheias de cores, cheiros e tapetes que deixam tudo com cara de filme de aventura!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Macaco-de-gibraltar.",
-      "language": "Aqui falamos Árabe e amazigue.",
-      "culture": "Minhas medinas têm artesanato, roupas tradicionais e festivais com muita cor.",
-      "typicalDish": "Um dos nossos pratos típicos é Cuscuz marroquino.",
-      "shape": "No mapa, fico no cantinho noroeste da África, pertinho da Europa.",
-      "capital": "Minha capital é Rabat."
+      "famousAnimal": "Macaco-de-gibraltar.",
+      "language": "Árabe e amazigue.",
+      "culture": "Medinas com artesanatos, roupas tradicionais e festivais coloridos.",
+      "typicalDish": "Prato típico é Cuscuz marroquino.",
+      "shape": "Localizado no noroeste da África, perto da Europa.",
+      "capital": "Rabat."
     }
   },
   {
@@ -56,12 +56,12 @@
     "name": "Nigéria",
     "funFact": "Tem tanta gente morando aqui que 1 em cada 5 africanos é nigeriano. É o país mais lotado do continente!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Chimpanzé.",
-      "language": "Aqui falamos Inglês.",
-      "culture": "Meus festivais reais têm desfiles de cavalos vestidos com mantos coloridos.",
-      "typicalDish": "Um dos nossos pratos típicos é Jollof Rice.",
-      "shape": "No mapa, pareço um grande bloco no oeste africano, acima do Golfo da Guiné.",
-      "capital": "Minha capital é Abuja."
+      "famousAnimal": "Chimpanzé.",
+      "language": "Inglês.",
+      "culture": "Durbar são festivais com desfiles de cavalos vestidos com mantos coloridos.",
+      "typicalDish": "Prato típico é Jollof Rice.",
+      "shape": "Localizado no oeste africano, acima do Golfo da Guiné.",
+      "capital": "Abuja."
     }
   },
   {
@@ -69,12 +69,12 @@
     "name": "Tanzânia",
     "funFact": "A Tanzânia guarda o Kilimanjaro, uma montanha tão alta que seu topo parece encostar nas nuvens!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Leopardo.",
-      "language": "Aqui falamos Suaíli e inglês.",
-      "culture": "Minha arte usa cores muito fortes e desenhos de animais que parecem ter saído de um sonho.",
-      "typicalDish": "Um dos nossos pratos típicos é Ugali.",
-      "shape": "No mapa, fico na costa leste, logo abaixo do Quênia.",
-      "capital": "Minha capital é Dodoma."
+      "famousAnimal": "Leopardo.",
+      "language": "Suaíli e inglês.",
+      "culture": "Pinturas e artes que usam cores muito fortes e desenhos de animais.",
+      "typicalDish": "Prato típico é Ugali.",
+      "shape": "Localizado na costa leste, logo abaixo do Quênia.",
+      "capital": "Dodoma."
     }
   },
   {
@@ -82,12 +82,12 @@
     "name": "Madagascar",
     "funFact": "Mais de 80% dos animais e plantas daqui não existem em nenhum outro lugar do planeta. É como uma ilha secreta da natureza!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Lêmure-de-cauda-anelada.",
-      "language": "Aqui falamos Malgaxe e francês.",
-      "culture": "No meu país, os contadores de histórias usam casacos vermelhos e tambores.",
-      "typicalDish": "Um dos nossos pratos típicos é Romazava.",
-      "shape": "No mapa, tenho formato de ilha alongada ao lado da costa africana.",
-      "capital": "Minha capital é Antananarivo."
+      "famousAnimal": "Lêmure-de-cauda-anelada.",
+      "language": "Malgaxe e francês.",
+      "culture": "Os contadores de histórias usam casacos vermelhos e tambores.",
+      "typicalDish": "Prato típico é Romazava.",
+      "shape": "Localizado no sudeste da África, é uma ilha.",
+      "capital": "Antananarivo."
     }
   },
   {
@@ -95,12 +95,12 @@
     "name": "Etiópia",
     "funFact": "A Etiópia é super resistente: mesmo com invasões, manteve sua história viva por séculos, como um escudo de coragem!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Lobo-etíope.",
-      "language": "Aqui falamos Amárico.",
-      "culture": "No meu país, o café é preparado em uma jarra preta com um cheiro delicioso",
-      "typicalDish": "Um dos nossos pratos típicos é Injera.",
-      "shape": "No mapa, meu território fica no Chifre da África e parece um trapézio grande.",
-      "capital": "Minha capital é Adis Abeba."
+      "famousAnimal": "Lobo-etíope.",
+      "language": "Amárico.",
+      "culture": "Cerimônia do café preparado em uma jarra preta",
+      "typicalDish": "Prato típico é Injera.",
+      "shape": "Localizado no leste da África.",
+      "capital": "Adis Abeba."
     }
   },
   {
@@ -108,12 +108,12 @@
     "name": "Argélia",
     "funFact": "A Argélia é tão gigante que daria para viajar por dias e ainda continuar no mesmo país, atravessando muito deserto do Saara!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Raposa-fennec.",
-      "language": "Aqui falamos Árabe e amazigue.",
-      "culture": "Minhas músicas clássicas são tocadas em instrumentos de madeira com barriga redonda",
-      "typicalDish": "Um dos nossos pratos típicos é Cuscuz argelino.",
-      "shape": "No mapa, sou um país enorme no norte da África com borda no Mediterrâneo.",
-      "capital": "Minha capital é Argel."
+      "famousAnimal": "Raposa-fennec.",
+      "language": "Árabe e amazigue.",
+      "culture": "Uso do oud, instrumento de madeira com barriga redonda",
+      "typicalDish": "Prato típico é Cuscuz argelino.",
+      "shape": "Localizado no norte da África, com litoral no Mediterrâneo.",
+      "capital": "Argel."
     }
   },
   {
@@ -121,12 +121,12 @@
     "name": "Gana",
     "funFact": "Gana foi o primeiro da África Subsaariana a conquistar independência no século 20. Virou inspiração para vários vizinhos gritarem “também conseguimos”!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Águia-rapace.",
-      "language": "Aqui falamos Inglês.",
-      "culture": "Tenho desenhos secretos que dizem se uma pessoa é corajosa ou amiga.",
-      "typicalDish": "Um dos nossos pratos típicos é Fufu com sopa leve.",
-      "shape": "No mapa, fico no Golfo da Guiné com formato compacto no oeste africano.",
-      "capital": "Minha capital é Acra."
+      "famousAnimal": "Águia-rapace.",
+      "language": "Inglês.",
+      "culture": "Adinkra, são desenhos secretos que dizem se uma pessoa é corajosa ou amiga.",
+      "typicalDish": "Prato típico é Fufu com sopa leve.",
+      "shape": "Localizado no Golfo da Guiné, no oeste africano.",
+      "capital": "Acra."
     }
   },
   {
@@ -134,12 +134,12 @@
     "name": "Angola",
     "funFact": "Em Angola, as crianças também falam português como você. E tem palavra divertida: café da manhã pode ser chamado de “mata-bicho”!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Palanca-negra-gigante.",
-      "language": "Aqui falamos Português.",
-      "culture": "Minhas máscaras de madeira celebram a beleza das mães e das avós.",
-      "typicalDish": "Um dos nossos pratos típicos é Muamba de galinha.",
-      "shape": "No mapa, fico na parte sudoeste da África, com litoral grande.",
-      "capital": "Minha capital é Luanda."
+      "famousAnimal": "Palanca-negra-gigante.",
+      "language": "Português.",
+      "culture": "Máscaras de madeira celebram a beleza das mães e das avós.",
+      "typicalDish": "Prato típico é Muamba de galinha.",
+      "shape": "Localizado no sudoeste da África, com litoral grande.",
+      "capital": "Luanda."
     }
   },
   {
@@ -147,12 +147,12 @@
     "name": "Moçambique",
     "funFact": "Em Moçambique também se fala português, só que com jeitos próprios super legais. E o mar do Índico fica tão perto que vira cenário do dia a dia!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Mamba Negra.",
-      "language": "Aqui falamos Português.",
-      "culture": "Meus artistas esculpem estátuas em madeiras tão escuras que parecem carvão.",
-      "typicalDish": "Um dos nossos pratos típicos é Matapa.",
-      "shape": "No mapa, sou comprido de norte a sul na costa leste africana.",
-      "capital": "Minha capital é Maputo."
+      "famousAnimal": "Mamba Negra.",
+      "language": "Português.",
+      "culture": "Artistas esculpem estátuas em madeiras tão escuras que parece carvão.",
+      "typicalDish": "Prato típico é Matapa.",
+      "shape": "Localizado no sudeste da África.",
+      "capital": "Maputo."
     }
   },
   {
@@ -160,12 +160,12 @@
     "name": "Camarões",
     "funFact": "Chamam Camarões de “África em miniatura” porque tem de quase tudo: praia, floresta, montanha e até vulcão no mesmo país!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Mandril.",
-      "language": "Aqui falamos Francês e inglês.",
-      "culture": "Minhas casas de barro parecem conchas de caracol gigantes viradas para baixo.",
-      "typicalDish": "Um dos nossos pratos típicos é Ndolé.",
-      "shape": "No mapa, fico na África Central com um formato que desce até o mar.",
-      "capital": "Minha capital é Yaoundé."
+      "famousAnimal": "Mandril.",
+      "language": "Francês e inglês.",
+      "culture": "Casas de barro que lembram conchas de caracol gigantes viradas para baixo.",
+      "typicalDish": "Prato típico é Ndolé.",
+      "shape": "Localizado na África Central.",
+      "capital": "Yaoundé."
     }
   },
   {
@@ -173,12 +173,12 @@
     "name": "Cabo Verde",
     "funFact": "Em Cabo Verde, você ouve português e crioulo juntos no cotidiano, como uma mistura musical de palavras. E tudo acontece em ilhas nascidas de vulcões!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Tartaruga-marinha.",
-      "language": "Aqui falamos Português e crioulo.",
-      "culture": "Meu jogo favorito é de madeira e usamos sementes para capturar as do amigo",
-      "typicalDish": "Um dos nossos pratos típicos é Cachupa.",
-      "shape": "No mapa, pareço pontinhos de ilhas espalhadas no oceano.",
-      "capital": "Minha capital é Praia."
+      "famousAnimal": "Tartaruga-marinha.",
+      "language": "Português e crioulo.",
+      "culture": "Jogo Mancala feito com madeira e sementes, com objetivo capturar as sementes do adversário",
+      "typicalDish": "Prato típico é Cachupa.",
+      "shape": "Localizado no oeste da África, é um conjunto de ilhas.",
+      "capital": "Praia."
     }
   },
   {
@@ -186,12 +186,12 @@
     "name": "Costa do Marfim",
     "funFact": "Muita barra de chocolate começa aqui: a Costa do Marfim é uma das campeãs mundiais do cacau!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Elefante Africano.",
-      "language": "Aqui falamos Francês.",
-      "culture": "Para fazer meus tambores, os artistas usam um tronco de árvore inteiro. Eles tiram a madeira de dentro até ficar oco e o som poder ecoar bem alto.",
-      "typicalDish": "Um dos nossos pratos típicos é Attiéké com peixe.",
-      "shape": "No mapa, fico no oeste africano e meu território parece um quadrilátero inclinado.",
-      "capital": "Minha capital é Yamoussoukro."
+      "famousAnimal": "Elefante Africano.",
+      "language": "Francês.",
+      "culture": "Para fazer tambores, os artistas usam um tronco de árvore inteiro. Eles tiram a madeira de dentro até ficar oco e o som poder ecoar bem alto.",
+      "typicalDish": "Prato típico é Attiéké com peixe.",
+      "shape": "Localizado no oeste da África, com litoral.",
+      "capital": "Yamoussoukro."
     }
   },
   {
@@ -199,12 +199,12 @@
     "name": "Senegal",
     "funFact": "Dacar pulsa com música, dança e corridas famosas, como se a cidade estivesse sempre em dia de festival!",
     "hints": {
-      "famousAnimal": "No meu país, um animal marcante é Hipopótamo.",
-      "language": "Aqui falamos Francês.",
-      "culture": "Meu instrumento real tem 21 cordas e é feito de uma abóbora gigante",
-      "typicalDish": "Um dos nossos pratos típicos é Thieboudienne.",
-      "shape": "No mapa, fico como uma “ponta” do continente voltada para o Atlântico.",
-      "capital": "Minha capital é Dacar."
+      "famousAnimal": "Hipopótamo.",
+      "language": "Francês.",
+      "culture": "Instrumento real com 21 cordas, feito de uma abóbora gigante",
+      "typicalDish": "Prato típico é Thieboudienne.",
+      "shape": "Localizado no oeste da África, com litoral.",
+      "capital": "Dacar."
     }
   }
 ]
