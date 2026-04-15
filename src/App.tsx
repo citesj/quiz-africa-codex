@@ -27,14 +27,24 @@ const App = () => {
     <main className="min-h-screen bg-color-paper bg-paper p-3 font-body text-color-ink sm:p-4 md:p-6 chromebook:p-5 lg:p-8">
       <div className="mx-auto w-full max-w-4xl chromebook:max-w-5xl">
         <AnimatePresence mode="wait">
-          {gameState.phase === 'quiz' && gameState.round && (
-            <motion.div key={`quiz-${gameState.round.roundNumber}`} {...pageTransition}>
-              <QuizScreen round={gameState.round} onRevealHint={revealNextHint} onSelectAnswer={selectAnswer} />
+          {gameState.phase === "quiz" && gameState.round && (
+            <motion.div
+              key={`quiz-${gameState.round.roundNumber}`}
+              {...pageTransition}
+            >
+              <QuizScreen
+                round={gameState.round}
+                onRevealHint={revealNextHint}
+                onSelectAnswer={selectAnswer}
+              />
             </motion.div>
           )}
 
-          {gameState.phase === 'discovery' && gameState.round && (
-            <motion.div key={`discovery-${gameState.round.roundNumber}`} {...pageTransition}>
+          {gameState.phase === "discovery" && gameState.round && (
+            <motion.div
+              key={`discovery-${gameState.round.roundNumber}`}
+              {...pageTransition}
+            >
               <DiscoveryScreen
                 round={gameState.round}
                 encouragementMessage={gameState.encouragementMessage}
@@ -44,17 +54,24 @@ const App = () => {
             </motion.div>
           )}
 
-          {gameState.phase === 'completed' && (
+          {gameState.phase === "completed" && (
             <motion.section
               key="completed"
               {...pageTransition}
               className="relative overflow-hidden rounded-3xl border border-color-ink/20 bg-[#fdf9ef] p-8 text-center shadow-passport"
             >
-              <span aria-hidden="true" className="absolute -right-5 top-4 rotate-12 rounded-md bg-color-stamp/20 px-3 py-1 text-xs font-bold text-color-stamp">
+              <span
+                aria-hidden="true"
+                className="absolute right-1 top-4 rotate-12 rounded-md bg-color-stamp/20 px-3 py-1 text-xs font-bold text-color-stamp"
+              >
                 CARIMBADO
               </span>
-              <h2 className="mb-3 font-title text-4xl font-extrabold text-color-ink">Expedição Concluída!</h2>
-              <p className="mb-5 text-[18px] text-color-ink/85">{gameState.encouragementMessage}</p>
+              <h2 className="mb-3 font-title text-4xl font-extrabold text-color-ink">
+                Expedição Concluída!
+              </h2>
+              <p className="mb-5 text-[18px] text-color-ink/85">
+                {gameState.encouragementMessage}
+              </p>
               <button
                 type="button"
                 onClick={resetGame}
@@ -71,3 +88,4 @@ const App = () => {
 };
 
 export default App;
+
