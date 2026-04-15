@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { TOTAL_HINTS, TOTAL_ROUNDS } from "../constants";
 
 interface WelcomeScreenProps {
   onStart: () => void;
@@ -23,6 +24,20 @@ export const WelcomeScreen = ({ onStart, isPending }: WelcomeScreenProps) => (
       <p className="mt-3 text-lg font-semibold text-[#5f4520]">
         Leia as pistas e descubra o país certo.
       </p>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.4 }}
+        className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm font-bold text-[#8a6027]"
+      >
+        <span className="flex items-center gap-1.5 rounded-full bg-[#f6e5c4] px-4 py-1.5 border border-[#e5c99f]">
+          <span aria-hidden="true">🌍</span> {TOTAL_ROUNDS} Destinos
+        </span>
+        <span className="flex items-center gap-1.5 rounded-full bg-[#f6e5c4] px-4 py-1.5 border border-[#e5c99f]">
+          <span aria-hidden="true">💡</span> Até {TOTAL_HINTS} pistas por país
+        </span>
+      </motion.div>
 
       <button
         type="button"
