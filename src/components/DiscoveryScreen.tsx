@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { useEffect, useRef } from 'react';
-import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_ROUNDS } from '../constants';
-import type { RoundState } from '../types';
-import { getCountryImageSrc } from '../utils/countryImages';
+import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { BODY_TEXT_MIN_SIZE_CLASS, TOTAL_ROUNDS } from "../constants";
+import type { RoundState } from "../types";
+import { getCountryImageSrc } from "../utils/countryImages";
 
 interface DiscoveryScreenProps {
   round: RoundState;
@@ -12,10 +12,10 @@ interface DiscoveryScreenProps {
 }
 
 const PREFIXOS_INVESTIGATIVOS = [
-  '🕵️ Segredo desbloqueado: ',
-  '💡 Você sabia que... ',
-  '🔎 Descoberta fantástica: ',
-  '🌍 Arquivo confidencial: ',
+  "🕵️ Segredo desbloqueado: ",
+  "💡 Você sabia que... ",
+  "🔎 Descoberta fantástica: ",
+  "🌍 Arquivo confidencial: ",
 ];
 
 const FLAG_FALLBACK =
@@ -30,15 +30,19 @@ export const DiscoveryScreen = ({
   const feedbackRef = useRef<HTMLParagraphElement>(null);
   const country = round.country;
   const prefixoEscolhido =
-    PREFIXOS_INVESTIGATIVOS[(round.roundNumber - 1) % PREFIXOS_INVESTIGATIVOS.length];
+    PREFIXOS_INVESTIGATIVOS[
+      (round.roundNumber - 1) % PREFIXOS_INVESTIGATIVOS.length
+    ];
   const textoCuriosidade = `${prefixoEscolhido}${country.funFact}`;
-  const nextButtonLabel = isLastRound ? 'Ver resultado final' : 'Próxima descoberta';
+  const nextButtonLabel = isLastRound
+    ? "Ver resultado final"
+    : "Próxima descoberta";
   const canReadAloud =
-    typeof window !== 'undefined' &&
-    'speechSynthesis' in window &&
-    typeof window.speechSynthesis?.speak === 'function' &&
-    typeof window.speechSynthesis?.cancel === 'function' &&
-    typeof SpeechSynthesisUtterance !== 'undefined';
+    typeof window !== "undefined" &&
+    "speechSynthesis" in window &&
+    typeof window.speechSynthesis?.speak === "function" &&
+    typeof window.speechSynthesis?.cancel === "function" &&
+    typeof SpeechSynthesisUtterance !== "undefined";
 
   useEffect(() => {
     feedbackRef.current?.focus();
@@ -58,7 +62,7 @@ export const DiscoveryScreen = ({
     }
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(textoCuriosidade);
-    utterance.lang = 'pt-BR';
+    utterance.lang = "pt-BR";
     utterance.rate = 0.9;
     window.speechSynthesis.speak(utterance);
   };
@@ -70,7 +74,9 @@ export const DiscoveryScreen = ({
       className="space-y-5 rounded-3xl border border-color-ink/20 bg-[#fcf7ea] p-8 shadow-passport"
     >
       <div className="flex items-center justify-between gap-3">
-        <h2 className="font-title text-3xl font-extrabold text-color-ink">Diário de Descoberta</h2>
+        <h2 className="font-title text-3xl font-extrabold text-color-ink">
+          Diário de Descoberta
+        </h2>
         {canReadAloud ? (
           <motion.button
             type="button"
@@ -93,8 +99,8 @@ export const DiscoveryScreen = ({
         animate={{ opacity: 1, y: 0 }}
         className={`rounded-2xl border-2 p-4 text-lg font-bold leading-relaxed shadow-photo focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-color-ochre focus-visible:ring-offset-4 focus-visible:ring-offset-color-paper md:text-xl ${
           round.isCorrect
-            ? 'border-emerald-900 bg-emerald-100 text-emerald-950'
-            : 'border-orange-800 bg-orange-100 text-orange-950'
+            ? "border-emerald-900 bg-emerald-100 text-emerald-950"
+            : "border-orange-800 bg-orange-100 text-orange-950"
         }`}
       >
         {encouragementMessage}
@@ -107,14 +113,16 @@ export const DiscoveryScreen = ({
           className="mx-auto w-full max-w-sm overflow-hidden rounded-xl border border-color-ink/20 shadow-photo md:max-w-md chromebook:max-w-lg"
         >
           <img
-            src={getCountryImageSrc(round.country, 'flag') ?? FLAG_FALLBACK}
+            src={getCountryImageSrc(round.country, "flag") ?? FLAG_FALLBACK}
             alt={`Bandeira de ${country.name}`}
             className="h-auto max-h-[28vh] w-full object-contain object-center md:max-h-[32vh] chromebook:max-h-[30vh]"
             loading="lazy"
             decoding="async"
           />
         </motion.div>
-        <h3 className="text-center font-title text-3xl font-extrabold text-color-ink md:text-4xl">{country.name}</h3>
+        <h3 className="text-center font-title text-3xl font-extrabold text-color-ink md:text-4xl">
+          {country.name}
+        </h3>
       </div>
 
       <p className="rounded-2xl border border-color-ochre/30 bg-color-ochre/10 px-4 py-3 font-body text-color-ink shadow-photo">
@@ -135,3 +143,4 @@ export const DiscoveryScreen = ({
     </motion.section>
   );
 };
+

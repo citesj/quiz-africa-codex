@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { TOTAL_HINTS, TOTAL_ROUNDS } from "../constants";
+import { ExpeditionBackdrop } from "./ExpeditionBackdrop";
 
 interface WelcomeScreenProps {
   onStart: () => void;
@@ -11,12 +12,14 @@ export const WelcomeScreen = ({ onStart, isPending }: WelcomeScreenProps) => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
+    className="relative isolate flex w-full min-h-[70vh] items-center justify-center overflow-hidden"
   >
+    <ExpeditionBackdrop className="opacity-45" />
     <motion.div
       initial={{ scale: 0.96, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 0.05, duration: 0.4 }}
-      className="mx-auto max-w-3xl rounded-[28px] border-2 border-[#efd7a9] bg-gradient-to-b from-[#fff7e8] to-[#fff1d6] p-7 text-center shadow-[0_14px_36px_rgba(120,77,17,0.2)] sm:p-10"
+      className="relative z-10 mx-auto max-w-3xl rounded-[28px] border-2 border-[#efd7a9] bg-gradient-to-b from-[#fff7e8] to-[#fff1d6] p-7 text-center shadow-[0_14px_36px_rgba(120,77,17,0.2)] sm:p-10"
     >
       <h1 className="font-title text-4xl font-extrabold leading-tight text-[#3f2b11] sm:text-5xl">
         Quiz Continente Africano
